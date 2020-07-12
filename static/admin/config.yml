@@ -44,7 +44,7 @@ collections:
           default: "agenda-event",
         }
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Adresse", name: "adress", widget: "map", required: false }
+      - { label: "Adresse", name: "adress", widget: "string", required: false }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Résumé", name: "resume", widget: "text", required: false }
       - {
