@@ -33,10 +33,10 @@ collections:
     create: true
     fields:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "agenda-event" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Résumé", name: "resume", widget: "text" }
-      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Résumé", name: "resume", widget: "text", required: false }
+      - { label: "Description", name: "description", widget: "markdown", required: false }
       - { label: "Afficher", name: "display", widget: "boolean" }
 
   - name: "pages"
