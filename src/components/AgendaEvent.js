@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, graphql, StaticQuery } from "gatsby";
 import agendaIcon from "../img/agenda.svg";
+import locationIcon from "../img/icons/location.svg";
+
 class AgendaEvent extends React.Component {
   render() {
     const { data } = this.props;
@@ -41,6 +43,15 @@ class EventItem extends React.Component {
           <div className="agenda-event-item-text">
             <div className="has-text-primary is-size-4">{event.frontmatter.title}</div>
             <div className="is-size-6">{event.frontmatter.resume}</div>
+            {event.frontmatter.address && (
+              <div className="is-size-7 text-right">
+                <img src={locationIcon} alt="Agenda" style={{ height: "0.75em" }} />
+                <a target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps/search/?api=1&query=${event.frontmatter.address}`}>
+                  {event.frontmatter.address}
+                </a>
+              </div>
+            )}
+
             <div className="agenda-event-item-text-more is-size-7">
               <Link to={event.fields.slug}>Plus d'informations...</Link>
             </div>
@@ -70,9 +81,10 @@ export default () => (
                 title
                 resume
                 description
-                day: date(formatString: "DD")
-                month: date(formatString: "MMM")
-                year: date(formatString: "YYYY")
+                address
+                day: date(formatString: "DD", locale: "fr")
+                month: date(formatString: "MMM", locale: "fr")
+                year: date(formatString: "YYYY", locale: "fr")
               }
             }
           }

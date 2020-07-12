@@ -1,7 +1,7 @@
 ---
 templateKey: agenda-event
 title: Randonnée pédestre
-adress: Montanay, foyer rural
+address: Montanay, foyer rural
 date: 2021-04-17T12:20:35.036Z
 resume: Edition 2021 de notre randonnée pédestre.
 description: >-

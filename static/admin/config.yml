@@ -44,12 +44,17 @@ collections:
           default: "agenda-event",
         }
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Adresse", name: "adress", widget: "string", required: false }
+      - {
+          label: "addresse",
+          name: "address",
+          widget: "string",
+          required: false,
+        }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Résumé", name: "resume", widget: "text", required: false }
       - {
           label: "Description",
-          name: "description",
+          name: "body",
           widget: "markdown",
           required: false,
         }
