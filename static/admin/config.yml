@@ -37,7 +37,6 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Résumé", name: "resume", widget: "text", required: false }
       - { label: "Description", name: "description", widget: "markdown", required: false }
-      - { label: "Test", name: "test", widget: "markdown", required: false }
       - { label: "Afficher", name: "display", widget: "boolean" }
 
   - name: "pages"
