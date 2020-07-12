@@ -35,8 +35,8 @@ collections:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "agenda-event" }
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Résumé", name: "resume", widget: "text", required: false }
-      - { label: "Description", name: "description", widget: "markdown", required: false }
+      - { label: "Résumé", name: "resume", widget: "text", required: false, optional: true }
+      - { label: "Description", name: "description", widget: "markdown", required: false, optional: true }
       - { label: "Afficher", name: "display", widget: "boolean" }
 
   - name: "pages"
