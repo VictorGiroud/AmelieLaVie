@@ -1,15 +1,16 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React from "react";
+import { Link } from "gatsby";
+import facebook from "../img/social/bluefacebook.svg";
+import colibri from "../img/colibrilogo.svg";
+import logo from "../img/amelielavie.png";
 
 const Navbar = class extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       active: false,
-      navBarActiveClass: '',
-    }
+      navBarActiveClass: "",
+    };
   }
 
   toggleHamburger = () => {
@@ -23,76 +24,62 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
+              navBarActiveClass: "is-active",
             })
           : this.setState({
-              navBarActiveClass: '',
-            })
+              navBarActiveClass: "",
+            });
       }
-    )
-  }
+    );
+  };
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
+      <nav className="navbar is-fixed-top" role="navigation" aria-label="main-navigation">
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+            <Link to="/" className="navbar-item" title="Amélie La Vie">
+              <img src={logo} alt="Amélie La Vie" />
             </Link>
             {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
+            <div className={`navbar-burger burger ${this.state.navBarActiveClass}`} data-target="navMenu" onClick={() => this.toggleHamburger()}>
               <span />
               <span />
               <span />
             </div>
           </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
+          <div id="navMenu" className={`navbar-menu ${this.state.navBarActiveClass}`}>
             <div className="navbar-start has-text-centered">
               <Link className="navbar-item" to="/about">
-                About
+                L'association
               </Link>
               <Link className="navbar-item" to="/products">
-                Products
+                Habitat partagé
               </Link>
               <Link className="navbar-item" to="/blog">
-                Blog
+                Nous soutenir
               </Link>
               <Link className="navbar-item" to="/contact">
                 Contact
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
             </div>
             <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a className="navbar-item" href="#" rel="noopener noreferrer">
                 <span className="icon">
-                  <img src={github} alt="Github" />
+                  <img src={colibri} alt="Les Colibris" title="Les Colibris" />
+                </span>
+              </a>
+              <a className="navbar-item" href="https://facebook.com/associationamelielavie" target="_blank" rel="noopener noreferrer">
+                <span className="icon facebook">
+                  <img src={facebook} alt="Facebook" title="Facebook" />
                 </span>
               </a>
             </div>
           </div>
         </div>
       </nav>
-    )
+    );
   }
-}
+};
 
-export default Navbar
+export default Navbar;
