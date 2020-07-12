@@ -14,7 +14,7 @@ export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, descr
       style={{
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,
-        backgroundColor: `#ffaf40`,
+        backgroundColor: `#fff6e9`,
       }}
     >
       <div
@@ -29,7 +29,7 @@ export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, descr
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            color: "white",
+            color: "#ffaf40",
             lineHeight: "1",
             padding: "0.25em",
           }}
@@ -39,7 +39,7 @@ export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, descr
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            color: "white",
+            color: "#ffaf40",
             lineHeight: "1",
             padding: "0.25em",
           }}

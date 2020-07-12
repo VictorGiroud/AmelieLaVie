@@ -5,6 +5,7 @@ $kaldi-red: #D64000
 $kaldi-red-invert: #fff
 
 $primary: #ffaf40
+$secondary: #fff6e9
 $primary-invert: #fff
 $body-color: #333
 $black: #2b2523
@@ -125,6 +126,43 @@ $menu-label-color: $white-ter
     height: 1em
     vertical-align: middle
     display: inline
+
+
+// agenda
+.agenda-event-item-container
+  padding: 1em
+.agenda-event-item
+  background-color: $secondary
+  height: 100%
+  display: flex
+  padding: 0.5em
+.agenda-event-item-text
+  flex-grow: 1
+  padding-left: 0.5em
+  display: flex;
+  flex-direction: column;
+.agenda-event-item-text-more
+  margin-top: auto
+  text-align: right
+.agenda-event-item-calendar
+  align-self: center
+  flex: 0 0 5em
+  width: 5em
+  height: 5em
+  position: relative
+  text-align: center
+  user-select: none
+.agenda-event-item-calendar-month
+  position: absolute
+  top: 1.5em
+  left: 50%
+  transform: translate(-50%, -50%)
+.agenda-event-item-calendar-day
+  position: absolute
+  top: 2.3em
+  left: 50%
+  transform: translate(-50%, -50%)
+
 
 // blog roll
 .blog-list-item.is-featured

@@ -18,7 +18,12 @@ collections:
     folder: "src/pages/blog"
     create: true
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post" }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "blog-post",
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
@@ -32,11 +37,22 @@ collections:
     folder: "src/pages/agenda"
     create: true
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "agenda-event" }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "agenda-event",
+        }
       - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Adresse", name: "adress", widget: "map", required: false }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Résumé", name: "resume", widget: "text", required: false }
-      - { label: "Description", name: "description", widget: "markdown", required: false }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "markdown",
+          required: false,
+        }
       - { label: "Afficher", name: "display", widget: "boolean" }
 
   - name: "pages"
@@ -46,7 +62,12 @@ collections:
         label: "Landing Page"
         name: "index"
         fields:
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page" }
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
@@ -55,7 +76,11 @@ collections:
               label: Mainpitch,
               name: mainpitch,
               widget: object,
-              fields: [{ label: Title, name: title, widget: string }, { label: Description, name: description, widget: text }],
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
             }
           - { label: Description, name: description, widget: string }
           - {
@@ -70,7 +95,11 @@ collections:
                     label: Blurbs,
                     name: blurbs,
                     widget: list,
-                    fields: [{ label: Image, name: image, widget: image }, { label: Text, name: text, widget: text }],
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Text, name: text, widget: text },
+                      ],
                   },
                 ],
             }
@@ -86,19 +115,31 @@ collections:
                     label: Image1,
                     name: image1,
                     widget: object,
-                    fields: [{ label: Image, name: image, widget: image }, { label: Alt, name: alt, widget: string }],
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
                   },
                   {
                     label: Image2,
                     name: image2,
                     widget: object,
-                    fields: [{ label: Image, name: image, widget: image }, { label: Alt, name: alt, widget: string }],
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
                   },
                   {
                     label: Image3,
                     name: image3,
                     widget: object,
-                    fields: [{ label: Image, name: image, widget: image }, { label: Alt, name: alt, widget: string }],
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
                   },
                 ],
             }
@@ -106,14 +147,24 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page" }
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
+            }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
         fields:
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page" }
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "product-page",
+            }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
@@ -130,7 +181,11 @@ collections:
                     label: Blurbs,
                     name: blurbs,
                     widget: list,
-                    fields: [{ label: Image, name: image, widget: image }, { label: Text, name: text, widget: text }],
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Text, name: text, widget: text },
+                      ],
                   },
                 ],
             }
@@ -146,19 +201,31 @@ collections:
                     label: Image1,
                     name: image1,
                     widget: object,
-                    fields: [{ label: Image, name: image, widget: image }, { label: Alt, name: alt, widget: string }],
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
                   },
                   {
                     label: Image2,
                     name: image2,
                     widget: object,
-                    fields: [{ label: Image, name: image, widget: image }, { label: Alt, name: alt, widget: string }],
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
                   },
                   {
                     label: Image3,
                     name: image3,
                     widget: object,
-                    fields: [{ label: Image, name: image, widget: image }, { label: Alt, name: alt, widget: string }],
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
                   },
                 ],
             }
@@ -166,7 +233,11 @@ collections:
               label: Testimonials,
               name: testimonials,
               widget: list,
-              fields: [{ label: Quote, name: quote, widget: string }, { label: Author, name: author, widget: string }],
+              fields:
+                [
+                  { label: Quote, name: quote, widget: string },
+                  { label: Author, name: author, widget: string },
+                ],
             }
           - { label: Full_image, name: full_image, widget: image }
           - {
@@ -185,7 +256,11 @@ collections:
                       [
                         { label: Plan, name: plan, widget: string },
                         { label: Price, name: price, widget: string },
-                        { label: Description, name: description, widget: string },
+                        {
+                          label: Description,
+                          name: description,
+                          widget: string,
+                        },
                         { label: Items, name: items, widget: list },
                       ],
                   },
