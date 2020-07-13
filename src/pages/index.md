@@ -1,9 +1,10 @@
 ---
 templateKey: index-page
-title: Amélie la vie
+title: Super citation jolie wahou
 image: /img/home-jumbotron.jpg
 heading: Habitat partagé
-subheading: Association loi de 1901
+subheading: Suite au Covid19, l'assemblée générale et l'édition 2020 de notre
+  randonnée pédèstre sont reportés à une date inconnue à ce jour.
 mainpitch:
   title: Notre histoire, nos missions
   description: >-
