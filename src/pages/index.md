@@ -5,7 +5,7 @@ image: /img/home-jumbotron.jpg
 heading: Section
 subheading: Association loi de 1901
 mainpitch:
-  title: Pourquoi l'associtation ?
+  title: Pourquoi l’association ?
   description: >-
     En décembre 2003, l'association Amélie la vie a été créée pour financer
     l'opération d'Amélie aux Etats Unis.
