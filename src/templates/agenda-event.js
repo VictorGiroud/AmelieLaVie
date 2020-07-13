@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
-export const AgendaEventTemplate = ({ content, contentComponent, date, description, resume, address, title, helmet }) => {
+export const AgendaEventTemplate = ({ content, contentComponent, date, resume, address, title, helmet }) => {
   const EventContent = contentComponent || Content;
 
   return (
@@ -26,7 +26,7 @@ export const AgendaEventTemplate = ({ content, contentComponent, date, descripti
               )}
             </p>
             <p className="has-text-weight-light is-size-5">{resume}</p>
-            <EventContent content={description} />
+            <EventContent content={content} />
           </div>
         </div>
       </div>
@@ -35,7 +35,6 @@ export const AgendaEventTemplate = ({ content, contentComponent, date, descripti
 };
 
 const AgendaEvent = ({ data }) => {
-  console.log(data);
   const { markdownRemark: event } = data;
 
   return (
@@ -44,7 +43,6 @@ const AgendaEvent = ({ data }) => {
         content={event.html}
         contentComponent={HTMLContent}
         resume={event.frontmatter.resume}
-        description={event.frontmatter.description}
         address={event.frontmatter.address}
         date={event.frontmatter.date}
         helmet={
@@ -70,7 +68,6 @@ export const pageQuery = graphql`
         date(formatString: "DD MMMM YYYY", locale: "fr")
         title
         resume
-        description
         address
       }
     }

@@ -5,10 +5,26 @@ $kaldi-red: #D64000
 $kaldi-red-invert: #fff
 
 $primary: #ffaf40
-$secondary: #fff6e9
 $primary-invert: #fff
+$secondary: #feeed8
+$secondary-invert: #fdfaf5
 $body-color: #333
 $black: #2b2523
+
+.section 
+  padding: 1rem 1.5rem!important
+.index > *:nth-child(odd)
+  background-color: $secondary-invert
+
+.section-container
+  display: flex;
+  align-items: center;
+  justify-content: center;
+.section-icon
+  flex: 0 0 5em
+.section-content
+  flex-grow: 1
+  padding-left: 1em
 
 .content .taglist
   list-style: none

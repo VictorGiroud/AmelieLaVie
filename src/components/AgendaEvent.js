@@ -12,16 +12,16 @@ class AgendaEvent extends React.Component {
     return (
       <>
         {years.map((year) => (
-          <>
+          <div key={year}>
             <div className="is-size-4 has-text-weight-bold">{year}</div>
             <div className="columns is-multiline agenda">
               {events
                 .filter((event) => event.node.frontmatter.year === year)
                 .map(({ node: event }) => (
-                  <EventItem event={event} />
+                  <EventItem event={event} key={event.id} />
                 ))}
             </div>
-          </>
+          </div>
         ))}
         {events.length === 0 && <div>Aucun évenement n'est planifié pour le moment.</div>}
       </>

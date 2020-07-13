@@ -7,14 +7,39 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import AgendaEvent from "../components/AgendaEvent";
 
+import story from "../img/story.svg";
+import colibriLeft from "../img/colibri_bg_left.svg";
+import colibriRight from "../img/colibri_bg_right.svg";
+
+export const Section = ({ children, odd }) => (
+  <section
+    className="section"
+    style={{
+      backgroundPosition: odd ? `bottom 1em right 1em` : `bottom 1em left 1em`,
+      backgroundImage: `url(${odd ? colibriRight : colibriLeft})`,
+      backgroundRepeat: `no-repeat`,
+      backgroundSize: `4em`,
+    }}
+  >
+    <div className="container">
+      <div className="section">
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <div className="content">{children}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, description, intro }) => (
-  <div>
+  <div className="index">
     <div
-      className="full-width margin-top-0"
+      className="full-width margin-top-0 section-secondary"
       style={{
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,
-        backgroundColor: `#fff6e9`,
       }}
     >
       <div
@@ -48,53 +73,63 @@ export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, descr
         </h3>
       </div>
     </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">Evenements à venir</h3>
-                  <AgendaEvent />
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">Actualités</h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Plus d'articles
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <Section odd>
+      <div className="content">
+        <div className="tile">
+          <h1 className="title">{mainpitch.title}</h1>
+        </div>
+        <div className="section-container">
+          <div className="section-icon is-hidden-mobile">
+            <img src={story} alt="Histoire" style={{ width: "100%" }} />
+          </div>
+          <div className="section-content">
+            <p className="subtitle">{mainpitch.description}</p>
           </div>
         </div>
       </div>
-    </section>
+      <div className="columns">
+        <div className="column is-12 has-text-centered">
+          <Link className="btn" to="/products">
+            En savoir plus sur l'association
+          </Link>
+        </div>
+      </div>
+    </Section>
+    <Section>
+      <div className="columns">
+        <div className="column is-12">
+          <h1 className="title">Evenements à venir</h1>
+          <AgendaEvent />
+        </div>
+      </div>
+    </Section>
+    <Section odd>
+      <div className="columns">
+        <div className="column is-12">
+          <h1 className="title">{heading}</h1>
+          <p>{description}</p>
+        </div>
+      </div>
+      <Features gridItems={intro.blurbs} />
+      <div className="columns">
+        <div className="column is-12 has-text-centered">
+          <Link className="btn" to="/products">
+            En savoir plus sur notre projet d'habitat partagé
+          </Link>
+        </div>
+      </div>
+    </Section>
+    <Section>
+      <div className="column is-12">
+        <h3 className="has-text-weight-semibold is-size-2">Actualités</h3>
+        <BlogRoll />
+        <div className="column is-12 has-text-centered">
+          <Link className="btn" to="/blog">
+            Plus d'articles
+          </Link>
+        </div>
+      </div>
+    </Section>
   </div>
 );
 

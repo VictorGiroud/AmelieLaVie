@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import facebook from "../img/social/bluefacebook.svg";
-import colibri from "../img/colibrilogo.svg";
+import youtube from "../img/social/youtube.svg";
 import logo from "../img/amelielavie.png";
 
 const Navbar = class extends React.Component {
@@ -64,14 +64,14 @@ const Navbar = class extends React.Component {
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
-              <a className="navbar-item" href="#" rel="noopener noreferrer">
-                <span className="icon">
-                  <img src={colibri} alt="Les Colibris" title="Les Colibris" />
-                </span>
-              </a>
               <a className="navbar-item" href="https://facebook.com/associationamelielavie" target="_blank" rel="noopener noreferrer">
                 <span className="icon facebook">
                   <img src={facebook} alt="Facebook" title="Facebook" />
+                </span>
+              </a>
+              <a className="navbar-item" href="https://www.youtube.com/channel/UCxTbiQ0ffRnZfrjdbNAf10w" target="_blank" rel="noopener noreferrer">
+                <span className="icon">
+                  <img src={youtube} alt="Youtube" title="Youtube" />
                 </span>
               </a>
             </div>
