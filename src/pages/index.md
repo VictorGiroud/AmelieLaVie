@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Amélie la vie
 image: /img/home-jumbotron.jpg
-heading: Section
+heading: Habitat partagé
 subheading: Association loi de 1901
 mainpitch:
   title: Pourquoi l’association ?
@@ -12,10 +12,8 @@ mainpitch:
 
 
     Aujourd’hui, nous nous impliquons auprès des personnes cérébrolésées et de leurs proches : collecte de fonds, conseils, éventuellement aides financières. Notre but étant à la fois d'aider la recherche médicale et d'accompagner dans l'autonomie les personnes cérébrolésées.
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
+description: Nous avons pour projet la création d'un habitat partagé pour
+  accueillir des adultes cérébrolésés.
 intro:
   blurbs:
     - image: /img/coffee.png
