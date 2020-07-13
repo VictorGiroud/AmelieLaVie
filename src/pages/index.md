@@ -5,13 +5,12 @@ image: /img/home-jumbotron.jpg
 heading: Habitat partagé
 subheading: Association loi de 1901
 mainpitch:
-  title: Pourquoi l’association ?
+  title: Notre histoire, nos missions
   description: >-
     En décembre 2003, l'association Amélie la vie a été créée pour financer
     l'opération d'Amélie aux Etats Unis.
 
-
-    Aujourd’hui, nous nous impliquons auprès des personnes cérébrolésées et de leurs proches : collecte de fonds, conseils, éventuellement aides financières. Notre but étant à la fois d'aider la recherche médicale et d'accompagner dans l'autonomie les personnes cérébrolésées.
+    Aujourd’hui, nous nous impliquons auprès des personnes cérébrolésées et de leurs proches avec pour but de les accompagner dans l'autonomie.
 description: Nous avons pour projet la création d'un habitat partagé pour
   accueillir des adultes cérébrolésés.
 intro:
