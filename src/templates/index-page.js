@@ -35,24 +35,16 @@ export const Section = ({ children, odd }) => (
 
 export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, description, intro }) => (
   <div className="index">
-    <div
-      className="full-width margin-top-0 section-secondary"
-      style={{
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
+    <div className="full-width full-width-padding">
       <div
         style={{
           display: "flex",
-          lineHeight: "1",
-          justifyContent: "space-around",
           alignItems: "center",
           flexDirection: "column",
         }}
       >
         <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+          className="is-size-3-mobile is-size-2-tablet is-size-1-widescreen quote"
           style={{
             color: "#ffaf40",
             lineHeight: "1",
@@ -61,19 +53,14 @@ export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, descr
         >
           {title}
         </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            color: "#ffaf40",
-            lineHeight: "1",
-            padding: "0.25em",
-          }}
-        >
-          {subheading}
-        </h3>
       </div>
     </div>
     <Section odd>
+      {subheading && (
+        <article class="message is-primary">
+          <div class="message-body">{subheading}</div>
+        </article>
+      )}
       <div className="content">
         <div className="tile">
           <h1 className="title">{mainpitch.title}</h1>
@@ -96,10 +83,13 @@ export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, descr
       </div>
     </Section>
     <Section>
-      <div className="columns">
-        <div className="column is-12">
-          <h1 className="title">Evenements à venir</h1>
-          <AgendaEvent />
+      <div className="column is-12">
+        <h3 className="has-text-weight-semibold is-size-2">Actualités</h3>
+        <BlogRoll />
+        <div className="column is-12 has-text-centered">
+          <Link className="btn" to="/blog">
+            Plus d'articles
+          </Link>
         </div>
       </div>
     </Section>
@@ -119,14 +109,12 @@ export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, descr
         </div>
       </div>
     </Section>
+
     <Section>
-      <div className="column is-12">
-        <h3 className="has-text-weight-semibold is-size-2">Actualités</h3>
-        <BlogRoll />
-        <div className="column is-12 has-text-centered">
-          <Link className="btn" to="/blog">
-            Plus d'articles
-          </Link>
+      <div className="columns">
+        <div className="column is-12">
+          <h1 className="title">Evenements à venir</h1>
+          <AgendaEvent />
         </div>
       </div>
     </Section>

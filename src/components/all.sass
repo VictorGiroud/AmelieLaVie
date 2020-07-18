@@ -1,4 +1,5 @@
 @import "~bulma/sass/utilities/initial-variables"
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
 
 // Config vars
 $kaldi-red: #D64000
@@ -6,14 +7,14 @@ $kaldi-red-invert: #fff
 
 $primary: #ffaf40
 $primary-invert: #fff
-$secondary: #feeed8
+$secondary: #fff6eb
 $secondary-invert: #fdfaf5
 $body-color: #333
 $black: #2b2523
 
 .section 
   padding: 1rem 1.5rem!important
-.index > *:nth-child(odd)
+.index > section:nth-child(odd)
   background-color: $secondary-invert
 
 .section-container
@@ -25,6 +26,18 @@ $black: #2b2523
 .section-content
   flex-grow: 1
   padding-left: 1em
+
+.quote
+  font-family: 'Lora', serif!important
+  font-style: italic
+  font-weight: 400!important
+  transform: rotate(1deg);
+.quote:before 
+  content: "“"
+  color: $secondary
+.quote:after 
+  content: "„"
+  color: $secondary
 
 .content .taglist
   list-style: none
@@ -69,6 +82,9 @@ $black: #2b2523
     display: flex
     justify-content: center
     align-items: center
+
+.full-width-padding
+  padding: 1em
 
 .btn
     display: inline-block
@@ -148,6 +164,7 @@ $menu-label-color: $white-ter
 .agenda-event-item-container
   padding: 1em
 .agenda-event-item
+  border-left: 3px $primary solid;
   background-color: $secondary
   height: 100%
   display: flex
@@ -181,13 +198,14 @@ $menu-label-color: $white-ter
 
 
 // blog roll
-.blog-list-item.is-featured
-  background-color: #d6400033;
+.blog-list-item
+  border-left: 3px $primary solid
+  background-color: white!important
 .blog-list-item header
   display: flex;
   margin-bottom: 1em;
 .blog-list-item .featured-thumbnail
-  flex-basis: 35%;
+  flex: 0 0 30%;
   margin: 0 1.5em 0 0;
 
 

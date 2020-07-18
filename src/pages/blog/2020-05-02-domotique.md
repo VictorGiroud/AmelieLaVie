@@ -3,11 +3,11 @@ templateKey: blog-post
 title: Domotique
 date: 2020-05-02T20:03:00.000Z
 description: Vive la domotique.
-featuredpost: true
 featuredimage: /img/illustration-maison-connectee.jpg
 tags:
   - domotique test
 ---
+
 Alors c'est pour tester **un peu** !
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sodales convallis sagittis. Etiam non tempus orci, ultrices tincidunt velit. Nullam quis nibh mauris. Donec ornare felis iaculis, malesuada nisi sollicitudin, dapibus velit. In volutpat tincidunt mauris eu fermentum. Curabitur convallis ac nulla sed pulvinar. Donec tellus erat, sodales posuere nibh eget, ullamcorper varius dolor. Sed cursus neque ut felis accumsan vehicula ac ac elit. In dictum a lorem sit amet feugiat. Nulla et diam a sem consequat blandit. Vivamus et tempor velit, in consequat magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam pretium massa sit amet orci porttitor iaculis. Pellentesque maximus augue ut ligula efficitur, in rhoncus felis tempor. Ut tristique massa at risus tempus, id consequat lorem blandit.
@@ -22,6 +22,6 @@ Vivamus cursus auctor tellus. Nam ullamcorper sagittis sem in volutpat. Mauris a
 
 #### Il reste à :
 
-* 1
-* 2
-* 3
+- 1
+- 2
+- 3
