@@ -107,6 +107,8 @@ const BlogPost = ({ data, location }) => {
           <Helmet titleTemplate="%s | Actualités">
             <title>{`${post.frontmatter.title}`}</title>
             <meta name="description" content={`${post.frontmatter.description}`} />
+            <meta property="og:type" content="article" />
+            <meta property="og:title" content={`${post.frontmatter.title}`} />
             {post.frontmatter.featuredimage && <meta property="og:image" content={`${post.frontmatter.featuredimage.childImageSharp.fluid.src}`} />}
           </Helmet>
         }
