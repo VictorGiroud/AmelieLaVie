@@ -1,12 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {
+  TwitterIcon,
+  EmailIcon,
+  EmailShareButton,
+  FacebookIcon,
+  FacebookShareButton,
+  LinkedinShareButton,
+  LinkedinIcon,
+  TwitterShareButton,
+  WhatsappShareButton,
+  WhatsappIcon,
+} from "react-share";
 import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
-export const BlogPostTemplate = ({ content, contentComponent, description, tags, title, helmet }) => {
+import clockIcon from "../img/icons/clock.svg";
+
+export const BlogPostTemplate = ({ content, contentComponent, description, date, tags, title, readingTime, helmet }) => {
   const PostContent = contentComponent || Content;
 
   return (
@@ -15,20 +29,51 @@ export const BlogPostTemplate = ({ content, contentComponent, description, tags,
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">{title}</h1>
+            <h1 className="title is-size-2 is-bold-light">{title}</h1>
+            <p>
+              <img src={clockIcon} alt="Temps de lecture" style={{ height: "0.8em" }} />
+              <span> {date}</span>
+              <span> &bull; </span>
+              <span>
+                Temps de lecture : {Math.round(readingTime)} minute{Math.round(readingTime) > 1 ? "s" : null}
+              </span>
+            </p>
             <p>{description}</p>
+            <hr />
             <PostContent content={content} />
+
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <>
+                <hr style={{ marginTop: `2rem` }} />
+                <div className="share is-size-5 is-flex">
+                  Partager cet article :
+                  <EmailShareButton url={window.location.href} subject={title} body={description}>
+                    <EmailIcon size={32} round />
+                  </EmailShareButton>
+                  <FacebookShareButton url={window.location.href} quote={title}>
+                    <FacebookIcon size={32} round />
+                  </FacebookShareButton>
+                  <TwitterShareButton url={window.location.href} title={title}>
+                    <TwitterIcon size={32} round />
+                  </TwitterShareButton>
+                  <LinkedinShareButton url={window.location.href}>
+                    <LinkedinIcon size={32} round />
+                  </LinkedinShareButton>
+                  <WhatsappShareButton url={window.location.href} title={`${title} - ${description}`} separator=" ">
+                    <WhatsappIcon size={32} round />
+                  </WhatsappShareButton>
+                </div>
+                <div style={{ marginTop: `2rem` }}>
+                  <h4>Tags</h4>
+                  <ul className="taglist">
+                    {tags.map((tag) => (
+                      <li key={tag + `tag`}>
+                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </>
             ) : null}
           </div>
         </div>
@@ -55,14 +100,16 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        date={post.frontmatter.date}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Actualités">
             <title>{`${post.frontmatter.title}`}</title>
             <meta name="description" content={`${post.frontmatter.description}`} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        readingTime={post.fields.readingTime.minutes}
       />
     </Layout>
   );
@@ -86,6 +133,11 @@ export const pageQuery = graphql`
         title
         description
         tags
+      }
+      fields {
+        readingTime {
+          minutes
+        }
       }
     }
   }

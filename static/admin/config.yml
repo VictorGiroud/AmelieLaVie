@@ -13,9 +13,9 @@ public_folder: /img
 locale: "fr"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
+  - name: "actualites"
+    label: "Actualités"
+    folder: "src/pages/actualites"
     create: true
     fields:
       - {
@@ -147,9 +147,9 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+      - file: "src/pages/association/index.md"
+        label: "Association"
+        name: "association"
         fields:
           - {
               label: "Template Key",
@@ -157,8 +157,8 @@ collections:
               widget: "hidden",
               default: "about-page",
             }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Titre", name: "title", widget: "string" }
+          - { label: "Contenu", name: "body", widget: "markdown" }
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"

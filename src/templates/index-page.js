@@ -87,7 +87,7 @@ export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, descr
         <h3 className="has-text-weight-semibold is-size-2">Actualités</h3>
         <BlogRoll />
         <div className="column is-12 has-text-centered">
-          <Link className="btn" to="/blog">
+          <Link className="btn" to="/actualites">
             Plus d'articles
           </Link>
         </div>

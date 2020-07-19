@@ -32,9 +32,20 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        includePaths: [{ regex: "^/actualites/" }],
+        height: 3,
+        prependToBody: false,
+        color: `#ffaf40`,
+        footerHeight: 380,
+      },
+    },
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          `gatsby-remark-reading-time`,
           {
             resolve: "gatsby-remark-relative-images",
             options: {
