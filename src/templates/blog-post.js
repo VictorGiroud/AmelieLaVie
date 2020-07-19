@@ -17,13 +17,14 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import useSiteMetadata from "../hooks/useSiteMetadata";
 
 import clockIcon from "../img/icons/clock.svg";
 
-export const BlogPostTemplate = ({ content, contentComponent, description, date, tags, title, readingTime, helmet }) => {
+export const BlogPostTemplate = ({ location, content, contentComponent, description, date, tags, title, readingTime, helmet }) => {
   const PostContent = contentComponent || Content;
-  const windowGlobal = typeof window !== "undefined" && window;
-  const url = windowGlobal.location.href;
+  const { siteURL } = useSiteMetadata();
+  const url = `${siteURL}${location.pathname}`;
 
   return (
     <section className="section">
@@ -92,9 +93,8 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
 };
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, location }) => {
   const { markdownRemark: post } = data;
-  console.log(data);
 
   return (
     <Layout>
@@ -112,6 +112,7 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         readingTime={post.fields.readingTime.minutes}
+        location={location}
       />
     </Layout>
   );
