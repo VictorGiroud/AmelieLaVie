@@ -84,7 +84,7 @@ export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, descr
     </Section>
     <Section>
       <div className="column is-12">
-        <h3 className="has-text-weight-semibold is-size-2">Actualités</h3>
+        <h1 className="title">Actualités</h1>
         <BlogRoll />
         <div className="column is-12 has-text-centered">
           <Link className="btn" to="/actualites">

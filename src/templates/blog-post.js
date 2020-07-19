@@ -22,6 +22,8 @@ import clockIcon from "../img/icons/clock.svg";
 
 export const BlogPostTemplate = ({ content, contentComponent, description, date, tags, title, readingTime, helmet }) => {
   const PostContent = contentComponent || Content;
+  const windowGlobal = typeof window !== "undefined" && window;
+  const url = windowGlobal.location.href;
 
   return (
     <section className="section">
@@ -47,19 +49,19 @@ export const BlogPostTemplate = ({ content, contentComponent, description, date,
                 <hr style={{ marginTop: `2rem` }} />
                 <div className="share is-size-5 is-flex">
                   Partager cet article :
-                  <EmailShareButton url={window.location.href} subject={title} body={description}>
+                  <EmailShareButton url={url} subject={title} body={description}>
                     <EmailIcon size={32} round />
                   </EmailShareButton>
-                  <FacebookShareButton url={window.location.href} quote={title}>
+                  <FacebookShareButton url={url} quote={title}>
                     <FacebookIcon size={32} round />
                   </FacebookShareButton>
-                  <TwitterShareButton url={window.location.href} title={title}>
+                  <TwitterShareButton url={url} title={title}>
                     <TwitterIcon size={32} round />
                   </TwitterShareButton>
-                  <LinkedinShareButton url={window.location.href}>
+                  <LinkedinShareButton url={url}>
                     <LinkedinIcon size={32} round />
                   </LinkedinShareButton>
-                  <WhatsappShareButton url={window.location.href} title={`${title} - ${description}`} separator=" ">
+                  <WhatsappShareButton url={url} title={`${title} - ${description}`} separator=" ">
                     <WhatsappIcon size={32} round />
                   </WhatsappShareButton>
                 </div>
