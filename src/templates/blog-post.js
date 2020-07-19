@@ -21,10 +21,9 @@ import useSiteMetadata from "../hooks/useSiteMetadata";
 
 import clockIcon from "../img/icons/clock.svg";
 
-export const BlogPostTemplate = ({ location, content, contentComponent, description, date, tags, title, readingTime, helmet }) => {
+export const BlogPostTemplate = ({ url, content, contentComponent, description, date, tags, title, readingTime, helmet }) => {
   const PostContent = contentComponent || Content;
   const { siteURL } = useSiteMetadata();
-  const url = `${siteURL}${location.pathname}`;
 
   return (
     <section className="section">
@@ -95,6 +94,8 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data, location }) => {
   const { markdownRemark: post } = data;
+  const { siteURL } = useSiteMetadata();
+  const url = `${siteURL}${location.pathname}`;
 
   return (
     <Layout>
@@ -109,13 +110,13 @@ const BlogPost = ({ data, location }) => {
             <meta name="description" content={`${post.frontmatter.description}`} />
             <meta property="og:type" content="article" />
             <meta property="og:title" content={`${post.frontmatter.title}`} />
-            {post.frontmatter.featuredimage && <meta property="og:image" content={`${post.frontmatter.featuredimage.childImageSharp.fluid.src}`} />}
+            {post.frontmatter.featuredimage && <meta property="og:image" content={`${siteURL}${post.frontmatter.featuredimage.childImageSharp.fluid.src}`} />}
           </Helmet>
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         readingTime={post.fields.readingTime.minutes}
-        location={location}
+        url={url}
       />
     </Layout>
   );
