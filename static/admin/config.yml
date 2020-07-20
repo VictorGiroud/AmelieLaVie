@@ -85,15 +85,14 @@ collections:
                   { label: Description, name: description, widget: text },
                 ],
             }
-          - { label: Description, name: description, widget: string }
           - {
-              label: Intro,
+              label: Section,
               name: intro,
               widget: object,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
+                  { label: En tête, name: heading, widget: string },
+
                   {
                     label: Blurbs,
                     name: blurbs,
@@ -104,6 +103,7 @@ collections:
                         { label: Text, name: text, widget: text },
                       ],
                   },
+                  { label: Description, name: description, widget: text },
                 ],
             }
       - file: "src/pages/association/index.md"

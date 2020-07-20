@@ -97,19 +97,23 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
       <div className="columns">
         <div className="column is-12">
           <h1 className="title">{heading}</h1>
-          <p>{description}</p>
+          <p>{intro.heading}</p>
         </div>
       </div>
       <Features gridItems={intro.blurbs} />
       <div className="columns">
+        <div className="column is-12">
+          <p>{intro.description}</p>
+        </div>
+      </div>
+      <div className="columns">
         <div className="column is-12 has-text-centered">
-          <Link className="btn" to="/products">
+          <Link className="btn" to="/habitat-partage">
             En savoir plus sur notre projet d'habitat partagé
           </Link>
         </div>
       </div>
     </Section>
-
     <Section>
       <div className="columns">
         <div className="column is-12">
