@@ -18,17 +18,10 @@ intro:
   blurbs:
     - image: /img/colibirs.jpg
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
+        L'habitat s'appellera Les Colibirs parce que les oiseaux c'est joli. Piou piou. Vive les oiseaux. Piou piou piou piou. Piou piou piou piou. Piou piou piou piou.
     - image: /img/plan.jpg
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
+        Il y aura plusieurs habitations mais aussi des parties communes. Donc c'est trop bien vivement que ça soit construit on va bien s'amuser. Héhé. C'est cool non ? En plus il y a des plans donc voilà on peut voir un peu.
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
