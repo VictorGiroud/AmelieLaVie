@@ -40,7 +40,7 @@ module.exports = {
         height: 3,
         prependToBody: false,
         color: `#ffaf40`,
-        footerHeight: 380,
+        footerHeight: 350,
       },
     },
     {

@@ -1,11 +1,11 @@
 ---
 templateKey: index-page
-title: Super citation jolie wahou
+title: Vive les framboises
 image: /img/home-jumbotron.jpg
 heading: Habitat partagé
-subheading: Suite au Covid19, l'assemblée générale et l'édition 2020 de notre
+alerte: Suite au Covid19, l'assemblée générale et l'édition 2020 de notre
   randonnée pédèstre sont reportés à une date inconnue à ce jour.
-mainpitch:
+presentation:
   title: Notre histoire, nos missions
   description: >-
     En décembre 2003, l'association Amélie la vie a été créée pour financer
@@ -49,20 +49,4 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
-main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
-  image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
 ---

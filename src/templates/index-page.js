@@ -33,7 +33,7 @@ export const Section = ({ children, odd }) => (
   </section>
 );
 
-export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, description, intro }) => (
+export const IndexPageTemplate = ({ title, heading, alerte, presentation, description, intro }) => (
   <div className="index">
     <div className="full-width full-width-padding">
       <div
@@ -56,21 +56,21 @@ export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, descr
       </div>
     </div>
     <Section odd>
-      {subheading && (
+      {alerte && (
         <article class="message is-primary">
-          <div class="message-body">{subheading}</div>
+          <div class="message-body">{alerte}</div>
         </article>
       )}
       <div className="content">
         <div className="tile">
-          <h1 className="title">{mainpitch.title}</h1>
+          <h1 className="title">{presentation.title}</h1>
         </div>
         <div className="section-container">
           <div className="section-icon is-hidden-mobile">
             <img src={story} alt="Histoire" style={{ width: "100%" }} />
           </div>
           <div className="section-content">
-            <p className="subtitle">{mainpitch.description}</p>
+            <p className="subtitle">{presentation.description}</p>
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@ export const IndexPageTemplate = ({ title, heading, subheading, mainpitch, descr
     <Section>
       <div className="column is-12">
         <h1 className="title">Actualités</h1>
-        <BlogRoll />
+        <BlogRoll limit={5} />
         <div className="column is-12 has-text-centered">
           <Link className="btn" to="/actualites">
             Plus d'articles
@@ -125,8 +125,8 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
+  alerte: PropTypes.string,
+  presentation: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
@@ -142,8 +142,8 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
+        alerte={frontmatter.alerte}
+        presentation={frontmatter.presentation}
         description={frontmatter.description}
         intro={frontmatter.intro}
       />
@@ -174,8 +174,8 @@ export const pageQuery = graphql`
           }
         }
         heading
-        subheading
-        mainpitch {
+        alerte
+        presentation {
           title
           description
         }

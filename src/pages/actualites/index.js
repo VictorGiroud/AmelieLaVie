@@ -13,7 +13,7 @@ export default class BlogIndexPage extends React.Component {
               <div className="column is-10 is-offset-1">
                 <div className="section">
                   <h1 className="title">Actualités</h1>
-                  <BlogRoll />
+                  <BlogRoll limit={21} />
                 </div>
               </div>
             </div>

@@ -23,7 +23,6 @@ import clockIcon from "../img/icons/clock.svg";
 
 export const BlogPostTemplate = ({ url, content, contentComponent, description, date, tags, title, readingTime, helmet }) => {
   const PostContent = contentComponent || Content;
-  const { siteURL } = useSiteMetadata();
 
   return (
     <section className="section">

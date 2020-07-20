@@ -5,13 +5,13 @@ import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 class BlogRoll extends React.Component {
   render() {
-    const { data } = this.props;
+    const { data, limit } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <div className="columns is-multiline">
         {posts &&
-          posts.map(({ node: post }, index) => {
+          posts.slice(0, limit).map(({ node: post }, index) => {
             return index === 0 ? (
               <div className="is-parent column is-12" key={post.id}>
                 <article className={`blog-list-item tile is-child box notification`}>
@@ -74,11 +74,11 @@ BlogRoll.propTypes = {
   }),
 };
 
-export default () => (
+export default ({ limit }) => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
-        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, filter: { frontmatter: { templateKey: { eq: "blog-post" } } }) {
+        allMarkdownRemark(limit: 21, sort: { order: DESC, fields: [frontmatter___date] }, filter: { frontmatter: { templateKey: { eq: "blog-post" } } }) {
           edges {
             node {
               excerpt(pruneLength: 400)
@@ -104,6 +104,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <BlogRoll data={data} count={count} limit={limit} />}
   />
 );

@@ -38,11 +38,6 @@ const Footer = class extends React.Component {
                         Habitat Partagé
                       </Link>
                     </li>
-                    <li>
-                      <a className="navbar-item" href="/admin" target="_blank" rel="noopener noreferrer">
-                        Admin
-                      </a>
-                    </li>
                   </ul>
                 </section>
               </div>
@@ -63,6 +58,11 @@ const Footer = class extends React.Component {
                       <Link className="navbar-item" to="/mentions-legales">
                         Mentions légales
                       </Link>
+                    </li>
+                    <li>
+                      <a className="navbar-item" href="/admin" target="_blank" rel="noopener noreferrer">
+                        Admin
+                      </a>
                     </li>
                   </ul>
                 </section>
