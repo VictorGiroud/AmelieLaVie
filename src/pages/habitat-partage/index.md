@@ -2,8 +2,8 @@
 heading: Great coffee with a conscience
 path: /habitat-partage
 templateKey: habitat-page
-title: Our Coffee
-image: /img/hope.jpg
+title: "Habitat partagé : les Colibris"
+image: /img/colibriheader.jpg
 description: Kaldi is the ultimate spot for coffee lovers who want to learn
   about their java’s origin and support the farmers that grew it. We take coffee
   production, roasting and brewing seriously and we’re glad to pass that
