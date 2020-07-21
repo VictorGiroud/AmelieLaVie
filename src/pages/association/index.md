@@ -3,7 +3,7 @@ path: /association
 templateKey: default-page
 title: "L'association"
 subtitle: "Amélie la vie"
-image: /img/colibriheader.jpg
+image: /img/hope.jpg
 description: Présentation de l'association Amélie la Vie
 ---
 

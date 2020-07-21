@@ -124,9 +124,8 @@ collections:
               required: false,
             }
           - { label: Description, name: description, widget: string }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: image, widget: image, required: false }
           - { label: "Contenu", name: "body", widget: "markdown" }
-
       - file: "src/pages/habitat-partage/index.md"
         label: "Habitat partagé"
         name: "habitat-partage"
@@ -145,5 +144,45 @@ collections:
               required: false,
             }
           - { label: Description, name: description, widget: string }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: "Contenu", name: "body", widget: "markdown" }
+      - file: "src/pages/mentions-légales/index.md"
+        label: "Mentions légales"
+        name: "mentions-legales"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "default-page",
+            }
+          - { label: Titre, name: title, widget: string }
+          - {
+              label: Sous-titre,
+              name: subtitle,
+              widget: string,
+              required: false,
+            }
+          - { label: Description, name: description, widget: string }
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: "Contenu", name: "body", widget: "markdown" }
+      - file: "src/pages/nous-soutenir/index.md"
+        label: "Nous soutenir"
+        name: "nous-soutenir"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "default-page",
+            }
+          - { label: Titre, name: title, widget: string }
+          - {
+              label: Sous-titre,
+              name: subtitle,
+              widget: string,
+              required: false,
+            }
+          - { label: Description, name: description, widget: string }
+          - { label: Image, name: image, widget: image, required: false }
           - { label: "Contenu", name: "body", widget: "markdown" }

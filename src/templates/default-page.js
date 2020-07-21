@@ -12,12 +12,13 @@ export const DefaultPageTemplate = ({ image, content, contentComponent, title, s
   return (
     <div className="content">
       {helmet || ""}
-      <FullWidthImage image={image} title={title} subtitle={subtitle} />
+      {image && <FullWidthImage image={image} title={title} subtitle={subtitle} />}
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
             <div className="columns">
               <div className="column is-7 is-offset-1">
+                {!image && <h1>{title}</h1>}
                 <HtmlContent content={content} />
               </div>
             </div>
