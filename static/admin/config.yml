@@ -118,15 +118,15 @@ collections:
             }
           - { label: "Titre", name: "title", widget: "string" }
           - { label: "Contenu", name: "body", widget: "markdown" }
-      - file: "src/pages/products/index.md"
-        label: "Products Page"
-        name: "products"
+      - file: "src/pages/habitat-partage/index.md"
+        label: "Habitat partagé"
+        name: "habitat-partage"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "product-page",
+              default: "habitat-page",
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }

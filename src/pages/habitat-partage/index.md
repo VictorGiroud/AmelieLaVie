@@ -1,7 +1,7 @@
 ---
 heading: Great coffee with a conscience
-path: /products
-templateKey: product-page
+path: /habitat-partage
+templateKey: habitat-page
 title: Our Coffee
 image: /img/hope.jpg
 description: Kaldi is the ultimate spot for coffee lovers who want to learn
