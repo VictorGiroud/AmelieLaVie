@@ -1,7 +1,10 @@
 ---
-templateKey: "about-page"
 path: /association
-title: About our values
+templateKey: default-page
+title: "L'association"
+subtitle: "Amélie la vie"
+image: /img/colibriheader.jpg
+description: Présentation de l'association Amélie la Vie
 ---
 
 ### Shade-grown coffee
