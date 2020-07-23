@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, createRef } from "react";
 import { navigate } from "gatsby-link";
 import Recaptcha from "react-google-recaptcha";
 import PropTypes from "prop-types";
@@ -18,27 +18,27 @@ function encode(data) {
 
 export const ContactPageTemplate = ({ image, content, contentComponent, title, subtitle, description, helmet }) => {
   const [formData, setFormData] = useState({ isValidated: false });
-  const recaptchaRef = useRef(null);
+  const recaptchaRef = createRef();
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    console.log(formData);
+    const recaptchaValue = recaptchaRef.current.getValue();
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
+        "g-recaptcha-response": recaptchaValue,
         ...formData,
       }),
     })
       .then(() => navigate(form.getAttribute("action")))
       .catch((error) => alert(error));
   };
-
-  const handleRecaptcha = (value) => setFormData({ ...formData, "g-recaptcha-response": value });
 
   const HtmlContent = contentComponent || Content;
 
@@ -79,14 +79,14 @@ export const ContactPageTemplate = ({ image, content, contentComponent, title, s
                   </div>
                   <div className="field">
                     <label className="label" htmlFor={"message"}>
-                      Message ({RECAPTCHA_KEY})
+                      Message
                     </label>
                     <div className="control">
                       <textarea className="textarea" name={"message"} onChange={handleChange} id={"message"} required={true} />
                     </div>
                   </div>
                   <div className="field">
-                    <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} onChange={handleRecaptcha} />
+                    <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} />
                   </div>
                   <div className="field">
                     <button className="button is-link" type="submit">
