@@ -27,7 +27,7 @@ export const ContactPageTemplate = ({ image, content, contentComponent, title, s
     const form = e.target;
     const recaptchaValue = recaptchaRef.current.getValue();
 
-    fetch("/", {
+    fetch("/?no-cache=1", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
@@ -36,7 +36,15 @@ export const ContactPageTemplate = ({ image, content, contentComponent, title, s
         ...formData,
       }),
     })
-      .then(() => navigate(form.getAttribute("action")))
+      .then((response) => {
+        if (response.status === 200 && !response.redirected) {
+          //netlify doesnt give an error on recaptcha fail (only 303 redirect...)
+          console.log(response);
+          console.log(JSON.stringify(response));
+          navigate(form.getAttribute("action"));
+        }
+      })
+
       .catch((error) => alert(error));
   };
 
