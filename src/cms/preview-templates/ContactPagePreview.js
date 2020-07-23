@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { DefaultPageTemplate } from "../../templates/default-page";
+import { ContactPageTemplate } from "../../templates/contact-page";
 
-const DefaultPagePreview = ({ entry, getAsset }) => {
+const ContactPagePreview = ({ entry, getAsset }) => {
   return (
-    <DefaultPageTemplate
+    <ContactPageTemplate
       image={getAsset(entry.getIn(["data", "image"]))}
       title={entry.getIn(["data", "title"])}
       subtitle={entry.getIn(["data", "subtitle"])}
@@ -13,11 +13,11 @@ const DefaultPagePreview = ({ entry, getAsset }) => {
   );
 };
 
-DefaultPagePreview.propTypes = {
+ContactPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 };
 
-export default DefaultPagePreview;
+export default ContactPagePreview;

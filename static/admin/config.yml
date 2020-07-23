@@ -186,3 +186,23 @@ collections:
           - { label: Description, name: description, widget: string }
           - { label: Image, name: image, widget: image, required: false }
           - { label: "Contenu", name: "body", widget: "markdown" }
+      - file: "src/pages/contact/index.md"
+        label: "Contact"
+        name: "Contact"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "contact-page",
+            }
+          - { label: Titre, name: title, widget: string }
+          - {
+              label: Sous-titre,
+              name: subtitle,
+              widget: string,
+              required: false,
+            }
+          - { label: Description, name: description, widget: string }
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: "Contenu", name: "body", widget: "markdown" }
