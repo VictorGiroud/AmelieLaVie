@@ -79,7 +79,7 @@ export const ContactPageTemplate = ({ image, content, contentComponent, title, s
                   </div>
                   <div className="field">
                     <label className="label" htmlFor={"message"}>
-                      Message
+                      Message ({RECAPTCHA_KEY})
                     </label>
                     <div className="control">
                       <textarea className="textarea" name={"message"} onChange={handleChange} id={"message"} required={true} />
