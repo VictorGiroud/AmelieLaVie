@@ -5,9 +5,11 @@
   "author": "Victor Giroud",
   "dependencies": {
     "bulma": "^0.8.0",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-google-analytics": "^2.3.13",
+    "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-netlify": "^2.2.4",
     "gatsby-plugin-netlify-cms": "^4.2.5",
     "gatsby-plugin-page-progress": "^2.1.0",
@@ -45,7 +47,7 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "npm run develop",
-    "build": "npm run clean && echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && echo GA_TRACKING_ID=$GA_TRACKING_ID >> .env.production && gatsby build",
+    "build": "npm run clean && echo MAILCHIMP_ENDPOINT=$MAILCHIMP_ENDPOINT >> .env.production && echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && echo GA_TRACKING_ID=$GA_TRACKING_ID >> .env.production && gatsby build",
     "develop": "npm run clean && gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"

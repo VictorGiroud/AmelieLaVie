@@ -147,15 +147,44 @@ $menu-label-color: $white-ter
 .social
   padding: 2em
 .social a
-    padding: .5em .5em .3em .5em
-    border-radius: 1em
-    background-color: $white-ter
-    margin: .5em
-    width: 1em
-    height: 1em
-    vertical-align: middle
-    display: inline
+  padding: .5em .5em .3em .5em
+  border-radius: 1em
+  background-color: $white-ter
+  margin: .5em
+  width: 1em
+  height: 1em
+  vertical-align: middle
+  display: inline
 
+.help-us 
+  background-image: linear-gradient(45deg, $primary 25%, $secondary 25%, $secondary 50%, $primary 50%, $primary 75%, $secondary 75%, $secondary 100%)
+  background-size: 10.00px 10.00px
+.help-us-tile
+  display: flex
+  padding: 1em
+  background-color: $secondary
+  border-radius: 50px
+  align-items: center
+  border: 2px solid $black
+.help-us-tile:hover
+  background-color: $secondary-invert
+  color: $black
+  cursor: pointer
+.help-us-tile-image
+  flex: 0 0 20%
+.help-us-tile-text
+  flex-grow: 1
+  text-align: center
+  font-size: 1.5em
+
+// newsletter
+.newsletter
+  background-color: $secondary-invert
+  border-bottom: 3px solid $primary
+.newsletter-columns
+  margin: 0!important
+.newsletter-column
+  padding: 2em!important
 
 // agenda
 .agenda-event-item-container

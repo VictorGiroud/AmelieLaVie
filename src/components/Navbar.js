@@ -42,7 +42,14 @@ const Navbar = class extends React.Component {
               <img src={logo} alt="Amélie La Vie" />
             </Link>
             {/* Hamburger menu */}
-            <div className={`navbar-burger burger ${this.state.navBarActiveClass}`} data-target="navMenu" onClick={() => this.toggleHamburger()}>
+            {/* eslint-disable-next-line */}
+            <div
+              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+              data-target="navMenu"
+              role="navigation"
+              onKeyPress={() => this.toggleHamburger()}
+              onClick={() => this.toggleHamburger()}
+            >
               <span />
               <span />
               <span />

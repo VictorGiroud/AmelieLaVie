@@ -67,7 +67,7 @@ export const ContactPageTemplate = ({ image, content, contentComponent, title, s
               <div className="column is-7 is-offset-1">
                 <form name="contact" method="post" action="/contact/merci" data-netlify="true" data-netlify-recaptcha="true" onSubmit={handleSubmit}>
                   {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                  <h2>Formulaire</h2>
+                  <h2>Formulaire de contact</h2>
                   <input type="hidden" name="form-name" value="contact" />
                   <div hidden>
                     <label>

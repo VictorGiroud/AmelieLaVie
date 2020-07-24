@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { Link, navigate, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
@@ -10,6 +10,8 @@ import AgendaEvent from "../components/AgendaEvent";
 import story from "../img/story.svg";
 import colibriLeft from "../img/colibri_bg_left.svg";
 import colibriRight from "../img/colibri_bg_right.svg";
+import phone from "../img/phone.svg";
+import love from "../img/love.svg";
 
 export const Section = ({ children, odd }) => (
   <section
@@ -57,8 +59,8 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
     </div>
     <Section odd>
       {alerte && (
-        <article class="message is-primary">
-          <div class="message-body">{alerte}</div>
+        <article className="message is-primary">
+          <div className="message-body">{alerte}</div>
         </article>
       )}
       <div className="content">
@@ -122,6 +124,36 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
         </div>
       </div>
     </Section>
+    <div className="help-us">
+      <div className="container">
+        <div className="section">
+          <div className="columns">
+            <div className="column is-5 is-offset-1">
+              <div
+                className="content help-us-tile"
+                onClick={() => navigate("nous-soutenir")}
+                onKeyPress={() => navigate("nous-soutenir")}
+                tabIndex="0"
+                role="link"
+              >
+                <div className="help-us-tile-image">
+                  <img src={love} alt="Nous soutenir" style={{ width: "100%" }} />
+                </div>
+                <div className="help-us-tile-text">Nous soutenir dans nos actions</div>
+              </div>
+            </div>
+            <div className="column is-5">
+              <div className="content help-us-tile" onClick={() => navigate("contact")} onKeyPress={() => navigate("contact")} tabIndex="0" role="link">
+                <div className="help-us-tile-image">
+                  <img src={phone} alt="Nous contacter" style={{ width: "100%" }} />
+                </div>
+                <div className="help-us-tile-text">Nous contacter</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 );
 

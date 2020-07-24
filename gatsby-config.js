@@ -1,3 +1,8 @@
+const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: "Amélie La Vie",
@@ -40,7 +45,7 @@ module.exports = {
         height: 3,
         prependToBody: false,
         color: `#ffaf40`,
-        footerHeight: 350,
+        footerHeight: 565,
       },
     },
     {
@@ -90,6 +95,12 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GA_TRACKING_ID,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint: process.env.MAILCHIMP_ENDPOINT,
       },
     },
   ],
