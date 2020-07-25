@@ -9,6 +9,7 @@ const FeatureGrid = ({ gridItems }) => (
         <section className="section">
           <div className="has-text-centered">
             <div
+              className="feature-image"
               style={{
                 width: "320px",
                 display: "inline-block",

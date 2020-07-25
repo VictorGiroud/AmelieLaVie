@@ -11,8 +11,8 @@ const FullWidthImage = ({ image, title, subtitle }) => {
       <div className="full-width">
         <img alt="Illustration" src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} style={{ visibility: `hidden` }} />
         <div className="full-width-text">
-          <h1 className="has-text-weight-bold is-size-2 full-width-text-title">{title}</h1>
-          {subtitle && <h2 className="has-text-weight-bold is-size-3 is-inline-block full-width-text-title">{subtitle}</h2>}
+          <h1 className="has-text-weight-bold is-size-2 is-size-5-mobile full-width-text-title">{title}</h1>
+          {subtitle && <h2 className="has-text-weight-bold is-size-3 is-size-6-mobile is-inline-block full-width-text-title">{subtitle}</h2>}
         </div>
       </div>
     </div>
