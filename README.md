@@ -4,8 +4,6 @@ Build by forking Gatsby + Netlify CMS Starter, using [Gatsby v2](https://www.gat
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/37c0461c-22b9-48de-a2a4-17e6f6bc6ee7/deploy-status)](https://app.netlify.com/sites/amelielavie/deploys)
 
-**Note:** This starter uses [Gatsby v2](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/).
-
 This repo contains all the source code of the **Amélie la vie** association.
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
