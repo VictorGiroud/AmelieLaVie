@@ -139,7 +139,7 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
                 <div className="help-us-tile-image">
                   <img src={love} alt="Nous soutenir" style={{ width: "100%" }} />
                 </div>
-                <div className="help-us-tile-text">Nous soutenir dans nos actions</div>
+                <div className="help-us-tile-text">Nous soutenir, adhérer, faire un don</div>
               </div>
             </div>
             <div className="column is-5">

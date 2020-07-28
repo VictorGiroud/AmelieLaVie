@@ -236,17 +236,35 @@ $menu-label-color: $white-ter
 .share > button
   margin-left: 3px
 
+.adhesion
+  margin-top: 1em
 
 
 @import "~bulma"
 
 
 // responsiveness
++fullhd
+  .iframe-desktop
+    display: block!important
+
++widescreen-only
+  .iframe-tablet
+    display: block!important
+
++desktop-only
+  .iframe-tablet
+    display: block!important
+
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%
+  .iframe-tablet
+    display: block!important
 
 +mobile
+  .iframe-mobile
+    display: block!important
   .feature-image
     width: 100%!important
   .blog-list-item header
