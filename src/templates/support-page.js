@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import FullWidthImage from "../components/FullWidthImage";
 
-export const DefaultPageTemplate = ({ image, content, contentComponent, title, subtitle, description, helmet }) => {
+export const SupportPageTemplate = ({ image, content, contentComponent, title, subtitle, description, helmet }) => {
   const HtmlContent = contentComponent || Content;
 
   return (
@@ -29,7 +29,7 @@ export const DefaultPageTemplate = ({ image, content, contentComponent, title, s
   );
 };
 
-DefaultPageTemplate.propTypes = {
+SupportPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   subtitle: PropTypes.string,
@@ -37,12 +37,12 @@ DefaultPageTemplate.propTypes = {
   helmet: PropTypes.object,
 };
 
-const DefaultPage = ({ data }) => {
+const SupportPage = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
 
   return (
     <Layout>
-      <DefaultPageTemplate
+      <SupportPageTemplate
         content={html}
         contentComponent={HTMLContent}
         image={frontmatter.image}
@@ -62,7 +62,7 @@ const DefaultPage = ({ data }) => {
   );
 };
 
-DefaultPage.propTypes = {
+SupportPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -70,10 +70,10 @@ DefaultPage.propTypes = {
   }),
 };
 
-export default DefaultPage;
+export default SupportPage;
 
-export const DefaultPageQuery = graphql`
-  query DefaultPage($id: String!) {
+export const SupportPageQuery = graphql`
+  query SupportPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

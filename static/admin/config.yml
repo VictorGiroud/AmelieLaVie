@@ -174,7 +174,7 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "default-page",
+              default: "support-page",
             }
           - { label: Titre, name: title, widget: string }
           - {
