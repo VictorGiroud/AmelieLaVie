@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Habitat partagé pour 5 personnes cérébrolésées à Sathonay-Camp
+title: Habitat partagé pour adultes cérébrolésées
 image: /img/home-jumbotron.jpg
 heading: Habitat partagé
 alerte: Suite au Covid19, l'assemblée générale et l'édition 2020 de notre

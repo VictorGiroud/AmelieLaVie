@@ -78,7 +78,7 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
       </div>
       <div className="columns">
         <div className="column is-12 has-text-centered">
-          <Link className="btn" to="/habitat-partage">
+          <Link className="btn" to="/association">
             En savoir plus sur l'association
           </Link>
         </div>

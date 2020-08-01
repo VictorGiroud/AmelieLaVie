@@ -3,7 +3,7 @@ path: /habitat-partage
 templateKey: default-page
 title: "Habitat partagé"
 subtitle: "Les Colibris"
-image: /img/colibriheader.jpg
+image: /img/colibriheader2.jpg
 description: Présentation de l'habitat partagé Les Colibris.
 ---
 

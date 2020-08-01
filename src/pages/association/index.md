@@ -7,13 +7,13 @@ image: /img/hope.jpg
 description: Présentation de l'association Amélie la Vie
 ---
 
-### Section 1
+### Notre histoire
 
 Bonjour
 
 ![logo](/img/favicon-64x64.png)
 
-### Section 2
+### Nos missions
 
 ....
 
