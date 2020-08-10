@@ -18,10 +18,14 @@ Depuis, les statuts ont évolué. L'association se mobilise pour aider un public
 
 Nous avons aidé la **recherche médicale** : la **bourse « Amélie la vie »**, dotée de 20 000 euros a permis de financer plusieurs programmes de recherche en partenariat avec l’**[ANOCEF](https://www.anocef.org/)** quatre années de suite.
 
-* **2007** : Etude des résistances de certaines protéines dans le traitement médicamenteux de tumeurs au cerveau. Son intitulé exact est : « Expression des protéines de résistance multiple aux médicaments au niveau des épendymomes et des tumeurs plexuelles de l’enfant ». Nous avons pu rencontrer l’équipe en charge de la recherche. Elle nous a exposé les objectifs, ainsi que les différents moyens utilisés pour cette recherche.
+* **2007** : Etude des résistances de certaines protéines dans le traitement médicamenteux de tumeurs au cerveau. Son intitulé exact est : "Expression des protéines de résistance multiple aux médicaments au niveau des épendymomes et des tumeurs plexuelles de l’enfant". Nous avons pu rencontrer l’équipe en charge de la recherche. Elle nous a exposé les objectifs, ainsi que les différents moyens utilisés pour cette recherche.
 * **2008** : Etude des gliomes des voies optiques, l’identification de marqueurs pronostiques, et création d’un modèle in vitro afin d’évaluer de nouvelles thérapies moléculaires.
 * **2009** : Le dossier retenu est le même que l'année précédente. Compte-tenu de la bonne avancée de ces travaux (publication d'un article dans une revue médicale), nous soutenons encore cette équipe.
-* **2010** : Son intitulé est ≪ Cibles thérapeutiques et nouveaux médicaments pour les tumeurs du système nerveux de l’enfant ≫ de l'unité de Recherche CNRS UMR 8203 ≪Vectorologie et thérapeutiques anticancéreuses ≫
+* **2010** : Son intitulé est "Cibles thérapeutiques et nouveaux médicaments pour les tumeurs du système nerveux de l’enfant" de l'unité de Recherche CNRS UMR 8203 "Vectorologie et thérapeutiques anticancéreuses".
+
+De 2013 à 2017, nous avons soutenu l'association **[Imagine for Margo](https://imagineformargo.org/)**. Celle-ci mène des actions de sensibilisation et de collecte de fonds afin d’accélérer la recherche pour mieux comprendre et mieux soigner les cancers des enfants.
+
+
 
 ### Notre mission aujourd’hui
 
@@ -35,7 +39,9 @@ Ce projet ambitieux est en cours de réalisation, vous pouvez retrouver toutes l
 
 Depuis 12 ans, chaque année, au mois d’avril, nous organisons une **randonnée pédestre** avec plusieurs parcours, 5, 10 et 15 km.
 
-Les différents marchés de Noël auxquels nous participons permettent de faire connaître l’association.
+Au mois de juin, nous participons à **[La Villageoise](https://www.villageoise.net/)** (course/randonnée), manifestation située à Sathonay-Village où l'association organisatrice nous reverse une partie de ses bénéfices. 
+
+Les différents marchés de Noël auxquels nous sommes présents permettent de faire connaître l’association.
 
 ### Nous aider
 
