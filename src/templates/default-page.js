@@ -17,7 +17,7 @@ export const DefaultPageTemplate = ({ image, content, contentComponent, title, s
         <div className="container">
           <div className="section">
             <div className="columns">
-              <div className="column is-7 is-offset-1">
+              <div className="column is-10 is-offset-1">
                 {!image && <h1>{title}</h1>}
                 <HtmlContent content={content} />
               </div>
