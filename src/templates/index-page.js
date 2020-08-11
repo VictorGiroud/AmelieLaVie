@@ -7,7 +7,7 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import AgendaEvent from "../components/AgendaEvent";
 
-import story from "../img/story.svg";
+import logo from "../img/logo.jpg";
 import colibriLeft from "../img/colibri_bg_left.svg";
 import colibriRight from "../img/colibri_bg_right.svg";
 import phone from "../img/phone.svg";
@@ -46,9 +46,8 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
         }}
       >
         <h1
-          className="is-size-3-mobile is-size-2-tablet is-size-1-widescreen quote"
+          className="is-size-4-mobile is-size-3-tablet is-size-2-widescreen quote"
           style={{
-            color: "#ffaf40",
             lineHeight: "1",
             padding: "0.25em",
           }}
@@ -69,7 +68,7 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
         </div>
         <div className="section-container">
           <div className="section-icon is-hidden-mobile">
-            <img src={story} alt="Histoire" style={{ width: "100%" }} />
+            <img src={logo} alt="Histoire" style={{ width: "100%" }} />
           </div>
           <div className="section-content">
             <p className="subtitle">{presentation.description}</p>

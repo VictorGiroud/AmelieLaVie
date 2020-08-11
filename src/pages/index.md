@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Habitat partagé pour adultes cérébrolésés
+title: Un habitat partagé pour adultes cérébrolésés
 image: /img/home-jumbotron.jpg
 heading: Habitat partagé
 alerte: Suite au Covid19, l'assemblée générale et l'édition 2020 de notre

@@ -34,13 +34,15 @@ body > :last-child
   font-family: 'Lora', serif!important
   font-style: italic
   font-weight: 400!important
-  transform: rotate(1deg);
+  text-align: center
 .quote:before 
   content: "“"
   color: $secondary
+  opacity: 0.6
 .quote:after 
   content: "„"
   color: $secondary
+  opacity: 0.6
 
 .content .taglist
   list-style: none
@@ -68,6 +70,11 @@ body > :last-child
   display: flex
   justify-content: center
   align-items: center
+
+.full-width-padding
+  padding: 1em
+  background-color: $primary
+  color: white
 
 .full-width-text
   padding: 1rem
