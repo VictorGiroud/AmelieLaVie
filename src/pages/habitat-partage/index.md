@@ -6,11 +6,12 @@ subtitle: Les Colibris
 description: Présentation de l'habitat partagé Les Colibris.
 image: /img/colibriheader2.jpg
 ---
+
 ## Un habitat partagé, c'est quoi ?
 
 C'est le **partage d'un logement** adapté aux besoins des personnes handicapées (pouvant accueillir de 2 à 6 personnes selon le choix) proche des commerces, des transports en commun et des services de proximité. Le logement comprend des espaces individuels et collectifs (cuisine, salon, sanitaires). C'est aussi le **partage du quotidien** pour rompre la solitude, l'isolement, et partager éventuellement les repas, les plaisirs, les loisirs, les activités, les promenades, mais aussi les difficultés. C’est également une **aide quotidienne** de personnes **des services médico-sociaux** pour accomplir les gestes et les tâches de tous les jours.
 
- Pour ce projet, nous avons eu la chance de nous inspirer d'habitat existants, tels que **[La Novelline](https://la-novelline.fr/)** :un habitat partagé pour adultes affectés par une lésion cérébrale acquise ; **[K'Hutte](http://www.familles-solidaires.com/strasbourg/),** la volonté de l'association Familles Solidaires est de proposer des projets d’habitat à dimension humaine : les cinq futurs locataires des logements sont des personnes fragilisées, en situation de handicap.
+Pour ce projet, nous avons eu la chance de nous inspirer d'habitat existants, tels que **[La Novelline](https://la-novelline.fr/)** : un habitat partagé pour adultes affectés par une lésion cérébrale acquise ; **[K'Hutte](http://www.familles-solidaires.com/strasbourg/)**, la volonté de l'association Familles Solidaires est de proposer des projets d’habitat à dimension humaine : les cinq futurs locataires des logements sont des personnes fragilisées, en situation de handicap.
 
 ## Notre vision de l'habitat partagé
 
