@@ -30,6 +30,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       <div>{children}</div>
+      <div className="gatsby-resp-image-figcaption"></div>
       <Footer />
     </div>
   );

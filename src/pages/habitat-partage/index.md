@@ -6,6 +6,7 @@ subtitle: Les Colibris
 description: Présentation de l'habitat partagé Les Colibris.
 image: /img/colibriheader2.jpg
 ---
+
 ## Un habitat partagé, c'est quoi ?
 
 C'est le **partage d'un logement** adapté aux besoins des personnes handicapées (pouvant accueillir de 2 à 6 personnes selon le choix) proche des commerces, des transports en commun et des services de proximité. Le logement comprend des espaces individuels et collectifs (cuisine, salon, sanitaires). C'est aussi le **partage du quotidien** pour rompre la solitude, l'isolement, et partager éventuellement les repas, les plaisirs, les loisirs, les activités, les promenades, mais aussi les difficultés. C’est également une **aide quotidienne** de personnes **des services médico-sociaux** pour accomplir les gestes et les tâches de tous les jours.
@@ -20,11 +21,11 @@ ce projet, notamment grâce à des miroirs connectés, outils centraux permettan
 facilement à des informations importantes, de faciliter la communication et de tout contrôler de
 manière simple et intuitive.
 
-## L'aventure #LACHPA 
+## L'aventure #LACHPA
 
-![Logo Familles Solidaires](/img/logo-familles-solidaires.jpg)
+![](/img/logo-familles-solidaires.jpg)
 
-Nous faisons partie des 10 lauréats de l’appel à projet **[LACHPA](https://www.lachpa.fr/)** (Les Aidants Concepteurs d'Habitat Partagé et Accompagné)dont[ **Familles Solidaires**](https://www.familles-solidaires.com/) est l’initiateur. Ce groupe associatif, expert en habitat inclusif, aide et conseille les porteurs de projet. **Être lauréat LACHPA** nous permet de bénéficier de 5 jours de formation et 20 jours de conseils.
+Nous faisons partie des 10 lauréats de l’appel à projet **[LACHPA](https://www.lachpa.fr/)** (Les Aidants Concepteurs d'Habitat Partagé et Accompagné) dont[ **Familles Solidaires**](https://www.familles-solidaires.com/) est l’initiateur. Ce groupe associatif, expert en habitat inclusif, aide et conseille les porteurs de projet. **Être lauréat LACHPA** nous permet de bénéficier de 5 jours de formation et 20 jours de conseils.
 
 ## La réalisation
 

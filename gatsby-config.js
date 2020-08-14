@@ -52,9 +52,8 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          `gatsby-remark-reading-time`,
           {
-            resolve: "gatsby-remark-relative-images",
+            resolve: "gatsby-remark-relative-body-images",
             options: {
               name: "uploads",
             },
@@ -73,6 +72,7 @@ module.exports = {
               destinationDir: "static",
             },
           },
+          `gatsby-remark-reading-time`,
         ],
       },
     },
