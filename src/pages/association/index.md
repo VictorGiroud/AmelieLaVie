@@ -27,6 +27,8 @@ Nous avons aidé la **recherche médicale** : la **bourse « Amélie la vie »**
 * **2009** : Le dossier retenu est le même que l'année précédente. Compte-tenu de la bonne avancée de ces travaux (publication d'un article dans une revue médicale), nous soutenons encore cette équipe.
 * **2010** : Son intitulé est "Cibles thérapeutiques et nouveaux médicaments pour les tumeurs du système nerveux de l’enfant" de l'unité de Recherche CNRS UMR 8203 "Vectorologie et thérapeutiques anticancéreuses".
 
+![Rencontre avec l'équipe de l'ANOCEF](/img/anocef_rencontre.jpg)
+
 De 2013 à 2017, nous avons soutenu l'association **[Imagine for Margo](https://imagineformargo.org/)**. Celle-ci mène des actions de sensibilisation et de collecte de fonds afin d’accélérer la recherche pour mieux comprendre et mieux soigner les cancers des enfants.
 
 ### Notre mission actuelle
