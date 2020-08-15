@@ -18,16 +18,15 @@ intro:
     des adultes cérébrolésés.
   blurbs:
     - image: /img/colibirs.jpg
-      text: >
-        L'habitat s'appellera Les Colibris parce que les oiseaux c'est joli.
-        Piou piou. Vive les oiseaux. Piou piou piou piou. Piou piou piou piou.
-        Piou piou piou piou.
+      text: L'habitat s'appellera Les Colibris. Il permettra à 5 personnes
+        cérébrolésées de vivre chez elles dans des logements adaptés, de
+        favoriser leur autonomie tout en partageant une vie sociale et partagée
+        avec un collectif.
     - image: /img/plan.jpg
-      text: >
-        Il y aura plusieurs habitations mais aussi des parties communes. Donc
-        c'est trop bien vivement que ça soit construit on va bien s'amuser.
-        Héhé. C'est cool non ? En plus il y a des plans donc voilà on peut voir
-        un peu.
-  description: |
-    L'habitat sera bientôt construit !
+      text: "Il y aura 5 appartements T2 mais aussi des parties communes qui
+        permettront de partager des moments privilégiés entre les locataires :
+        faire la cuisine, de multiples activités, prévoir des sorties communes,
+        se détendre dans l'espace sport, ..."
+  description: Le permis de construire a été déposé fin juin 2020. L'ouverture
+    devrait se faire en 2022.
 ---
