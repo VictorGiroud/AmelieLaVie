@@ -9,13 +9,11 @@ adhesion: >
   l'association lors de nos échanges avec nos différents partenaires.
 
   Vous nous apportez votre soutien, et vous nous encouragez à continuer nos actions.
-tips: >-
+tips: >
   Votre soutien financier nous permet d'avancer dans notre projet d'habitat
   partagé. 
 
   Les adaptations nécessaires à l'ameublement (tels que des meubles de cuisine à hauteur variable) nécessitent un coût supplémentaire important.
-
-  Nous avons besoin de personnes compétentes dans des domaines précis (domotique, aménagements intérieur et extérieur) que nous rémunérerons.
 ---
 ### Comment nous aider ?
 
@@ -24,5 +22,7 @@ La manière la plus simple mais aussi la plus efficace d'apporter votre soutien 
 Vous pouvez partager nos pages, [nos articles](/actualites). Nous suivre sur les réseaux sociaux : [Facebook](https://facebook.com/associationamelielavie), [Youtube](https://www.youtube.com/channel/UCxTbiQ0ffRnZfrjdbNAf10w).
 
 Venez nous rencontrer à nos manifestations.
+
+Nous avons aussi besoin de personnes compétentes dans des domaines précis (domotique, aménagements intérieur et extérieur) que nous rémunérerons.
 
 N'hésitez pas à [nous contacter](/contact) pour toute interrogation ou proposition.
