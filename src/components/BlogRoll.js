@@ -78,7 +78,11 @@ export default ({ limit }) => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
-        allMarkdownRemark(limit: 21, sort: { order: DESC, fields: [frontmatter___date] }, filter: { frontmatter: { templateKey: { eq: "blog-post" } } }) {
+        allMarkdownRemark(
+          limit: 21
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { published: { eq: true }, templateKey: { eq: "blog-post" } } }
+        ) {
           edges {
             node {
               excerpt(pruneLength: 400)
@@ -88,6 +92,7 @@ export default ({ limit }) => (
               }
               frontmatter {
                 title
+                published
                 templateKey
                 description
                 date(formatString: "DD MMMM YYYY", locale: "fr")

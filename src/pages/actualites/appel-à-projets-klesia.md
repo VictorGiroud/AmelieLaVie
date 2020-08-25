@@ -4,6 +4,7 @@ title: Appel à projets Klesia
 date: 2020-07-19T20:48:55.256Z
 description: Réponse à l'appel à projets Klesia pour le prix NOUVELLES TECHNOLOGIES.
 featuredimage: /img/ok-klesia.png
+published: false
 tags:
   - appel à projets
 ---
