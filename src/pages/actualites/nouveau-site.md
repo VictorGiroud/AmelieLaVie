@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Le site fait peau neuve
 date: 2020-07-23T20:00:00.000Z
-description: Le site Amélie la vie devient plus accesible, plus pertient !
+description: Le site Amélie la vie devient plus accessible, plus pertinent !
 featuredimage: /img/alvwebsite.jpg
 published: true
 tags:
