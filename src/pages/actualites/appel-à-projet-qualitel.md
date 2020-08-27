@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Appel à projet Qualitel
+title: Appel à projets Qualitel
 date: 2020-07-15T13:03:31.273Z
 description: >
   Le Fonds de dotation QUALITEL a lancé son 9ème appel à projets, avec pour
@@ -8,7 +8,7 @@ description: >
   logement des plus défavorisés. 
 
   Nous avons candidaté en juillet, dans la catégorie « Hébergement », et plus précisément pour aménager la cuisine commune de notre habitat. 
-featuredimage: /img/qualitel.svg
+featuredimage: /img/qualitel_social_corpo.jpg
 published: true
 tags:
   - appel à projet
