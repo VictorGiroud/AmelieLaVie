@@ -32,7 +32,7 @@ class BlogRoll extends React.Component {
                         <span> &bull; </span>
                         <span className="subtitle is-size-5 is-block">{post.frontmatter.date}</span>
                       </p>
-                      <p>
+                      <p className="post-preview">
                         {post.excerpt}
                         <br />
                         <br />
@@ -56,7 +56,7 @@ class BlogRoll extends React.Component {
                       <span className="subtitle is-size-6 is-block">{post.frontmatter.date}</span>
                     </p>
                   </header>
-                  <p>{post.frontmatter.description}</p>
+                  <p className="post-preview">{post.frontmatter.description}</p>
                 </article>
               </div>
             );

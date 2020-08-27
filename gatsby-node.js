@@ -50,14 +50,11 @@ exports.createPages = ({ actions, graphql }) => {
     // Iterate through each post, putting all found tags into `tags`
     posts.forEach((edge) => {
       if (edge.node.frontmatter.published === true && _.get(edge, `node.frontmatter.tags`)) {
-        console.log(edge.node);
         tags = tags.concat(edge.node.frontmatter.tags);
       }
     });
     // Eliminate duplicate tags
     tags = _.uniq(tags);
-
-    console.log(tags);
 
     // Make tag pages
     tags.forEach((tag) => {
