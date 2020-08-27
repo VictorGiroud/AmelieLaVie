@@ -59,21 +59,21 @@ const Navbar = class extends React.Component {
             <div className="navbar-start has-text-centered">
               <Link
                 className="navbar-item"
-                to="/actualites"
-                activeStyle={{
-                  fontWeight: 700,
-                }}
-              >
-                Actualités
-              </Link>
-              <Link
-                className="navbar-item"
                 to="/association"
                 activeStyle={{
                   fontWeight: 700,
                 }}
               >
                 L'association
+              </Link>
+              <Link
+                className="navbar-item"
+                to="/actualites"
+                activeStyle={{
+                  fontWeight: 700,
+                }}
+              >
+                Actualités
               </Link>
               <Link
                 className="navbar-item"
