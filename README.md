@@ -19,8 +19,8 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 Pulldown a local copy of the Github repository Netlify created for you, with the name you specified in the previous step
 
 ```
-$ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
-$ cd [REPO_NAME]
+$ git clone https://github.com/VictorGiroud/AmelieLaVie.git
+$ cd AmelieLaVie
 $ yarn
 $ netlify dev # or ntl dev
 ```
