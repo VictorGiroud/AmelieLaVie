@@ -5,7 +5,7 @@ date: 2020-08-26T07:32:58.379Z
 description: "Le 3 mai 2020, le Progrès a publié un article sur notre projet
   d'habitat partagé ! "
 featuredimage: /img/article-progres.jpg
-published: false
+published: true
 tags:
   - Habitat partagé, Presse
 ---
