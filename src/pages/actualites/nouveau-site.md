@@ -21,4 +21,6 @@ Là où l'ancien site n'avait pas été conçu pour être adapté à ces usages 
 
 Nous voulions pouvoir vous présenter [l'association](/association) d'une manière complète mais succincte. Nous voulions pouvoir vous mettre à disposition toutes les informations importantes et à jour de [notre projet d'habitat partagé](/habitat-partage). Nous voulions un site plus vivant. Pouvoir vous proposer régulièrement [des articles](/actualites) sur le thème du handicap, sur nos actualités. Mettre en lumière les associations qui gravitent autour de nous. Offrir la possibilité de partager les différents contenus sur les réseaux sociaux pour y lire vos retours.
 
-Evidemment, rien n'est jamais parfait. C'est pourquoi nous lirons avec attentions tous [vos retours, corrections et suggestions](/contact) !
+Evidemment, rien n'est jamais parfait. C'est pourquoi nous lirons avec attentions tous [vos retours, corrections et suggestions](/contact).
+
+Pour être tenu au courant de nos avancées, nous vous recommandons de vous inscrire à notre newsletter juste en bas de cette page !
