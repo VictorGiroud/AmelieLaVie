@@ -4,17 +4,21 @@ import addToMailchimp from "gatsby-plugin-mailchimp";
 import emailLogo from "../img/email.svg";
 
 const Newsletter = () => {
-  const [name, setName] = useState("");
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState(null);
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log(name, email, message, isError, isLoading);
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-    console.log(name);
+  const handleFirstNameChange = (e) => {
+    setFirstName(e.target.value);
   };
+
+  const handleLastNameChange = (e) => {
+    setLastName(e.target.value);
+  };
+
   const handleEmailChange = (e) => setEmail(e.target.value);
 
   const handleSubmit = async (e) => {
@@ -22,8 +26,9 @@ const Newsletter = () => {
     setMessage(null);
     setIsLoading(true);
     try {
-      const response = await addToMailchimp(email, { name });
-      setName("");
+      const response = await addToMailchimp(email, { firstname, lastname });
+      setFirstName("");
+      setLastName("");
       setEmail("");
       setIsLoading(false);
       setIsError(response.result === "error");
@@ -50,18 +55,34 @@ const Newsletter = () => {
           </div>
           <div className="newsletter-column column is-4">
             <form onSubmit={handleSubmit}>
-              <div className="field">
-                <div className="control">
-                  <input
-                    placeholder="Prénom et nom"
-                    className="input"
-                    type={"text"}
-                    name={"name"}
-                    onChange={handleNameChange}
-                    id={"name"}
-                    value={name}
-                    required={true}
-                  />
+              <div className="columns mb-0">
+                <div className="column is-6">
+                  <div className="control">
+                    <input
+                      placeholder="Prénom"
+                      className="input"
+                      type={"text"}
+                      name={"firstname"}
+                      onChange={handleFirstNameChange}
+                      id={"firstname"}
+                      value={firstname}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className="column is-6">
+                  <div className="control">
+                    <input
+                      placeholder="Nom"
+                      className="input"
+                      type={"text"}
+                      name={"lastname"}
+                      onChange={handleLastNameChange}
+                      id={"lastname"}
+                      value={lastname}
+                      required={true}
+                    />
+                  </div>
                 </div>
               </div>
               <div className="field">
