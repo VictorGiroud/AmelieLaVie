@@ -37,15 +37,12 @@ Aujourd'hui, l’association vient en aide aux **personnes cérébrolésées** e
 
 Une personne cérébrolésée a des lésions cérébrales graves survenues, soit après un traumatisme crânien, soit après une tumeur cérébrale, soit après un accident vasculaire cérébral, ... Ce handicap invisible affecte durablement leur qualité de vie et celle de leur entourage. Il existe plusieurs sphères de déficits à des degrés de sévérité différents (neurologiques, cognitives, comportementales, psycho-affectives, ...).
 
-Les troubles le plus souvent constaté :
+Les troubles les plus souvent constatés :
 
-**Troubles du champ visuel** **:** Ces personnes cérébrolésées ont très souvent un champ visuel réduit et sont fortement gênées pour se déplacer. Ce handicap est difficilement compréhensible par l'entourage.
-
-**Troubles de la mémoire et de l’orientation temporo-spatiale** : L’une des grandes difficultés constatées est le repérage et l’orientation dans le temps et l’espace. Par exemple, elles doivent parcourir un trajet plusieurs fois afin de repérer tous les obstacles et de le mémoriser, elles ont des difficultés à gérer les événements imprévus et à adapter leur comportement.
-
-**Fatigabilité et lenteur** : Toute mobilisation cognitive entraîne une grande fatigabilité, augmentée par les stratégies de compensation et d’ajustement qui tentent de pallier les carences fonctionnelles. Les aides humaines sont donc à certains moments indispensables dans des actes de la vie quotidienne.
-
-**Altération de la motricité fine** : De nombreux gestes de la vie quotidienne ne peuvent être effectués : ouverture de boîtes, laçage de chaussures, dévissage de bouteilles…
+* **Troubles du champ visuel** **:** Ces personnes cérébrolésées ont très souvent un champ visuel réduit et sont fortement gênées pour se déplacer. Ce handicap est difficilement compréhensible par l'entourage.
+* **Troubles de la mémoire et de l’orientation temporo-spatiale** : L’une des grandes difficultés constatées est le repérage et l’orientation dans le temps et l’espace. Par exemple, elles doivent parcourir un trajet plusieurs fois afin de repérer tous les obstacles et de le mémoriser, elles ont des difficultés à gérer les événements imprévus et à adapter leur comportement.
+* **Fatigabilité et lenteur** : Toute mobilisation cognitive entraîne une grande fatigabilité, augmentée par les stratégies de compensation et d’ajustement qui tentent de pallier les carences fonctionnelles. Les aides humaines sont donc à certains moments indispensables dans des actes de la vie quotidienne.
+* **Altération de la motricité fine** : De nombreux gestes de la vie quotidienne ne peuvent être effectués : ouverture de boîtes, laçage de chaussures, dévissage de bouteilles…
 
 **Pour répondre à l’isolement de jeunes adultes souhaitant vivre dans des habitats inclusifs, dans un milieu ordinaire, au cœur de la cité, l’association a décidé de créer un habitat partagé et accompagné pour 5 personnes.**
 
