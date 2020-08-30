@@ -93,7 +93,7 @@ const Newsletter = () => {
               </div>
               <div className="field">
                 <div className="control">
-                  <label htmlFor={"Adresse email"} className="is-sr-only">
+                  <label htmlFor={"email"} className="is-sr-only">
                     Adresse email
                   </label>
                   <input
