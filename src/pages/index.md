@@ -1,11 +1,11 @@
 ---
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
-image: /img/home-jumbotron.jpg
 heading: Habitat partagé
 alerte: Suite au Covid19, l'assemblée générale et l'édition 2020 de notre
   randonnée pédestre sont reportés à une date inconnue à ce jour.
 presentation:
+  image: /img/logo.jpg
   title: Notre histoire, nos missions
   description: >-
     En décembre 2003, l'association Amélie la vie a été créée pour financer

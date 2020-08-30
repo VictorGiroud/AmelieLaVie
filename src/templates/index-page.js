@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, navigate, graphql } from "gatsby";
 
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import AgendaEvent from "../components/AgendaEvent";
 
-import logo from "../img/logo.jpg";
 import colibriLeft from "../img/colibri_bg_left.svg";
 import colibriRight from "../img/colibri_bg_right.svg";
 import phone from "../img/phone.svg";
@@ -68,7 +68,12 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
         </div>
         <div className="section-container">
           <div className="section-icon is-hidden-mobile">
-            <img src={logo} alt="Histoire" style={{ width: "100%" }} />
+            <PreviewCompatibleImage
+              imageInfo={{
+                image: presentation.image,
+                alt: `Logo Amélie la vie`,
+              }}
+            />
           </div>
           <div className="section-content">
             <p className="subtitle">{presentation.description}</p>
@@ -157,7 +162,6 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
 );
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   alerte: PropTypes.string,
@@ -201,18 +205,18 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         heading
         alerte
         presentation {
           title
           description
+          image {
+            childImageSharp {
+              fluid(maxWidth: 80, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
         description
         intro {
