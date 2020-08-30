@@ -58,6 +58,9 @@ const Newsletter = () => {
               <div className="columns mb-0">
                 <div className="column is-6">
                   <div className="control">
+                    <label htmlFor={"firstname"} className="is-sr-only">
+                      Prénom
+                    </label>
                     <input
                       placeholder="Prénom"
                       className="input"
@@ -72,6 +75,9 @@ const Newsletter = () => {
                 </div>
                 <div className="column is-6">
                   <div className="control">
+                    <label htmlFor={"lastname"} className="is-sr-only">
+                      Nom
+                    </label>
                     <input
                       placeholder="Nom"
                       className="input"
@@ -87,6 +93,9 @@ const Newsletter = () => {
               </div>
               <div className="field">
                 <div className="control">
+                  <label htmlFor={"Adresse email"} className="is-sr-only">
+                    Adresse email
+                  </label>
                   <input
                     placeholder="Adresse email"
                     className="input"
@@ -100,7 +109,7 @@ const Newsletter = () => {
                 </div>
               </div>
               <div className="field">
-                <button className={`button is-danger is-fullwidth ${isLoading ? "is-loading" : ""}`} type="submit">
+                <button className={`button is-warning is-fullwidth ${isLoading ? "is-loading" : ""}`} type="submit">
                   S'inscrire
                 </button>
               </div>

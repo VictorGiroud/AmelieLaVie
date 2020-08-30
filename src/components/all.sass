@@ -6,11 +6,13 @@ $kaldi-red: #D64000
 $kaldi-red-invert: #fff
 
 $primary: #ffaf40
+$primary-text: #945600
 $primary-invert: #fff
 $secondary: #fff6eb
 $secondary-invert: #fdfaf5
 $body-color: #333
 $black: #2b2523
+$link-contrast: #2366d1
 
 body > :last-child
   top: 64px!important
@@ -41,14 +43,15 @@ body > :last-child
   font-family: 'Lora', serif!important
   font-style: italic
   font-weight: 400!important
+  color: $black
   text-align: center
 .quote:before 
   content: "“"
-  color: $secondary
+  color: $black
   opacity: 0.6
 .quote:after 
   content: "„"
-  color: $secondary
+  color: $black
   opacity: 0.6
 
 .content .taglist
@@ -216,6 +219,11 @@ $menu-label-color: $white-ter
 .agenda-event-item-text-more
   margin-top: auto
   text-align: right
+  color: $link-contrast!important
+.agenda-event-item-text-title
+  color: $primary-text
+.agenda-event-item-location
+  color: $link-contrast!important
 .agenda-event-item-calendar
   align-self: center
   flex: 0 0 5em
@@ -248,6 +256,8 @@ $menu-label-color: $white-ter
   margin: 0 1.5em 0 0;
 .post-preview
   text-align: justify;
+.post-meta-title
+  color: $primary-text!important
 
 .share > button
   margin-left: 3px

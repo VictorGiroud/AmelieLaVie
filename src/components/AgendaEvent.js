@@ -41,19 +41,26 @@ class EventItem extends React.Component {
             <div className="agenda-event-item-calendar-day has-text-weight-bold is-size-4">{event.frontmatter.day}</div>
           </div>
           <div className="agenda-event-item-text">
-            <div className="has-text-primary is-size-4">{event.frontmatter.title}</div>
+            <div className="agenda-event-item-text-title is-size-4">{event.frontmatter.title}</div>
             <div className="is-size-6">{event.frontmatter.resume}</div>
             {event.frontmatter.address && (
               <div className="is-size-7 text-right">
                 <img src={locationIcon} alt="Agenda" style={{ height: "0.75em" }} />
-                <a target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps/search/?api=1&query=${event.frontmatter.address}`}>
+                <a
+                  className="agenda-event-item-location"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`https://www.google.com/maps/search/?api=1&query=${event.frontmatter.address}`}
+                >
                   {event.frontmatter.address}
                 </a>
               </div>
             )}
 
             <div className="agenda-event-item-text-more is-size-7">
-              <Link to={event.fields.slug}>Plus d'informations...</Link>
+              <Link className="agenda-event-item-text-more" to={event.fields.slug}>
+                Plus d'informations...
+              </Link>
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ class BlogRoll extends React.Component {
                     </div>
                     <div>
                       <p className="post-meta">
-                        <Link className="title has-text-primary is-size-4" to={post.fields.slug}>
+                        <Link className="title is-size-4 post-meta-title" to={post.fields.slug}>
                           {post.frontmatter.title}
                         </Link>
                         <span> &bull; </span>
@@ -49,7 +49,7 @@ class BlogRoll extends React.Component {
                 <article className={`blog-list-item tile is-child box notification`}>
                   <header>
                     <p className="post-meta">
-                      <Link className="title has-text-primary is-size-5" to={post.fields.slug}>
+                      <Link className="title is-size-5 post-meta-title" to={post.fields.slug}>
                         {post.frontmatter.title}
                       </Link>
                       <span> &bull; </span>
