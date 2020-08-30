@@ -6,7 +6,6 @@ subtitle: Amélie la vie
 description: Présentation de l'association Amélie la Vie
 image: /img/hope.jpg
 ---
-
 ### Notre histoire
 
 En **décembre 2003**, l'association **Amélie la vie** a été créée dans le but de récolter les fonds nécessaires au traitement et dépendance d'une maladie engageant le pronostic vital dont est atteinte la petite Amélie : **une tumeur cérébrale**.
@@ -23,10 +22,10 @@ Depuis, les statuts ont évolué. L'association se mobilise pour aider un public
 
 Nous avons aidé la **recherche médicale** : la **bourse « Amélie la vie »**, dotée de 20 000 euros a permis de financer plusieurs programmes de recherche en partenariat avec l’**[ANOCEF](https://www.anocef.org/)** quatre années de suite.
 
-- **[2007](/assets/subvention_2007.pdf)** : Etude des résistances de certaines protéines dans le traitement médicamenteux de tumeurs au cerveau. Son intitulé exact est : "Expression des protéines de résistance multiple aux médicaments au niveau des épendymomes et des tumeurs plexuelles de l’enfant". Nous avons pu rencontrer l’équipe en charge de la recherche. Elle nous a exposé les objectifs, ainsi que les différents moyens utilisés pour cette recherche.
-- **[2008](/assets/subvention_2008_2009.pdf)** : Etude des gliomes des voies optiques, l’identification de marqueurs pronostiques, et création d’un modèle in vitro afin d’évaluer de nouvelles thérapies moléculaires.
-- **2009** : Le dossier retenu est le même que l'année précédente. Compte-tenu de la bonne avancée de ces travaux (publication d'un article dans une revue médicale), nous soutenons encore cette équipe.
-- **[2010](/assets/subvention_2010.pdf)** : Son intitulé est "Cibles thérapeutiques et nouveaux médicaments pour les tumeurs du système nerveux de l’enfant" de l'unité de Recherche CNRS UMR 8203 "Vectorologie et thérapeutiques anticancéreuses".
+* **[2007](/assets/subvention_2007.pdf)** : Etude des résistances de certaines protéines dans le traitement médicamenteux de tumeurs au cerveau. Son intitulé exact est : "Expression des protéines de résistance multiple aux médicaments au niveau des épendymomes et des tumeurs plexuelles de l’enfant". Nous avons pu rencontrer l’équipe en charge de la recherche. Elle nous a exposé les objectifs, ainsi que les différents moyens utilisés pour cette recherche.
+* **[2008](/assets/subvention_2008_2009.pdf)** : Etude des gliomes des voies optiques, l’identification de marqueurs pronostiques, et création d’un modèle in vitro afin d’évaluer de nouvelles thérapies moléculaires.
+* **2009** : Le dossier retenu est le même que l'année précédente. Compte-tenu de la bonne avancée de ces travaux (publication d'un article dans une revue médicale), nous soutenons encore cette équipe.
+* **[2010](/assets/subvention_2010.pdf)** : Son intitulé est "Cibles thérapeutiques et nouveaux médicaments pour les tumeurs du système nerveux de l’enfant" de l'unité de Recherche CNRS UMR 8203 "Vectorologie et thérapeutiques anticancéreuses".
 
 ![Rencontre avec l'équipe de l'ANOCEF](/img/anocef_rencontre.jpg)
 
@@ -36,7 +35,16 @@ De 2013 à 2017, nous avons soutenu l'association **[Imagine for Margo](https://
 
 Aujourd'hui, l’association vient en aide aux **personnes cérébrolésées** et les accompagne afin de favoriser au maximum leur **autonomie dans la vie quotidienne**, notamment sur le plan humain, matériel et financier.
 
-Pour répondre à l’isolement de jeunes adultes souhaitant vivre dans des habitats inclusifs, dans un milieu ordinaire, au cœur de la cité, l’association a décidé de créer un habitat partagé et accompagné pour 5 personnes.
+Une personne cérébrolésée a des lésions cérébrales graves survenues, soit après un traumatisme crânien, soit après une tumeur cérébrale, soit après un accident vasculaire cérébral, ... Ce handicap invisible affecte durablement leur qualité de vie et celle de leur entourage. Il existe plusieurs sphères de déficits à des degrés de sévérité différents (neurologiques, cognitives, comportementales, psycho-affectives, ...).
+
+Les troubles les plus souvent constatés :
+
+* **Troubles du champ visuel** **:** Ces personnes cérébrolésées ont très souvent un champ visuel réduit et sont fortement gênées pour se déplacer. Ce handicap est difficilement compréhensible par l'entourage.
+* **Troubles de la mémoire et de l’orientation temporo-spatiale** : L’une des grandes difficultés constatées est le repérage et l’orientation dans le temps et l’espace. Par exemple, elles doivent parcourir un trajet plusieurs fois afin de repérer tous les obstacles et de le mémoriser, elles ont des difficultés à gérer les événements imprévus et à adapter leur comportement.
+* **Fatigabilité et lenteur** : Toute mobilisation cognitive entraîne une grande fatigabilité, augmentée par les stratégies de compensation et d’ajustement qui tentent de pallier les carences fonctionnelles. Les aides humaines sont donc à certains moments indispensables dans des actes de la vie quotidienne.
+* **Altération de la motricité fine** : De nombreux gestes de la vie quotidienne ne peuvent être effectués : ouverture de boîtes, laçage de chaussures, dévissage de bouteilles…
+
+**Pour répondre à l’isolement de jeunes adultes souhaitant vivre dans des habitats inclusifs, dans un milieu ordinaire, au cœur de la cité, l’association a décidé de créer un habitat partagé et accompagné pour 5 personnes.**
 
 Ce projet ambitieux est en cours de réalisation, vous pouvez retrouver toutes les informations et l'état d'avancement sur [notre page dédiée](/habitat-partage).
 
@@ -52,15 +60,15 @@ Les différents marchés de Noël auxquels nous sommes présents permettent de f
 
 ### Qui sommes-nous ?
 
-- _Patrice Giroud_, Président
-- _Christophe Gildas_, Vice-président
-- _Elisabeth Lordez_, Secrétaire
-- _Isabelle Giroud_, Secrétaire adjointe
-- _Françoise Granthomme_, Trésorière
-- _Jean-Paul Granthomme_, Trésorier adjoint
-- _Daniel Clerc_, membre du bureau
-- _Dominique Gildas_, membre du bureau
-- _Gaëlle Clerc_, membre du bureau
+* *Patrice Giroud*, Président
+* *Christophe Gildas*, Vice-président
+* *Elisabeth Lordez*, Secrétaire
+* *Isabelle Giroud*, Secrétaire adjointe
+* *Françoise Granthomme*, Trésorière
+* *Jean-Paul Granthomme*, Trésorier adjoint
+* *Daniel Clerc*, membre du bureau
+* *Dominique Gildas*, membre du bureau
+* *Gaëlle Clerc*, membre du bureau
 
 Amélie la vie compte **plus de soixante-dix adhérents**. Vous aussi, [apportez votre soutien en adhérant à l'association](/nous-soutenir).
 
