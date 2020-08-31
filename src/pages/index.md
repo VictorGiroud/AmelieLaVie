@@ -2,8 +2,8 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: Suite au Covid19, l'assemblée générale et l'édition 2020 de notre
-  randonnée pédestre sont reportés à une date inconnue à ce jour.
+alerte: Suite au Covid19, l'assemblée générale qui aurait dû avoir lieu au mois
+  de mars se tiendra le vendredi 25 septembre à 20h30.
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
