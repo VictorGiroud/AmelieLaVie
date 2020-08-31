@@ -35,7 +35,7 @@ De 2013 à 2017, nous avons soutenu l'association **[Imagine for Margo](https://
 
 Aujourd'hui, l’association vient en aide aux **personnes cérébrolésées** et les accompagne afin de favoriser au maximum leur **autonomie dans la vie quotidienne**, notamment sur le plan humain, matériel et financier.
 
-Une personne cérébrolésée a des lésions cérébrales graves survenues, soit après un traumatisme crânien, soit après une tumeur cérébrale, soit après un accident vasculaire cérébral, ... Ce handicap invisible affecte durablement leur qualité de vie et celle de leur entourage. Il existe plusieurs sphères de déficits à des degrés de sévérité différents (neurologiques, cognitives, comportementales, psycho-affectives, ...).
+Une personne cérébrolésée a des lésions cérébrales graves survenues, soit après un traumatisme crânien, soit après une tumeur cérébrale, soit après un accident vasculaire cérébral, ... Ce handicap invisible affecte durablement sa qualité de vie et celle de son entourage. Il existe plusieurs sphères de déficits à des degrés de sévérité différents (neurologiques, cognitives, comportementales, psycho-affectives, ...).
 
 Les troubles les plus souvent constatés :
 
