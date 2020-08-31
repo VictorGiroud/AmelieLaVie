@@ -6,7 +6,7 @@ description: >
   En juillet, nous avons candidaté au 9 ème appel à projets du fonds de
   dotations QUALITEL.
 featuredimage: /img/qualitel_social_corpo.jpg
-published: true
+published: false
 tags:
   - Appel à projets
 ---
