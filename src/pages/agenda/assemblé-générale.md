@@ -1,9 +1,10 @@
 ---
 templateKey: agenda-event
 title: Assemblée générale
-address: Montanay
-date: 2020-09-24T18:30:55.331Z
+address: Montanay, salle LNG
+date: 2020-09-25T18:30:55.331Z
 display: true
 ---
-Suite aux mesures exceptionnelles prises par le gouvernement et les municipalités, les assemblés générales ordinaire et extraordinaire d'Amélie La Vie prévues le 13/03/2020 à 20h30 sont reportées à une date ultérieure qui
-sera communiquée dès que possible.
+Les assemblés générales ordinaire et extraordinaire d'Amélie La Vie prévues le 13/03/2020 auront lieu le vendredi 25 septembre à 20h30 à la salle LNG de Montanay au 671 Rue des Échets.
+
+N'oubliez pas votre masque et votre stylo.
