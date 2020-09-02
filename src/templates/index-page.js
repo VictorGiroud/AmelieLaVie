@@ -64,7 +64,7 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
       )}
       <div className="content">
         <div className="tile">
-          <h1 className="title">{presentation.title}</h1>
+          <h2 className="title">{presentation.title}</h2>
         </div>
         <div className="section-container">
           <div className="section-icon is-hidden-mobile">
@@ -90,7 +90,7 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
     </Section>
     <Section>
       <div className="column is-12">
-        <h1 className="title">Actualités</h1>
+        <h2 className="title">Actualités</h2>
         <BlogRoll limit={5} />
         <div className="column is-12 has-text-centered">
           <Link className="btn" to="/actualites">
@@ -102,7 +102,7 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
     <Section odd>
       <div className="columns">
         <div className="column is-12">
-          <h1 className="title">{heading}</h1>
+          <h2 className="title">{heading}</h2>
           <p>{intro.heading}</p>
         </div>
       </div>
@@ -123,7 +123,7 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
     <Section>
       <div className="columns">
         <div className="column is-12">
-          <h1 className="title">Evenements à venir</h1>
+          <h2 className="title">Evenements à venir</h2>
           <AgendaEvent />
         </div>
       </div>

@@ -44,7 +44,7 @@ class EventItem extends React.Component {
             <div className="agenda-event-item-text-title is-size-4">{event.frontmatter.title}</div>
             <div className="is-size-6">{event.frontmatter.resume}</div>
             {event.frontmatter.address && (
-              <div className="is-size-7 text-right">
+              <div className="is-size-6 text-right">
                 <img src={locationIcon} alt="Agenda" style={{ height: "0.75em" }} />
                 <a
                   className="agenda-event-item-location"
@@ -57,7 +57,7 @@ class EventItem extends React.Component {
               </div>
             )}
 
-            <div className="agenda-event-item-text-more is-size-7">
+            <div className="agenda-event-item-text-more is-size-6">
               <Link className="agenda-event-item-text-more" to={event.fields.slug}>
                 Plus d'informations...
               </Link>
