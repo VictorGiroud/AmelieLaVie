@@ -2,12 +2,10 @@
 templateKey: agenda-event
 title: Randonnée pédestre
 address: Montanay, foyer rural
-date: 2021-04-17T12:20:35.036Z
+date: 2021-04-25T07:00:00.000Z
 resume: Edition 2021 de notre randonnée pédestre.
 display: false
 ---
-
-La **treizième édition de la randonnée pédestre** initialement prévue le
-dimanche 19 avril 2020 est **reportée** à une date à définir.
+**Treizième édition de la randonnée pédestre.**
 
 Le départ se fera cette année du **foyer rural** de **Montanay**.
