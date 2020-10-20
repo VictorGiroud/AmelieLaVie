@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Appel à projets Qualitel
-date: 2020-07-15T13:03:31.273Z
+date: 2020-10-20T11:54:05.735Z
 description: >
   En juillet, nous avons candidaté au 9ème appel à projets du fonds de dotations
   QUALITEL.
