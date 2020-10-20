@@ -10,7 +10,7 @@ published: true
 tags:
   - Appel à projets
 ---
-Le Fonds de dotation QUALITEL a lancé son 9 ème appel à projets, avec pour objectif de soutenir des initiatives emblématiques et novatrices en faveur du logement des plus défavorisés.  Nous avons candidaté en juillet, dans la catégorie « Hébergement », et plus précisément pour aménager la cuisine commune de notre habitat. 
+Le Fonds de dotation QUALITEL a lancé son 9ème appel à projets, avec pour objectif de soutenir des initiatives emblématiques et novatrices en faveur du logement des plus défavorisés.  Nous avons candidaté dans la catégorie « Hébergement », et plus précisément pour aménager la cuisine commune de notre habitat. 
 
 ![](/img/qualitel_social_corpo2.jpg)
 
