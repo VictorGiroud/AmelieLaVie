@@ -2,8 +2,7 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: Suite au Covid19, l'assemblée générale qui aurait dû avoir lieu au mois
-  de mars se tiendra le vendredi 25 septembre à 20h30.
+alerte: Suite au Covid19, le marché de Noël de Montanay n'aura pas lieu
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
@@ -28,5 +27,5 @@ intro:
         faire la cuisine, de multiples activités, prévoir des sorties communes,
         se détendre dans l'espace sport, ..."
   description: Le permis de construire a été déposé fin juin 2020. L'ouverture
-    devrait se faire en 2022.
+    devrait se faire au printemps 2023.
 ---
