@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: Suite au Covid19, le marché de Noël de Montanay n'aura pas lieu
+alerte: L'association vous souhaite une bonne année 2021.
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
