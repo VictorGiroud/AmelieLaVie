@@ -61,13 +61,13 @@ Les différents marchés de Noël auxquels nous sommes présents permettent de f
 ### Qui sommes-nous ?
 
 * *Patrice Giroud*, Président
-* *Christophe Gildas*, Vice-président
+* *Jacqueline Griot*, Vice-présidente
 * *Elisabeth Lordez*, Secrétaire
 * *Isabelle Giroud*, Secrétaire adjointe
 * *Françoise Granthomme*, Trésorière
 * *Jean-Paul Granthomme*, Trésorier adjoint
 * *Daniel Clerc*, membre du bureau
-* *Dominique Gildas*, membre du bureau
+* *Delphine Hadad*, membre du bureau
 * *Gaëlle Clerc*, membre du bureau
 
 Amélie la vie compte **plus de soixante-dix adhérents**. Vous aussi, [apportez votre soutien en adhérant à l'association](/nous-soutenir).
