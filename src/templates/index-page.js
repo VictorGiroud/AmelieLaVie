@@ -8,6 +8,8 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import AgendaEvent from "../components/AgendaEvent";
 
+import famillessolidaires from "../img/famillessolidaires.png";
+import ag2r from "../img/ag2r.png";
 import colibriLeft from "../img/colibri_bg_left.svg";
 import colibriRight from "../img/colibri_bg_right.svg";
 import phone from "../img/phone.svg";
@@ -125,6 +127,19 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
         <div className="column is-12">
           <h2 className="title">Evenements à venir</h2>
           <AgendaEvent />
+        </div>
+      </div>
+    </Section>
+    <Section odd>
+      <div className="columns">
+        <div className="column is-12">
+          <h4 className="title">Amélie la Vie est soutenu par :</h4>
+          <a className="support" title="AG2R La Mondiale" href="https://www.ag2rlamondiale.fr/" target="_blank" rel="noopener noreferrer">
+            <img src={ag2r} alt="AG2R La Mondiale" style={{ width: "10em" }} />
+          </a>
+          <a className="support" title="Familles Solidaires" href="https://familles-solidaires.com" target="_blank" rel="noopener noreferrer">
+            <img src={famillessolidaires} alt="Familles Solidaires" style={{ width: "10em" }} />
+          </a>
         </div>
       </div>
     </Section>
