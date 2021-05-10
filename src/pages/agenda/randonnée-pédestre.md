@@ -4,7 +4,7 @@ title: Randonnée pédestre
 address: Montanay, foyer rural
 date: 2021-04-25T07:00:00.000Z
 resume: Edition 2021 de notre randonnée pédestre.
-display: true
+display: false
 ---
 **Treizième édition de la randonnée pédestre.**
 

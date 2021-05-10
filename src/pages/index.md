@@ -2,7 +2,8 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: Randonnée le dimanche 25 avril à partir de 9h30. Départ de Montanay.
+alerte: La randonnée annuelle est reportée début juin, plus d'infos très
+  prochainement !
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
