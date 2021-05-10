@@ -2,8 +2,7 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: La randonnée annuelle est reportée début juin, plus d'infos très
-  prochainement !
+alerte: Notre randonnée pédestre aura lieu le dimanche 6 juin à Montanay
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
