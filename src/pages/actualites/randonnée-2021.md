@@ -54,7 +54,7 @@ Double avantage à cette solution : vous n’aurez pas à faire la queue pour pa
 
 Cela aidera aux respects des gestes barrières en fluidifiant le déroulement des inscriptions.
 
-* **[Je réserve ma participation et mon éventuel commande de cakes](https://www.helloasso.com/associations/amelie-la-vie/evenements/randonnee-amelie-la-vie-2021)**
+* **[Je réserve ma participation et mon éventuelle commande de cakes](https://www.helloasso.com/associations/amelie-la-vie/evenements/randonnee-amelie-la-vie-2021)**
 
 Vous n’aurez qu’à vous présenter dans la file dédiée le matin de la randonnée et nous vous remettrons votre plan et votre éventuelle commande de cakes qui aura été préparée au préalable !
 
