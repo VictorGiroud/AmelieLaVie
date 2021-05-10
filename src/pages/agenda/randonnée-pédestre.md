@@ -1,11 +1,11 @@
 ---
 templateKey: agenda-event
 title: Randonnée pédestre
-address: Montanay, foyer rural
-date: 2021-04-25T07:00:00.000Z
+address: Montanay, place de la Poype
+date: 2021-06-06T06:00:00.000Z
 resume: Edition 2021 de notre randonnée pédestre.
-display: false
+display: true
 ---
 **Treizième édition de la randonnée pédestre.**
 
-Le départ se fera cette année du **foyer rural** de **Montanay**.
+Le départ se fera cette année de la place de la Poype à **Montanay**.
