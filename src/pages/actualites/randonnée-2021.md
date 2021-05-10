@@ -9,15 +9,15 @@ published: true
 tags:
   - Randonnée pédestre
 ---
-Après une édition 2020 que nous avions été contraint d’annuler à cause des restrictions sanitaires, nous sommes heureux de vous donner rendez-vous ce dimanche 6 juin 2021 pour le retour de notre randonnée pédestre annuelle ! Les départs se feront entre 8h et 10h30.
+Après une édition 2020 que nous avions été contraints d’annuler à cause des restrictions sanitaires, nous sommes heureux de vous donner rendez-vous ce dimanche 6 juin 2021 pour le retour de notre randonnée pédestre annuelle ! Les départs se feront entre 8h et 10h30.
 
 Avis aux habitués qui souhaitent découvrir de nouveaux sentiers : pour la première fois, le départ ne se fera plus de Cailloux sur Fontaines mais de [Montanay, place de la Poype](https://www.google.com/maps/search/?api=1&query=Montanay%20Place%20de%20la%20Poype).
 
 Comme habituellement, nous vous proposerons 3 circuits adaptés à tous les marcheurs :
 
 * Relax : 5km (3€)
-* Fun : 10km (3€)
-* Sportif : 15km (3€)
+* Fun : 10km (5€)
+* Sportif : 15km (7€)
 
 ![Photo prise lors de l'édition 2017 de notre randonnée pédestre](/img/randonee_2017.jpg "Photo prise lors de l'édition 2017 de notre randonnée pédestre")
 
@@ -38,7 +38,7 @@ Pour les sportifs habitués utilisant une application tierce (Starvan, Garmin, O
 
 ### Vente de cakes
 
-Élément emblématique de nos randonnées ; nous vous proposerons comme chaque année une vente de cakes !
+Élément emblématique de nos randonnées, nous vous proposerons comme chaque année une vente de cakes !
 
 Portion unitaire ou familial, à déguster sur place ou à emporter, avec une multitude de parfums disponibles, il y en aura pour toutes les envies et tous les goûts.
 
@@ -60,6 +60,6 @@ Vous n’aurez qu’à vous présenter dans la file dédiée le matin de la rand
 
 Si vous n’arrivez pas à vous inscrire via le formulaire ou que le moyen de paiement ne vous convient pas, nous serons heureux de trouver une solution avec vous  ! [Contactez-nous via notre formulaire de contact, Messenger, ou par téléphone](/contact).
 
-Au plaisir de vous voir et de pouvoir échanger avec vous lors de cet événement le 9 juin prochain !
+Au plaisir de vous voir et de pouvoir échanger avec vous lors de cet événement le 6 juin prochain !
 
 <!--EndFragment-->
