@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Randonnée 2021
+title: Randonnée pédestre, édition 2021
 date: 2021-06-06T06:30:00.000Z
 description: "L'édition 2021 de notre randonnée pédestre aura lieu le dimanche 6
   juin à 2021 à Montanay ! "
