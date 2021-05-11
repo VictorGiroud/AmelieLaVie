@@ -34,7 +34,7 @@ Nous vous invitons à télécharger dès à présent l’application Footpath qu
 
 ![Aperçu du fonctionnement de Footpath](/img/footpath.jpg "Aperçu du fonctionnement de Footpath")
 
-Pour les sportifs habitués utilisant une application tierce (Starvan, Garmin, OsmAnd, ...), un fichier GPX à importer dans votre application favorite pourra vous être fourni pour retrouver le tracé de la randonnée.
+Pour les sportifs habitués utilisant une application tierce (Starva, Garmin, OsmAnd, ...), un fichier GPX à importer dans votre application favorite pourra vous être fourni pour retrouver le tracé de la randonnée.
 
 ### Vente de cakes
 
