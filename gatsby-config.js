@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: "Amélie La Vie",
     author: "Victor Giroud",
-    siteURL: "https://amelielavie.app",
+    siteURL: "https://amelielavie.com",
     description:
       'L\'association "Amélie la vie" a pour but de venir en aide à des personnes atteintes de maladies engageant le pronostic vital ou fortement handicapantes.',
   },
