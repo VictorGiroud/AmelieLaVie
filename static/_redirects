@@ -1,3 +1,14 @@
 /randonnee /actualites/randonn%C3%A9e-2021/
 /reservation https://www.helloasso.com/associations/amelie-la-vie/evenements/randonnee-amelie-la-vie-2021
-/rando/5 https://footpathapp.com/routes/1ad794f9-6f1b-4980-8c3e-0eca7eb86e82
+
+/rando/5/fp https://footpathapp.com/routes/1ad794f9-6f1b-4980-8c3e-0eca7eb86e82
+/rando/10/fp https://footpathapp.com/routes/1ad794f9-6f1b-4980-8c3e-0eca7eb86e82
+/rando/15/fp https://footpathapp.com/routes/1ad794f9-6f1b-4980-8c3e-0eca7eb86e82
+
+/rando/5/gpx /assets/rando/rando-2021-5km.gpx
+/rando/10/gpx /assets/rando/rando-2021-10km.gpx
+/rando/15/gpx /assets/rando/rando-2021-15km.gpx
+
+/rando/5 /rando/5/fp?utm_source=qrcode&utm_medium=plan&utm_campaign=randonnee_footpath_5
+/rando/10 /rando/10/fp?utm_source=qrcode&utm_medium=plan&utm_campaign=randonnee_footpath_10
+/rando/15 /rando/15/fp?utm_source=qrcode&utm_medium=plan&utm_campaign=randonnee_footpath_15
