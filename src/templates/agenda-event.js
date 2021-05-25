@@ -46,7 +46,7 @@ const AgendaEvent = ({ data }) => {
         address={event.frontmatter.address}
         date={event.frontmatter.date}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Agenda">
             <title>{`${event.frontmatter.title}`}</title>
             <meta name="description" content={`${event.frontmatter.resume}`} />
           </Helmet>

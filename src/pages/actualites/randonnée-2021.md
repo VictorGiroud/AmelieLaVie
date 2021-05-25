@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Randonnée pédestre, édition 2021
-date: 2021-06-06T06:30:00.000Z
+date: 2021-05-14T06:30:00.000Z
 description: "L'édition 2021 de notre randonnée pédestre aura lieu le dimanche 6
   juin à 2021 à Montanay ! "
 featuredimage: /img/randonnee.jpg
@@ -10,7 +10,7 @@ tags:
   - Randonnée pédestre
 ---
 
-Après une édition 2020 que nous avions été contraints d’annuler à cause des restrictions sanitaires, nous sommes heureux de vous donner rendez-vous ce dimanche 6 juin 2021 pour le retour de notre randonnée pédestre annuelle ! Les départs se feront à partir de 8h.
+Après une édition 2020 que nous avions été contraints d’annuler à cause des restrictions sanitaires, nous sommes heureux de vous donner rendez-vous ce **dimanche 6 juin 2021** pour le retour de notre randonnée pédestre annuelle ! Les départs se feront à partir de 8h.
 
 Avis aux habitués qui souhaitent découvrir de nouveaux sentiers : pour la première fois, le départ ne se fera plus de Cailloux sur Fontaines mais de [Montanay, place de la Poype](https://www.google.com/maps/search/?api=1&query=Montanay%20Place%20de%20la%20Poype).
 
