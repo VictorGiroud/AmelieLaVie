@@ -9,16 +9,15 @@ published: true
 tags:
   - Randonnée pédestre
 ---
-
 Après une édition 2020 que nous avions été contraints d’annuler à cause des restrictions sanitaires, nous sommes heureux de vous donner rendez-vous ce **dimanche 6 juin 2021** pour le retour de notre randonnée pédestre annuelle ! Les départs se feront à partir de 8h.
 
 Avis aux habitués qui souhaitent découvrir de nouveaux sentiers : pour la première fois, le départ ne se fera plus de Cailloux sur Fontaines mais de [Montanay, place de la Poype](https://www.google.com/maps/search/?api=1&query=Montanay%20Place%20de%20la%20Poype).
 
 Comme habituellement, nous vous proposerons 3 circuits adaptés à tous les marcheurs :
 
-- Relax : 5km (3€)
-- Fun : 10km (5€)
-- Sportif : 15km (7€)
+* Relax : 5km (3€)
+* Fun : 10km (5€)
+* Sportif : 15km (7€)
 
 ![Photo prise lors de l'édition 2017 de notre randonnée pédestre](/img/randonee_2017.jpg "Photo prise lors de l'édition 2017 de notre randonnée pédestre")
 
@@ -30,8 +29,8 @@ En support principal pour remplacer le plan papier, ou en support secondaire pou
 
 Nous vous invitons à télécharger dès à présent l’application Footpath qui vous servira à vous repérer le jour de la randonnée.
 
-- [Télécharger Footpath sur Android](https://play.google.com/store/apps/details?id=com.halfmilelabs.footpath)
-- [Télécharger Footpath sur iOS](https://apps.apple.com/fr/app/footpath-mesure-distance/id634845718)
+* [Télécharger Footpath sur Android](https://play.google.com/store/apps/details?id=com.halfmilelabs.footpath)
+* [Télécharger Footpath sur iOS](https://apps.apple.com/fr/app/footpath-mesure-distance/id634845718)
 
 ![Aperçu du fonctionnement de Footpath](/img/footpath.jpg "Aperçu du fonctionnement de Footpath")
 
@@ -55,7 +54,9 @@ Double avantage à cette solution : vous n’aurez pas à faire la queue pour pa
 
 Cela aidera aux respects des gestes barrières en fluidifiant le déroulement des inscriptions.
 
-- **[Je réserve ma participation et mon éventuelle commande de cakes](https://www.helloasso.com/associations/amelie-la-vie/evenements/randonnee-amelie-la-vie-2021)**
+**Les inscriptions en ligne ne seront plus possibles après le 5 juin à 23h mais pourront se faire sur le stand de l'association le jour de la randonnée.** 
+
+* **[Je réserve ma participation et mon éventuelle commande de cakes](https://www.helloasso.com/associations/amelie-la-vie/evenements/randonnee-amelie-la-vie-2021)**
 
 Vous n’aurez qu’à vous présenter dans la file dédiée le matin de la randonnée et nous vous remettrons votre plan et votre éventuelle commande de cakes qui aura été préparée au préalable !
 
