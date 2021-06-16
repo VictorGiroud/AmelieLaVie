@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Appel à projet GEOTEC
-date: 2021-01-27T19:43:10.823Z
+date: 2021-06-16T18:43:10.823Z
 description: >
   En octobre 2020, nous avons candidaté à l'appel à projets de GEOTEC et nous
   sommes lauréats !
