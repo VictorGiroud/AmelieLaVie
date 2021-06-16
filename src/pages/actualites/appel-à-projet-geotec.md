@@ -8,7 +8,7 @@ description: >
 featuredimage: /img/geotec.jpg
 published: true
 tags:
-  - Appel à projet
+  - Appel à projets
 ---
 La participation à différents appels à projets est pour notre association un exercice à la fois indispensable et stressant. Indispensable puisque nous avons besoin de fonds importants pour financer notre habitat partagé et stressant car ce n’est pas notre formation professionnelle, que les dossiers sont compliqués à remplir, et que souvent les réponses sont négatives… 
 
