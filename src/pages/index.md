@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: Notre randonnée pédestre aura lieu le dimanche 6 juin à Montanay
+alerte: Notre assemblée générale aura lieu le jeudi 1er juillet à Montanay
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
