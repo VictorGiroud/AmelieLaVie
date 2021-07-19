@@ -9,6 +9,8 @@ published: true
 tags:
   - Subvention
 ---
+Notre association a reçu une subvention du fonds de dotation Habitats et Familles Solidaires. 
+
 Cette subvention, reçue par [le fonds de dotation Habitats et Familles Solidaires](https://fonds-hfs.fr/) porte sur le financement de prestations de conseils, de frais fixes, et de ressources humaines portés par les porteurs de projets associatifs lauréats du concours LACHPA organisé par Familles Solidaires.
 
 ![Remise des prix #Lachpa](/img/remise-des-prix2.jpg "Remise des prix #Lachpa")
