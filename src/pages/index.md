@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: Notre assemblée générale aura lieu le jeudi 1er juillet à Montanay
+alerte: Bel été à tous, rendez-vous le 12 septembre avec La Villageoise
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
