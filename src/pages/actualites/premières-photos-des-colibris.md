@@ -9,15 +9,13 @@ published: true
 tags:
   - Habitat partagé
 ---
-<!--StartFragment-->
-
 Les Colibris à Sathonay-Camp, ça devient concret sur le terrain... !
 
-Un permis de construire affiché, deux belles places de parking réservées aux véhicules pour personnes à mobilité réduite déjà prévues au débouché de la venelle d'accès aux appartements, un espace de construction en bordure de l'arboretum mis en place par le Grand Lyon, avec vue sur les Monts d’Or.
+Un permis de construire affiché, deux belles places de parking réservées aux véhicules pour personnes à mobilité réduite déjà prévues au débouché de la venelle d'accès aux appartements. 
 
 ![Permis de construire](/img/sathonay3.jpg "Permis de construire")
 
-<!--EndFragment-->
+Un espace de construction en bordure de l'arboretum mis en place par le Grand Lyon, avec vue sur les Monts d’Or.
 
 ![Le terrain](/img/sathonay1.jpg "Le terrain")
 
