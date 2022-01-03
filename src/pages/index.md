@@ -2,8 +2,7 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: "Prochaines manifestations : 11 décembre, marché de Noël à Cailloux et
-  12 décembre, marché de Noël à Montanay"
+alerte: Meilleurs vœux pour cette nouvelle année !
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
