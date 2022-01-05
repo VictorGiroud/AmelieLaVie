@@ -7,8 +7,10 @@ description: "Le 7 décembre 2021, nous avons eu l'honneur de recevoir un prix d
 featuredimage: /img/1641201104978__fre9317.jpg
 published: true
 tags:
-  - Lauréat
+  - Lauréat appel à projet
 ---
+![](/img/_fre9358.jpg "Projets en faveur de la domotique")
+
 Cette année,** [28 initiatives solidaires](https://www.qualitel.org/financement-projets/les-laureats/)** ont été récompensées par le Fonds de dotation QUALITEL et ses partenaires mécènes. Notre projet a été retenu en faveur de la domotique.
 
 L'argent attribuée est destinée à la pose et l’aménagement de la cuisine des parties communes de notre futur habitat partagé.
