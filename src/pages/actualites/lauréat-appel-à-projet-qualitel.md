@@ -15,4 +15,4 @@ Cette année, [28 initiatives solidaires](https://www.qualitel.org/financement-p
 
 L'argent attribuée est destinée à la pose et l’aménagement de la cuisine des parties communes de notre futur habitat partagé.
 
-Vous pouvez revivre[ cette cérémonie](https://www.youtube.com/watch?v=JckoiTjTpkg&ab_channel=GroupeQUALITEL).
+Vous pouvez revivre[ cette cérémonie](https://youtu.be/JckoiTjTpkg?t=1544).
