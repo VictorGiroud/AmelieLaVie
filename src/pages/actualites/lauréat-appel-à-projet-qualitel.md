@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Lauréat - Appel à projet Qualitel
+title: Lauréat appel à projet Qualitel
 date: 2022-01-05T09:32:06.182Z
 description: "Le 7 décembre 2021, nous avons eu l'honneur de recevoir un prix de
   10 000 € suite au 10ème appel à projet de Qualitel. "
