@@ -13,6 +13,6 @@ tags:
 
 Cette année, [28 initiatives solidaires](https://www.qualitel.org/financement-projets/les-laureats/) ont été récompensées par le Fonds de dotation QUALITEL et ses partenaires mécènes. Notre projet a été retenu en faveur de la domotique.
 
-L'argent attribuée est destinée à la pose et l’aménagement de la cuisine des parties communes de notre futur habitat partagé.
+L'argent attribué est destinée à la pose et l’aménagement de la cuisine des parties communes de notre futur habitat partagé.
 
 Vous pouvez revivre[ cette cérémonie](https://youtu.be/JckoiTjTpkg?t=1544).
