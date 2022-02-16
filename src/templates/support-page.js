@@ -16,6 +16,7 @@ function Iframe(props) {
   return <div dangerouslySetInnerHTML={{ __html: props.iframe ? props.iframe : "" }} />;
 }
 
+// eslint-disable-next-line
 export const SupportPageTemplate = ({ image, content, contentComponent, title, subtitle, description, adhesion, tips, helmet }) => {
   const HtmlContent = contentComponent || Content;
 

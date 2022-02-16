@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import FullWidthImage from "../components/FullWidthImage";
 
+// eslint-disable-next-line
 export const DefaultPageTemplate = ({ image, content, contentComponent, title, subtitle, description, helmet }) => {
   const HtmlContent = contentComponent || Content;
 

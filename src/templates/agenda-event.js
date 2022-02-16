@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
+// eslint-disable-next-line
 export const AgendaEventTemplate = ({ content, contentComponent, date, resume, address, title, helmet }) => {
   const EventContent = contentComponent || Content;
 

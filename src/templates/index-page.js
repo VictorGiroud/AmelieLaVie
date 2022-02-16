@@ -15,6 +15,7 @@ import colibriRight from "../img/colibri_bg_right.svg";
 import phone from "../img/phone.svg";
 import love from "../img/love.svg";
 
+// eslint-disable-next-line
 export const Section = ({ children, odd }) => (
   <section
     className="section"
@@ -37,6 +38,7 @@ export const Section = ({ children, odd }) => (
   </section>
 );
 
+// eslint-disable-next-line
 export const IndexPageTemplate = ({ title, heading, alerte, presentation, description, intro }) => (
   <div className="index">
     <div className="full-width full-width-padding">

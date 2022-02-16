@@ -69,7 +69,7 @@ class EventItem extends React.Component {
   }
 }
 
-export default () => (
+const AgendaEventComponent = () => (
   <StaticQuery
     query={graphql`
       query AgendaEventQuery {
@@ -101,3 +101,5 @@ export default () => (
     render={(data, count) => <AgendaEvent data={data} count={count} />}
   />
 );
+
+export default AgendaEventComponent;

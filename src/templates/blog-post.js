@@ -21,6 +21,7 @@ import useSiteMetadata from "../hooks/useSiteMetadata";
 
 import clockIcon from "../img/icons/clock.svg";
 
+// eslint-disable-next-line
 export const BlogPostTemplate = ({ url, content, contentComponent, description, date, tags, title, readingTime, helmet }) => {
   const PostContent = contentComponent || Content;
 

@@ -74,7 +74,7 @@ BlogRoll.propTypes = {
   }),
 };
 
-export default ({ limit }) => (
+const BlogRollComponent = ({ limit }) => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
@@ -112,3 +112,5 @@ export default ({ limit }) => (
     render={(data, count) => <BlogRoll data={data} count={count} limit={limit} />}
   />
 );
+
+export default BlogRollComponent;

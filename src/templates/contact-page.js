@@ -16,6 +16,7 @@ function encode(data) {
     .join("&");
 }
 
+// eslint-disable-next-line
 export const ContactPageTemplate = ({ image, content, contentComponent, title, subtitle, description, helmet }) => {
   const [formData, setFormData] = useState({ isValidated: false });
   const recaptchaRef = createRef();

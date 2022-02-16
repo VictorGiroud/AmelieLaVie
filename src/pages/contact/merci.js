@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";
 
-export default () => (
+const Merci = () => (
   <Layout>
     <section className="section section--gradient">
       <div className="container">
@@ -17,3 +17,5 @@ export default () => (
     </section>
   </Layout>
 );
+
+export default Merci;
