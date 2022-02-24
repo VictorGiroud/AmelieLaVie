@@ -7,8 +7,8 @@ import Content, { HTMLContent } from "../components/Content";
 import FullWidthImage from "../components/FullWidthImage";
 
 const iframeAdhesion = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/adhesions/adherer-a-l-association/widget-vignette-horizontale" style="width:100%;height:250px;border:none;"></iframe>`;
-const iframeAdhesionTablet = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/adhesions/adhesion-amelie-la-vie/widget-vignette" style="width:350px;height:380px;border:none;"></iframe>`;
-const iframeAdhesioMobile = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/adhesions/adhesion-amelie-la-vie/widget-bouton" style="width:150px;height:70px;border:none;"></iframe>`;
+const iframeAdhesionTablet = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/adhesions/adherer-a-l-association/widget-vignette" style="width:350px;height:380px;border:none;"></iframe>`;
+const iframeAdhesioMobile = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/adhesions/adherer-a-l-association/widget-bouton" style="width:150px;height:70px;border:none;"></iframe>`;
 
 const iframeTip = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/formulaires/1/widget-bouton" style="width:200px;height:100px;border:none;"></iframe><div style="width:100%;">`;
 
