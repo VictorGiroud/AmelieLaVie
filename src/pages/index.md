@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: "Assemblée générale : 14 mars à 20h30 salle LNG à Montanay"
+alerte: "Randonnée pédestre : dimanche 27 mars à Montanay"
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
