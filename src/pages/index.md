@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: "Randonnée pédestre : dimanche 27 mars à Montanay"
+alerte: "Weekend festif de la Villageoise : 21 et 22 mai"
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
