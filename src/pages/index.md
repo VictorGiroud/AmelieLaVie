@@ -21,7 +21,7 @@ intro:
         cérébrolésées de vivre chez elles dans des logements adaptés, de
         favoriser leur autonomie tout en partageant une vie sociale et partagée
         avec un collectif.
-    - image: /img/plan.jpg
+    - image: /img/plan-les-colibris.png
       text: "Il y aura 5 appartements T2 mais aussi des parties communes qui
         permettront de partager des moments privilégiés entre les locataires :
         faire la cuisine, de multiples activités, prévoir des sorties communes,
