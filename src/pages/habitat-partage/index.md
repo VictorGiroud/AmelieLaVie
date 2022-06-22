@@ -22,7 +22,7 @@ Pour répondre à **l’isolement** de ces jeunes adultes, souhaitant vivre dans
 
 Pour faciliter au maximum la vie au quotidien de ces personnes, la domotique est au cœur de ce projet, notamment grâce à des miroirs connectés, outils centraux permettant d'accéder facilement à des informations importantes, de faciliter la communication et de tout contrôler de manière simple et intuitive.
 
-![Plan d'ensemble de notre habitat](/img/plan.jpg)
+![Plan d'ensemble de notre habitat](/img/plan-les-colibris.png)
 
 ## L'aventure #LACHPA
 
