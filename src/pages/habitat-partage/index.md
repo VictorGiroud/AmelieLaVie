@@ -36,7 +36,7 @@ Cet habitat s'appelle **Les Colibris**, il est situé à **[Sathonay-Camp](https
 
 Cet habitat fera partie d'un groupe d'immeubles construit par le bailleur social **[Dynacité](https://www.dynacite.fr/)**. L'architecte choisi est l'Atelier Régis Gachon à Lyon. Les logements sont en rez-de-chaussée, regroupés autour de la partie commune. Les logements seront équipés de domotique, ils présenteront des **aménagements adaptés** au handicap, favorisant ainsi l'**autonomie** des locataires et conciliant sécurité et liberté. Un jardin partagé, avec jardinières hautes complétera ce lieu.
 
-Le permis de construire a été déposé fin juin 2020. L'ouverture devrait se faire en **2022**.
+Le permis de construire a été déposé fin juin 2020. L'ouverture devrait se faire début 2024.
 
 ![Modélisation 3D de notre immeuble](/img/perspective.jpg)
 
