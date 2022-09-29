@@ -1,11 +1,8 @@
 ---
 templateKey: agenda-event
-title: Randonnée pédestre
-address: Montanay, place de la Poype
-date: 2021-06-06T06:00:00.000Z
-resume: Edition 2021 de notre randonnée pédestre.
+title: Marché de Noël à Cailloux sur Fontaines
+address: La Vallonnière, Rue des Prolières, Cailloux-sur-Fontaines
+date: 2022-12-09T07:00:00.000Z
+resume: ""
 display: true
 ---
-**Treizième édition de la randonnée pédestre.**
-
-Le départ se fera cette année de la place de la Poype à **Montanay**.
