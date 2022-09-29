@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: Bon été à tous !
+alerte: "Prochaine rencontre : randonnée à Montanay le dimanche 26 mars 2023 "
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
