@@ -2,7 +2,8 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: "Prochaine rencontre : randonnée à Montanay le dimanche 26 mars 2023 "
+alerte: "Prochaines rencontres : marchés de Noël le 10 décembre à Cailloux, le
+  11 décembre à Montanay"
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
