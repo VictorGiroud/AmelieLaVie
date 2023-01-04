@@ -28,5 +28,5 @@ intro:
         faire la cuisine, de multiples activités, prévoir des sorties communes,
         se détendre dans l'espace sport, ..."
   description: Le permis de construire a été déposé fin juin 2020. L'ouverture
-    devrait se faire début 2024.
+    devrait se faire en juin 2024.
 ---
