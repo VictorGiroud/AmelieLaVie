@@ -2,8 +2,8 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: Meilleurs vœux à tous ! Rendez-vous le dimanche 26 mars pour notre
-  randonnée pédestre à Montanay.
+alerte: "Assemblée Générale : vendredi 3 mars. Randonnée pédestre à Montanay
+  dimanche 26 mars."
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
