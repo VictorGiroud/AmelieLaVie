@@ -6,7 +6,7 @@ description: La construction de notre habitat avance !
 featuredimage: /img/amelie_2023-01-17_16-17-32.jpg
 published: true
 tags:
-  - habitat
+  - Habitat partagé
 ---
 Notre projet d'habitat partagé avance bien.
 
