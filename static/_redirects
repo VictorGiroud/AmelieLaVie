@@ -1,13 +1,13 @@
 /randonnee /actualites/randonn%C3%A9e-2023/
 /reservation https://www.helloasso.com/associations/amelie-la-vie/boutiques/randonnee-amelie-la-vie-2023-1
 
-/rando/5/fp https://footpathapp.com/routes/09e116df-b3ec-4aac-aae7-cd0e6b018154
-/rando/10/fp https://footpathapp.com/routes/2e56472a-aafc-46cb-bf48-a3f6c1380252
-/rando/15/fp https://footpathapp.com/routes/107934fd-101a-4cd2-98c0-66e400d98712
+/rando/5/fp https://footpathapp.com/routes/ed07ca38-82df-48e3-a88b-2af142ae382c
+/rando/10/fp https://footpathapp.com/routes/d776e665-e690-4954-b050-45f1241d0010
+/rando/15/fp https://footpathapp.com/routes/fb9458f5-9ca8-4df8-b6fe-976049dea14e
 
-/rando/5/gpx /assets/rando/rando-2022-5km.gpx
-/rando/10/gpx /assets/rando/rando-2022-10km.gpx
-/rando/15/gpx /assets/rando/rando-2022-15km.gpx
+/rando/5/gpx /assets/rando/rando-2023-5km.gpx
+/rando/10/gpx /assets/rando/rando-2023-10km.gpx
+/rando/15/gpx /assets/rando/rando-2023-15km.gpx
 
 /rando/5 /rando/5/gpx?utm_source=qrcode&utm_medium=plan&utm_campaign=randonnee_footpath_5
 /rando/10 /rando/10/gpx?utm_source=qrcode&utm_medium=plan&utm_campaign=randonnee_footpath_10
