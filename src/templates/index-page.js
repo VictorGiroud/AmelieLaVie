@@ -143,28 +143,28 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
         <div className="column is-12">
           <h4 className="title">Amélie la Vie est soutenu par :</h4>
           <a className="support" title="AG2R La Mondiale" href="https://www.ag2rlamondiale.fr/" target="_blank" rel="noopener noreferrer">
-            <img src={ag2r} alt="AG2R La Mondiale" style={{ width: "10em" }} />
+            <img src={ag2r} alt="AG2R La Mondiale" />
           </a>
           <a className="support" title="Familles Solidaires" href="https://familles-solidaires.com" target="_blank" rel="noopener noreferrer">
-            <img src={famillessolidaires} alt="Familles Solidaires" style={{ width: "10em" }} />
+            <img src={famillessolidaires} alt="Familles Solidaires" />
           </a> 
           <a className="support" title="Géotec" href="https://www.geotec.fr" target="_blank" rel="noopener noreferrer">
-            <img src={geotec} alt="Géotec" style={{ width: "10em" }} />
+            <img src={geotec} alt="Géotec" />
           </a> 
           <a className="support" title="Dynacité" href="https://www.dynacite.fr" target="_blank" rel="noopener noreferrer">
-            <img src={dynacite} alt="Dynacité" style={{ width: "10em" }} />
+            <img src={dynacite} alt="Dynacité" />
           </a> 
           <a className="support" title="Qualitel" href="https://www.qualitel.org" target="_blank" rel="noopener noreferrer">
-            <img src={qualitel} alt="Qualitel" style={{ width: "10em" }} />
+            <img src={qualitel} alt="Qualitel" />
           </a> 
           <a className="support" title="Domea Conseil" href="http://www.domeaconseil.fr" target="_blank" rel="noopener noreferrer">
-            <img src={domea} alt="Domea Conseil" style={{ width: "10em" }} />
+            <img src={domea} alt="Domea Conseil" />
           </a> 
           <a className="support" title="CNSA" href="https://www.cnsa.fr" target="_blank" rel="noopener noreferrer">
-            <img src={cnsa} alt="CNSA" style={{ width: "10em" }} />
+            <img src={cnsa} alt="CNSA" />
           </a> 
           <a className="support" title="Métropole de Lyon" href="https://www.grandlyon.com" target="_blank" rel="noopener noreferrer">
-            <img src={grandlyon} alt="Métropole de Lyon" style={{ width: "10em" }} />
+            <img src={grandlyon} alt="Métropole de Lyon" />
           </a>
         </div>
       </div>
