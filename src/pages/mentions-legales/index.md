@@ -12,7 +12,7 @@ Siège sociale : **160 chemin du brochez, 69250 Montanay**
 
 Téléphone : **04 78 22 47 50**
 
-SIRET : **489 407 445 00019**
+SIRET : **489 407 445 00027**
 
 Adresse de courrier électronique : **contact (at) amelielavie (point) com**
 

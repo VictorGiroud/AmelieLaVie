@@ -10,6 +10,12 @@ import AgendaEvent from "../components/AgendaEvent";
 
 import famillessolidaires from "../img/famillessolidaires.png";
 import ag2r from "../img/ag2r.png";
+import grandlyon from "../img/grandlyon.svg";
+import geotec from "../img/geotec.png";
+import qualitel from "../img/qualitel.png";
+import dynacite from "../img/geotec.png";
+import domea from "../img/domea.png";
+import cnsa from "../img/cnsa.png";
 import colibriLeft from "../img/colibri_bg_left.svg";
 import colibriRight from "../img/colibri_bg_right.svg";
 import phone from "../img/phone.svg";
@@ -62,7 +68,7 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
     </div>
     <Section odd>
       {alerte && (
-        <article className="message is-primary">
+        <article className="message is-primary is-size-5">
           <div className="message-body">{alerte}</div>
         </article>
       )}
@@ -141,6 +147,24 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
           </a>
           <a className="support" title="Familles Solidaires" href="https://familles-solidaires.com" target="_blank" rel="noopener noreferrer">
             <img src={famillessolidaires} alt="Familles Solidaires" style={{ width: "10em" }} />
+          </a> 
+          <a className="support" title="Géotec" href="https://www.geotec.fr" target="_blank" rel="noopener noreferrer">
+            <img src={geotec} alt="Géotec" style={{ width: "10em" }} />
+          </a> 
+          <a className="support" title="Dynacité" href="https://www.dynacite.fr" target="_blank" rel="noopener noreferrer">
+            <img src={dynacite} alt="Dynacité" style={{ width: "10em" }} />
+          </a> 
+          <a className="support" title="Qualitel" href="https://www.qualitel.org" target="_blank" rel="noopener noreferrer">
+            <img src={qualitel} alt="Qualitel" style={{ width: "10em" }} />
+          </a> 
+          <a className="support" title="Domea Conseil" href="http://www.domeaconseil.fr" target="_blank" rel="noopener noreferrer">
+            <img src={domea} alt="Domea Conseil" style={{ width: "10em" }} />
+          </a> 
+          <a className="support" title="CNSA" href="https://www.cnsa.fr" target="_blank" rel="noopener noreferrer">
+            <img src={cnsa} alt="CNSA" style={{ width: "10em" }} />
+          </a> 
+          <a className="support" title="Métropole de Lyon" href="https://www.grandlyon.com" target="_blank" rel="noopener noreferrer">
+            <img src={grandlyon} alt="Métropole de Lyon" style={{ width: "10em" }} />
           </a>
         </div>
       </div>
