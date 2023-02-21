@@ -13,7 +13,7 @@ import ag2r from "../img/ag2r.png";
 import grandlyon from "../img/grandlyon.svg";
 import geotec from "../img/geotec.png";
 import qualitel from "../img/qualitel.png";
-import dynacite from "../img/geotec.png";
+import dynacite from "../img/dynacite.png";
 import domea from "../img/domea.png";
 import cnsa from "../img/cnsa.png";
 import colibriLeft from "../img/colibri_bg_left.svg";
