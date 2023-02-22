@@ -60,4 +60,4 @@ Vous n’aurez qu’à vous présenter dans la file dédiée le matin de la rand
 
 Si vous n’arrivez pas à vous inscrire via le formulaire ou que le moyen de paiement ne vous convient pas, nous serons heureux de trouver une solution avec vous ! [Contactez-nous via notre formulaire de contact, Messenger, ou par téléphone](/contact).
 
-Au plaisir de vous voir et de pouvoir échanger avec vous lors de cet événement le 27 mars prochain !
+Au plaisir de vous voir et de pouvoir échanger avec vous lors de cet événement le 26 mars prochain !
