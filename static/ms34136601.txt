@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Fichier de vérification de la propriété du domaine pour Microsoft 365 : placer dans la racine du site web",
+  "Domain": "amelielavie.com",
+  "Id": "9a9973af-1319-4e6b-9c2c-bcde7e19b67b"
+}
