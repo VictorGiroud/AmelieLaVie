@@ -16,6 +16,7 @@ import qualitel from "../img/qualitel.png";
 import dynacite from "../img/dynacite.png";
 import domea from "../img/domea.png";
 import cnsa from "../img/cnsa.png";
+import caissedepargne from "../img/caissedepargne.png";
 import colibriLeft from "../img/colibri_bg_left.svg";
 import colibriRight from "../img/colibri_bg_right.svg";
 import phone from "../img/phone.svg";
@@ -165,6 +166,9 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
           </a> 
           <a className="support" title="Métropole de Lyon" href="https://www.grandlyon.com" target="_blank" rel="noopener noreferrer">
             <img src={grandlyon} alt="Métropole de Lyon" />
+          </a>
+          <a className="support" title="Fondation Caisse d'Epargne" href="https://www.caissedepargnerhonealpes.fr/responsable-solidaire/la-fondation/" target="_blank" rel="noopener noreferrer">
+            <img src={caissedepargne} alt="Fondation Caisse d'Epargne" />
           </a>
         </div>
       </div>
