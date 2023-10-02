@@ -17,6 +17,11 @@ import dynacite from "../img/dynacite.png";
 import domea from "../img/domea.png";
 import cnsa from "../img/cnsa.png";
 import caissedepargne from "../img/caissedepargne.png";
+import mma from "../img/mma.png";
+import fdj from "../img/fdj.png";
+import seb from "../img/seb.png";
+import sportdimanche from "../img/sportdimanche.png";
+
 import colibriLeft from "../img/colibri_bg_left.svg";
 import colibriRight from "../img/colibri_bg_right.svg";
 import phone from "../img/phone.svg";
@@ -169,6 +174,18 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
           </a>
           <a className="support" title="Fondation Caisse d'Epargne" href="https://www.caissedepargnerhonealpes.fr/responsable-solidaire/la-fondation/" target="_blank" rel="noopener noreferrer">
             <img src={caissedepargne} alt="Fondation Caisse d'Epargne" />
+          </a>
+          <a className="support" title="Fondation MMA solidarité" href="https://www.mma.fr/a-propos/fondation-mma.html" target="_blank" rel="noopener noreferrer">
+            <img src={mma} alt="Fondation MMA solidarité" />
+          </a>
+          <a className="support" title="Fondation FDJ" href="https://www.groupefdj.com/fr/fondation.html" target="_blank" rel="noopener noreferrer">
+            <img src={fdj} alt="Fondation FDJ" />
+          </a>
+          <a className="support" title="Fonds Groupe SEB" href="https://www.groupeseb.com/fr/fonds-groupe-seb" target="_blank" rel="noopener noreferrer">
+            <img src={seb} alt="Fonds Groupe SEB" />
+          </a>
+          <a className="support" title="Sport Dimanche" href="https://www.facebook.com/SportDimanche" target="_blank" rel="noopener noreferrer">
+            <img src={sportdimanche} alt="Sport Dimanche" />
           </a>
         </div>
       </div>
