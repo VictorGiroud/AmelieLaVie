@@ -169,12 +169,6 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
           <a className="support" title="CNSA" href="https://www.cnsa.fr" target="_blank" rel="noopener noreferrer">
             <img src={cnsa} alt="CNSA" />
           </a> 
-          <a className="support" title="Métropole de Lyon" href="https://www.grandlyon.com" target="_blank" rel="noopener noreferrer">
-            <img src={grandlyon} alt="Métropole de Lyon" />
-          </a>
-          <a className="support" title="Fondation Caisse d'Epargne" href="https://www.caissedepargnerhonealpes.fr/responsable-solidaire/la-fondation/" target="_blank" rel="noopener noreferrer">
-            <img src={caissedepargne} alt="Fondation Caisse d'Epargne" />
-          </a>
           <a className="support" title="Fondation MMA solidarité" href="https://www.mma.fr/a-propos/fondation-mma.html" target="_blank" rel="noopener noreferrer">
             <img src={mma} alt="Fondation MMA solidarité" />
           </a>
@@ -183,6 +177,12 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
           </a>
           <a className="support" title="Fonds Groupe SEB" href="https://www.groupeseb.com/fr/fonds-groupe-seb" target="_blank" rel="noopener noreferrer">
             <img src={seb} alt="Fonds Groupe SEB" />
+          </a>
+          <a className="support" title="Métropole de Lyon" href="https://www.grandlyon.com" target="_blank" rel="noopener noreferrer">
+            <img src={grandlyon} alt="Métropole de Lyon" />
+          </a>
+          <a className="support" title="Fondation Caisse d'Epargne" href="https://www.caissedepargnerhonealpes.fr/responsable-solidaire/la-fondation/" target="_blank" rel="noopener noreferrer">
+            <img src={caissedepargne} alt="Fondation Caisse d'Epargne" />
           </a>
           <a className="support" title="Sport Dimanche" href="https://www.facebook.com/SportDimanche" target="_blank" rel="noopener noreferrer">
             <img src={sportdimanche} alt="Sport Dimanche" />
