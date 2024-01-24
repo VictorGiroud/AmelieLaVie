@@ -21,6 +21,9 @@ import mma from "../img/mma.png";
 import fdj from "../img/fdj.png";
 import seb from "../img/seb.png";
 import sportdimanche from "../img/sportdimanche.png";
+import ccah from "../img/ccah.png";
+import macif from "../img/macif.png";
+import malakoff from "../img/malakoff.png";
 
 import colibriLeft from "../img/colibri_bg_left.svg";
 import colibriRight from "../img/colibri_bg_right.svg";
@@ -186,6 +189,15 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
           </a>
           <a className="support" title="Sport Dimanche" href="https://www.facebook.com/SportDimanche" target="_blank" rel="noopener noreferrer">
             <img src={sportdimanche} alt="Sport Dimanche" />
+          </a>
+          <a className="support" title="CCAH" href="https://www.ccah.fr" target="_blank" rel="noopener noreferrer">
+            <img src={ccah} alt="CCAH" />
+          </a>
+          <a className="support" title="Fondation Macif" href="https://www.fondation-macif.org" target="_blank" rel="noopener noreferrer">
+            <img src={macif} alt="Fondation Macif" />
+          </a>
+          <a className="support" title="Malakoff Humanis" href="https://www.malakoffhumanis.com" target="_blank" rel="noopener noreferrer">
+            <img src={malakoff} alt="Malakoff Humanis" />
           </a>
         </div>
       </div>
