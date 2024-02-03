@@ -2,8 +2,8 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: "Bonne année à tous  et à  vos agendas : la randonnée pédestre édition
-  2024 aura lieu le dimanche 24 mars !"
+alerte: "A vos agendas : la randonnée pédestre édition 2024 aura lieu le
+  dimanche 24 mars ! Amélie la vie fête ses 20 ans !"
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
