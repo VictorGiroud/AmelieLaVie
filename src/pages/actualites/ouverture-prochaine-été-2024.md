@@ -28,4 +28,5 @@ Pour assurer une dynamique harmonieuse au sein de notre habitat, nous recherchon
 
 Notre structure est portée par une association fondée par des aidants familiaux, et elle fonctionnera selon les principes de l'habitat inclusif. Chaque habitant sera suivi et accompagné par sa famille, sa tutelle ou un dispositif médico-social. Il est important que chaque famille s'implique dans la vie de l'habitat, car notre structure repose principalement sur le bénévolat, à l'exception de notre animateur coordinateur de vie sociale et partagée.
 
+Si vous avez envie de venir habiter dans ces appartements et de partager des moments conviviaux, [contactez nous](/contact) !\
 <!--EndFragment-->
