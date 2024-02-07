@@ -12,7 +12,7 @@ tags:
 ---
 <!--StartFragment-->
 
-Nous sommes ravis de vous annoncer l'ouverture imminente de notre habitat partagé pour adultes cérébrolésés au cours de l'été 2024. Nous croyons en la création d'un environnement inclusif et sécurisé où chacun peut s'épanouir et vivre pleinement. À travers cet article, nous souhaitons vous présenter cette initiative unique et vous inviter à rejoindre notre habitat.
+Nous sommes ravis de vous annoncer l'ouverture imminente de notre habitat partagé pour adultes cérébrolésés au cours de l'**été 2024**. Nous croyons en la création d'un environnement inclusif et sécurisé où chacun peut s'épanouir et vivre pleinement. À travers cet article, nous souhaitons vous présenter cette initiative unique et vous inviter à rejoindre notre habitat.
 
 **L'habitat partagé :**
 
