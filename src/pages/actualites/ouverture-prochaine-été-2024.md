@@ -22,11 +22,14 @@ Nos appartements sont conçus pour accueillir des individus désireux de vivre d
 
 **Critères de sélection :**
 
-Pour assurer une dynamique harmonieuse au sein de notre habitat, nous recherchons des personnes qui adhèrent à l'idée de partager un lieu de vie avec quatre autres locataires. De plus, des habiletés relationnelles compatibles avec cet environnement sont essentielles. Nous tenons à souligner que nous ne pouvons pas accueillir les personnes nécessitant une assistance humaine 24h/24, mais nous offrons un soutien partagé pour ceux bénéficiant de l'Aide Personnalisée au Logement (APL). De plus, il est important de noter que nos appartements sont accessibles aux personnes éligibles à l'attribution d'un logement social, en respectant le plafond de ressources établi.
+Pour assurer une dynamique harmonieuse au sein de notre habitat, nous recherchons des personnes qui adhèrent à l'idée de partager un lieu de vie avec quatre autres locataires. De plus, des habiletés relationnelles compatibles avec cet environnement sont essentielles. Nous tenons à souligner que nous ne pouvons pas accueillir les personnes nécessitant une assistance humaine 24h/24, mais nous offrons un soutien partagé pour celles bénéficiant d'une Prestation de Compensation du Handicap  (PCH) aide humaine dont une partie sera partagée.
+
+De plus, il est important de noter que nos appartements sont accessibles aux personnes éligibles à l'attribution d'un logement social, en respectant le plafond de ressources établi. Les locataires peuvent percevoir l'Aide Personnalisée au Logement (APL) .
 
 **Fonctionnement de l'habitat inclusif :**
 
 Notre structure est portée par une association fondée par des aidants familiaux, et elle fonctionnera selon les principes de l'habitat inclusif. Chaque habitant sera suivi et accompagné par sa famille, sa tutelle ou un dispositif médico-social. Il est important que chaque famille s'implique dans la vie de l'habitat, car notre structure repose principalement sur le bénévolat, à l'exception de notre animateur coordinateur de vie sociale et partagée.
 
 Si vous avez envie de venir habiter dans ces appartements et de partager des moments conviviaux, [contactez nous](/contact) !\
+
 <!--EndFragment-->
