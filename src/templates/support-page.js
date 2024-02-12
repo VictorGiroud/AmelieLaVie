@@ -6,10 +6,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import FullWidthImage from "../components/FullWidthImage";
 
-const iframeAdhesion = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/adhesions/adherer-a-l-association-pour-2024/widget-vignette-horizontale" style="width:100%;height:300px;border:none;"></iframe>`;
-const iframeAdhesionTablet = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/adhesions/adherer-a-l-association-pour-2024/widget-vignette" style="width:350px;height:380px;border:none;"></iframe>`;
-const iframeAdhesioMobile = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/adhesions/adherer-a-l-association-pour-2024/widget-bouton" style="width:150px;height:70px;border:none;"></iframe>`;
-
+const iframeAdhesion = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/adhesions/adherer-a-l-association-pour-2024/widget-bouton" style="width: 100%; height: 70px; border: none;"></iframe>`;
 const iframeTip = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/formulaires/1/widget-bouton" style="width:200px;height:100px;border:none;"></iframe><div style="width:100%;">`;
 
 function Iframe(props) {
@@ -36,12 +33,6 @@ export const SupportPageTemplate = ({ image, content, contentComponent, title, s
                   <p>{adhesion}</p>
                   <div className="is-hidden iframe-desktop">
                     <Iframe iframe={iframeAdhesion} />
-                  </div>
-                  <div className="is-hidden iframe-tablet">
-                    <Iframe iframe={iframeAdhesionTablet} />
-                  </div>
-                  <div className="is-hidden iframe-mobile">
-                    <Iframe iframe={iframeAdhesioMobile} />
                   </div>
                 </div>
                 <div>
