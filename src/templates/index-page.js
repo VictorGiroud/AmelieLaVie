@@ -24,6 +24,7 @@ import sportdimanche from "../img/sportdimanche.png";
 import ccah from "../img/ccah.png";
 import macif from "../img/macif.png";
 import malakoff from "../img/malakoff.png";
+import ircem from "../img/ircem.png";
 
 import colibriLeft from "../img/colibri_bg_left.svg";
 import colibriRight from "../img/colibri_bg_right.svg";
@@ -154,6 +155,15 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
           <a className="support" title="AG2R La Mondiale" href="https://www.ag2rlamondiale.fr/" target="_blank" rel="noopener noreferrer">
             <img src={ag2r} alt="AG2R La Mondiale" />
           </a>
+          <a className="support" title="IRCEM" href="https://www.ircem.com/" target="_blank" rel="noopener noreferrer">
+            <img src={ircem} alt="IRCEM" />
+          </a>
+          <a className="support" title="Malakoff Humanis" href="https://www.malakoffhumanis.com" target="_blank" rel="noopener noreferrer">
+            <img src={malakoff} alt="Malakoff Humanis" />
+          </a>
+          <a className="support" title="CCAH" href="https://www.ccah.fr" target="_blank" rel="noopener noreferrer">
+            <img src={ccah} alt="CCAH" />
+          </a>
           <a className="support" title="Familles Solidaires" href="https://familles-solidaires.com" target="_blank" rel="noopener noreferrer">
             <img src={famillessolidaires} alt="Familles Solidaires" />
           </a> 
@@ -190,14 +200,8 @@ export const IndexPageTemplate = ({ title, heading, alerte, presentation, descri
           <a className="support" title="Sport Dimanche" href="https://www.facebook.com/SportDimanche" target="_blank" rel="noopener noreferrer">
             <img src={sportdimanche} alt="Sport Dimanche" />
           </a>
-          <a className="support" title="CCAH" href="https://www.ccah.fr" target="_blank" rel="noopener noreferrer">
-            <img src={ccah} alt="CCAH" />
-          </a>
           <a className="support" title="Fondation Macif" href="https://www.fondation-macif.org" target="_blank" rel="noopener noreferrer">
             <img src={macif} alt="Fondation Macif" />
-          </a>
-          <a className="support" title="Malakoff Humanis" href="https://www.malakoffhumanis.com" target="_blank" rel="noopener noreferrer">
-            <img src={malakoff} alt="Malakoff Humanis" />
           </a>
         </div>
       </div>
