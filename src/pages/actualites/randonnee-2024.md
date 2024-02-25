@@ -69,7 +69,7 @@ Si vous avez l'habitude d'utiliser une application tierce (Strava, Garmin, OsmAn
 
 ## Réservation en ligne
 
-Pour une expérience sans tracas, vous avez la possibilité de **commander vos cakes et de réserver votre place à la randonnée en ligne via notre boutique dédié**e.
+Pour une expérience sans tracas, vous avez la possibilité de **commander vos cakes et de réserver votre place à la randonnée en ligne via notre boutique**.
 
 Ayez en tête que c’est également **le seul moyen de réserver vos sandwichs** ! C’est aussi l'assurance que vos parfums préférés de cakes ne seront pas épuisés à votre arrivée.
 
