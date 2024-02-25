@@ -82,3 +82,5 @@ Une question ? N'hésitez surtout pas à nous contacter via [notre formulaire de
 Au plaisir de vous accueillir le 24 mars prochain, et d'échanger avec vous au sujet de notre [habitat partagé](/habitat-partage) dont l’ouverture est prévue pour cet été, ou de tout autre sujet.
 
 **A très vite !**
+
+*Photographies © Victor Giroud*
