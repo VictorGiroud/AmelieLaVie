@@ -11,7 +11,7 @@ tags:
 ---
 À l'approche du mois de mars, au fur et à mesure que les jours commencent à s'étirer et que la nature se réveille, une douce allégresse se diffuse silencieusement. Notre traditionnelle **randonnée pédestre** annuelle se dessine délicatement à l'horizon !
 
-Comme chaque année, nous vous invitons à venir partager une journée de convivialité et de découverte en notre compagnie. Chaussez vos chaussures les plus robustes, ajustez vos agendas, et préparez vous à rejoindre nos nouveaux sentiers le **dimanche 24 mars 2024**, à **Montanay**, [place de la Poype](https://www.google.com/maps/search/?api=1&query=Montanay%20Place%20de%20la%20Poype).
+Comme chaque année, nous vous invitons à venir partager une journée de convivialité et de découverte en notre compagnie. Chaussez vos chaussures les plus robustes, ajustez vos agendas, et préparez vous à rejoindre nos nouveaux sentiers le **dimanche 24 mars 2024**, à **Montanay**, [place de la Poype](https://www.google.com/maps/search/?api=1&query=Montanay%20Place%20de%20la%20Poype). **Les départs seront possibles dès 9h du matin, jusqu'à 15h.**
 
 Nous avons le plaisir de vous proposer **trois parcours** conçus pour répondre à tous les profils de marcheurs. Que vous soyez en famille avec des jeunes enfants, un marcheur occasionnel ou un habitué des sentiers, il y a forcément un parcours qui vous conviendra !
 
@@ -43,8 +43,6 @@ Le **ruisseau** devient votre fidèle compagnon de balade et sera mis en avant s
 
 Ce tracé est spécialement recommandé pour les **passionnés et habitués de randonnée**. Et peut-être pourrait-il également attirer les adeptes de trail les plus intrépides ? 
 
-
-
 ## Vente de cakes et… de sandwichs !
 
 Après avoir arpenté les sentiers, quoi de mieux qu'une pause gourmande pour recharger les batteries ? Notre **vente de cakes**, une tradition bien-aimée, sera là pour satisfaire vos papilles.
@@ -59,8 +57,6 @@ Profitez en pour prolonger votre parcours ou simplement prendre le temps de vous
 
 Attention, pour des raisons logistiques, **les sandwichs ne pourront être achetés que depuis notre boutique en ligne** et pas le jour même !
 
-
-
 ## Circuits accessibles depuis votre téléphone
 
 Cette année encore, vous pouvez opter pour la **praticité numérique**. Confirmez votre itinéraire d'un simple coup d'œil sur votre écran et suivez votre localisation GPS en temps réel, directement depuis une application de votre téléphone.
@@ -70,8 +66,6 @@ Pour une expérience optimale, nous vous recommandons de télécharger l'applica
 ![Aperçu du fonctionnement de Footpath](/img/footpath.jpg "Aperçu du fonctionnement de Footpath")
 
 Si vous avez l'habitude d'utiliser une application tierce (Strava, Garmin, OsmAnd, …), nous pouvons vous fournir directement un fichier GPX.
-
-
 
 ## Réservation en ligne
 
