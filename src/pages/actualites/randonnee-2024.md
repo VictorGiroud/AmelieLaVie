@@ -35,7 +35,7 @@ Pour les familles qui apprécient prendre leur temps, ce parcours propose des es
 
 ### Parcours Aventure - 15km
 
-Le Parcours Aventure tire son inspiration du précédent, partageant les mêmes points de vue magnifiques tout en poussant l'exploration encore plus loin, avec des portions qui vous guideront au bout des sentiers.
+Le parcours Aventure tire son inspiration du précédent, partageant les mêmes points de vue magnifiques tout en poussant l'exploration encore plus loin, avec des portions qui vous guideront au bout des sentiers.
 
 Le **ruisseau** devient votre fidèle compagnon de balade et sera mis en avant sur une longue partie du parcours.
 
@@ -53,7 +53,7 @@ Choisissez parmi une palette de saveurs, allant des pépites de chocolat à l'ex
 
 Petite innovation pour cette année 2024, **nous vous proposons également une petite sélection de sandwichs**.
 
-Profitez en pour prolonger votre parcours ou simplement prendre le temps de vous ressourcer en plein air : tous les parcours proposent des endroits propices au pique-nique.
+Profitez-en pour prolonger votre parcours ou simplement prendre le temps de vous ressourcer en plein air : tous les parcours proposent des endroits propices au pique-nique.
 
 Attention, pour des raisons logistiques, **les sandwichs ne pourront être achetés que depuis notre boutique en ligne** et pas le jour même !
 
