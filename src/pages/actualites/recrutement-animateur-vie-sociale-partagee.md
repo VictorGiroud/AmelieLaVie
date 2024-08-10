@@ -25,7 +25,7 @@ Le recrutement est à pourvoir en **CDI**, dès **septembre 2024**.
 
 L﻿a fiche de poste détaillée est consultable depuis [ce lien](https://amelielavie.com/assets/recrutement-AVP.pdf). 
 
-**Pour postuler ou obtenir des informations supplémentaires, contactez-nous à** [](<>)**[contact@amelielavie.com](mailto:contact@amelielavie.com).**
+**Pour postuler ou obtenir des informations supplémentaires, contactez-nous à** [](<>)**[rh@amelielavie.com](mailto:rh@amelielavie.com).**
 
 Nous vous remercions de partager cette opportunité autour de vous. Si quelqu'un dans votre entourage pourrait être intéressé, n'hésitez pas à lui en parler.
 
