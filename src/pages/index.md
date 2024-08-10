@@ -2,8 +2,8 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: "Venez participer le 16 juin à Sathonay-Village à la Villageoise :
-  course ou marche nature organisées par Sport Dimanche !"
+alerte: Nous recrutons un Animateur de la Vie Sociale et Partagée en CDI à
+  partir de septembre 2024 !
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
