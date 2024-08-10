@@ -25,6 +25,10 @@ Le recrutement est à pourvoir en **CDI**, dès **septembre 2024**.
 
 L﻿a fiche de poste détaillée est consultable depuis [ce lien](https://amelielavie.com/assets/recrutement-AVP.pdf). 
 
-Nous vous remercions de partager cette opportunité autour de vous ! Si quelqu'un dans votre entourage pourrait être intéressé, n'hésitez pas à lui en parler.
+**Pour postuler ou obtenir des informations supplémentaires, contactez-nous à [](<>)[contact@amelielavie.com](mailto:contact@amelielavie.com).**
 
-A﻿ très vite.
+Nous vous remercions de partager cette opportunité autour de vous. Si quelqu'un dans votre entourage pourrait être intéressé, n'hésitez pas à lui en parler.
+
+
+
+A﻿ très vite pour des nouvelles des Colibris, l'ouverture se rapproche à grands pas !
