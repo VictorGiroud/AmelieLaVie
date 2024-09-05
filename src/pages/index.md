@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: L'ouverture des Colibris est prévue le 13 novembre 2023 !
+alerte: L'ouverture des Colibris est prévue le 13 novembre 2024 !
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
