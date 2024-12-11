@@ -1,7 +1,9 @@
 ---
 templateKey: agenda-event
-title: Marché de Noël Montanay
-date: 2022-12-11T11:34:02.291Z
-resume: au Foyer Rural
+title: Marché de Noël de Montanay
+address: Foyer Rural, Montanay
+date: 2024-12-15T09:00:00.000Z
+resume: Nous serons présents au marché de Noël de Montanay le dimanche 15
+  décembre 2024 à partir de 10h du matin, au Foyer Rural.
 display: false
 ---
