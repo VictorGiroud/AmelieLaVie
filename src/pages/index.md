@@ -2,7 +2,8 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: L'ouverture des Colibris est prévue le 13 novembre 2024 !
+alerte: "Prochaine manifestation : randonnée pédestre le 23 mars 2025 départ de
+  Montanay"
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
