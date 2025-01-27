@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import FullWidthImage from "../components/FullWidthImage";
 
-const iframeAdhesion = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/adhesions/adherer-a-l-association-pour-2024/widget-bouton" style="width:185px; height:70px; border:none;"></iframe>`;
+const iframeAdhesion = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/adhesions/adherer-a-l-association-pour-2025/widget-bouton" style="width:185px; height:70px; border:none;"></iframe>`;
 const iframeTip = `<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/amelie-la-vie/formulaires/1/widget-bouton" style="width:200px;height:100px;border:none;"></iframe>`;
 
 function Iframe(props) {
