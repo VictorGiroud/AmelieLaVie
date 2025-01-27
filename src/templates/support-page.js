@@ -28,7 +28,7 @@ export const SupportPageTemplate = ({ image, content, contentComponent, title, s
               <div className="column is-10 is-offset-1">
                 {!image && <h1>{title}</h1>}
                 <HtmlContent content={content} />
-                <div className="adhesion">
+                <div className="mt-1">
                   <h3>Adhérer à l'association</h3>
                   <p>{adhesion}</p>
                   <Iframe iframe={iframeAdhesion} />
