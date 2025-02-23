@@ -19,7 +19,7 @@ Le dimanche **23 mars 2025**, nous vous donnons une nouvelle fois rendez-vous à
 
 Cette année encore, nous avons préparé trois itinéraires pour satisfaire toutes les envies, que vous soyez amateur de balades tranquilles ou adepte de randonnées plus sportives.
 
-* **Parcours Famille - 5 km** : Idéal pour les familles et les jeunes enfants, ce circuit accessible aux poussettes tout terrain emprunte des chemins accessibles et avec un faible dénivelé, tout en proposant des passages dans la nature paisibles de Montanay.
+* **Parcours Famille - 5 km** : Idéal pour les familles et les jeunes enfants, ce circuit accessible aux poussettes tout terrain emprunte des chemins accessibles et avec un faible dénivelé, tout en proposant des passages dans la nature paisible de Montanay.
 * **Parcours Aventure - 10 km** : Une belle promenade qui vous offrira l'occasion de découvrir des paysages et des chemins variés. Un relais sera à votre disposition.
 * **Parcours Habitat Partagé - 17 km** : Après un tour de l'arboretum de Sathonay-Champ, ce parcours vous mènera jusqu'au **cœur de notre habitat partagé** où nous vous accueillerons pour une pause bien mérité avant de repartir à l'assaut des sentiers.
 
