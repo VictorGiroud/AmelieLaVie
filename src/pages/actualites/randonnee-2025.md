@@ -2,85 +2,53 @@
 templateKey: blog-post
 title: Randonnée pédestre 2025
 date: 2025-02-23T20:00:30.242Z
-description: Cette année, c’est le dimanche 24 mars que nous vous accueillerons
-  pour notre traditionnelle randonnée pédestre, au départ de Montanay.
-featuredimage: /img/pxl_20240225_090415438.jpg
+description: Nous vous accueillerons le dimanche 24 mars 2025 pour notre
+  traditionnelle randonnée pédestre, au départ de Montanay.
+featuredimage: /img/pxl_20250223_172846506.night.raw-01.cover.jpg
 published: true
 tags:
   - Randonnée pédestre
 ---
-À l'approche du mois de mars, au fur et à mesure que les jours commencent à s'étirer et que la nature se réveille, une douce allégresse se diffuse silencieusement. Notre traditionnelle **randonnée pédestre** annuelle se dessine délicatement à l'horizon !
+Le printemps approche, et avec lui, notre randonnée annuelle.
 
-Comme chaque année, nous vous invitons à venir partager une journée de convivialité et de découverte en notre compagnie. Chaussez vos chaussures les plus robustes, ajustez vos agendas, et préparez vous à rejoindre nos nouveaux sentiers le **dimanche 24 mars 2024**, à **Montanay**, [place de la Poype](https://www.google.com/maps/search/?api=1&query=Montanay%20Place%20de%20la%20Poype). **Les départs seront possibles dès 9h du matin, jusqu'à 15h.**
+Le dimanche **23 mars 2025**, nous vous donnons une nouvelle fois rendez-vous à Montanay, [place de la Poype](https://www.google.com/maps/search/?api=1&query=Montanay%20Place%20de%20la%20Poype).
 
-Nous avons le plaisir de vous proposer **trois parcours** conçus pour répondre à tous les profils de marcheurs. Que vous soyez en famille avec des jeunes enfants, un marcheur occasionnel ou un habitué des sentiers, il y a forcément un parcours qui vous conviendra !
+![Photo d'un paysage depuis les sentiers de Montanay](/img/pxl_20250223_172846506.night.raw-01.cover.jpg "Photo d'un paysage depuis les sentiers de Montanay")
 
-### Parcours Détente - 5 km
+## **Trois parcours pour tous les niveaux**
 
-Le parcours Détente a été spécialement conçu pour permettre aux **plus petits** de profiter pleinement de cette expérience, ainsi que pour ceux cherchant une **balade accessible**. Avec un dénivelé quasiment inexistant, il traverse les paisibles champs de Montanay via des **sentiers larges et dégagés**. Ce parcours a été pensé pour être praticable avec des poussettes tout-terrain, offrant ainsi une **expérience sans encombre**.
+Cette année encore, nous avons préparé trois itinéraires pour satisfaire toutes les envies, que vous soyez amateur de balades tranquilles ou adepte de randonnées plus sportives.
 
-![Sentier au milieu des champs, Montanay](/img/pxl_20240225_090415438.jpg "Sentier au milieu des champs, Montanay")
+* **Parcours Famille - 5 km** : Idéal pour les familles et les jeunes enfants, ce circuit accessible aux poussettes tout terrain emprunte des chemins accessibles et avec un faible dénivelé, tout en proposant des passages dans la nature paisibles de Montanay.
+* **Parcours Aventure - 10 km** : Une belle promenade qui vous offrira l'occasion de découvrir des paysages et des chemins variés. Un relais sera à votre disposition.
+* **Parcours Habitat Partagé - 17 km** : Après un tour de l'arboretum de Sathonay-Champ, ce parcours vous mènera jusqu'au **cœur de notre habitat partagé** où nous vous accueillerons pour une pause bien mérité avant de repartir à l'assaut des sentiers.
 
-Il constitue l'itinéraire parfait pour s'offrir une parenthèse nature dans sa semaine, permettant à chacun de profiter d'un moment de détente avant de reprendre le rythme de ses activités.
+![Photo de l'arboretum de Sathonay-Camp](/img/pxl_20250223_150320921.mp.jpg "Photo de l'arboretum de Sathonay-Camp")
 
-### Parcours Évasion - 10 km
+## **Départs et inscriptions**
 
-Le parcours Évasion vous convie à une balade décontractée, dévoilant les charmes naturels des environs à votre rythme. En suivant les hauteurs de Fleurieu-sur-Saône, vous profiterez d'une **vue panoramique** magnifique du Val de Saône.
+Les départs seront possibles entre 9h et 15h. Vous pouvez vous [inscrire en ligne](https://amelielavie.com/reservation) ou directement sur place le jour J.
 
-![Vue panoramique depuis la Madone, Fleurieu-Sur-Saone](/img/pxl_20240224_104537437.jpg "Vue panoramique depuis la Madone, Fleurieu-Sur-Saone")
+## **Un moment de détente et de gourmandise**
 
-Découvrez une variété de paysages en alternant entre les **bois**, les **champs**, et quelques portions de route des villages de la région. Aussi, vous aurez l’occasion de longer un ruisseau durant votre périple.
+Après l'effort, place au réconfort ! Retrouvez notre stand de cakes maison aux saveurs variées pour votre pause gourmande.
 
-Pour les familles qui apprécient prendre leur temps, ce parcours propose des espaces idéaux pour des pauses détente, pourquoi pas un pique-nique en plein air ? Un moment simple et convivial au cœur de la nature.
-
-### Parcours Aventure - 15km
-
-Le parcours Aventure tire son inspiration du précédent, partageant les mêmes points de vue magnifiques tout en poussant l'exploration encore plus loin, avec des portions qui vous guideront au bout des sentiers.
-
-Le **ruisseau** devient votre fidèle compagnon de balade et sera mis en avant sur une longue partie du parcours.
-
-![Ruisseau longeant le sentier, Cailloux-sur-Fontaines](/img/pxl_20240224_110904072.jpg "Ruisseau longeant le sentier, Cailloux-sur-Fontaines")
-
-Ce tracé est spécialement recommandé pour les **passionnés et habitués de randonnée**. Et peut-être pourrait-il également attirer les adeptes de trail les plus intrépides ? 
-
-## Vente de cakes et… de sandwichs !
-
-Après avoir arpenté les sentiers, quoi de mieux qu'une pause gourmande pour recharger les batteries ? Notre **vente de cakes**, une tradition bien-aimée, sera là pour satisfaire vos papilles.
-
-Choisissez parmi une palette de saveurs, allant des pépites de chocolat à l'explosion fruitée, de la douceur veloutée de la crème de marron à la richesse gourmande de la praline, et de la fraîcheur piquante du citron. En format individuel ou familial.
+Nouveauté de cette année : le parfum **caramel beurre salé** vous attend !
 
 ![Photo issue d'une de nos ventes de cakes](/img/cakes.jpg "Photo issue d'une de nos ventes de cakes")
 
-Petite innovation pour cette année 2024, **nous vous proposons également une petite sélection de sandwichs**.
+## **Suivez votre parcours en temps réel**
 
-Profitez-en pour prolonger votre parcours ou simplement prendre le temps de vous ressourcer en plein air : tous les parcours proposent des endroits propices au pique-nique.
-
-Attention, pour des raisons logistiques, **les sandwichs ne pourront être achetés que depuis notre boutique en ligne** et pas le jour même !
-
-## Circuits accessibles depuis votre téléphone
-
-Cette année encore, vous pouvez opter pour la **praticité numérique**. Confirmez votre itinéraire d'un simple coup d'œil sur votre écran et suivez votre localisation GPS en temps réel, directement depuis une application de votre téléphone.
-
-Pour une expérience optimale, nous vous recommandons de télécharger l'application **Footpath** dès maintenant : sur [Android](https://play.google.com/store/apps/details?id=com.halfmilelabs.footpath), ou sur [iOS](https://apps.apple.com/fr/app/footpath-mesure-distance/id634845718).
+Pour une expérience plus fluide, tous les circuits sont accessibles via l'application Footpath. Vous pouvez également [nous contacter](https://amelielavie.com/contact) après votre préinscription pour que nous vous envoyons un fichier GPX si vous utilisez une application comme Strava, Garmin, ou autre.
 
 ![Aperçu du fonctionnement de Footpath](/img/footpath.jpg "Aperçu du fonctionnement de Footpath")
 
-Si vous avez l'habitude d'utiliser une application tierce (Strava, Garmin, OsmAnd, …), nous pouvons vous fournir directement un fichier GPX.
+## **Réservations et contact**
 
-## Réservation en ligne
+[Accéder à la boutique en ligne](https://amelielavie.com/reservation)  pour vous préinscrire ou pour réserver vos parfums de cake préférés. Certains pourraient partir vite !
 
-Pour une expérience sans tracas, vous avez la possibilité de **commander vos cakes et de réserver votre place à la randonnée en ligne via notre boutique**.
+Pour toute question, n'hésitez pas à nous [contacter par téléphone, Messenger ou via notre formulaire en ligne](https://amelielavie.com/contact).
 
-Ayez en tête que c’est également **le seul moyen de réserver vos sandwichs** ! C’est aussi l'assurance que vos parfums préférés de cakes ne seront pas épuisés à votre arrivée.
+Nous avons hâte de vous retrouver le 23 mars 2025.
 
-Les inscriptions en ligne seront closes la veille de la marche, mais pas d'inquiétude, vous pourrez toujours vous inscrire sur place le jour de la randonnée..
-
-* **[Accéder à la boutique en ligne](/reservation)**
-
-Une question ? N'hésitez surtout pas à nous contacter via [notre formulaire de contact, sur Messenger, ou par téléphone](/contact). Notre équipe est prête à vous assister.
-
-Au plaisir de vous accueillir le 24 mars prochain, et d'échanger avec vous au sujet de notre [habitat partagé](/habitat-partage) dont l’ouverture est prévue pour cet été, ou de tout autre sujet.
-
-**A très vite !**
-
-*Photographies © Victor Giroud*
+![Photo depuis notre habitat partagé](/img/1000000363-1-1-.jpg "Photo depuis notre habitat partagé")
