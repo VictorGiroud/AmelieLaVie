@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Randonnée pédestre 2025
 date: 2025-02-23T20:00:30.242Z
-description: Nous vous accueillerons le dimanche 24 mars 2025 pour notre
+description: Nous vous accueillerons le dimanche 23 mars 2025 pour notre
   traditionnelle randonnée pédestre, au départ de Montanay.
 featuredimage: /img/pxl_20250223_172846506.night.raw-01.cover.jpg
 published: true
