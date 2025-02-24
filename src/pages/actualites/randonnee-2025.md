@@ -21,7 +21,7 @@ Cette année encore, nous avons préparé trois itinéraires pour satisfaire tou
 
 * **Parcours Famille - 5 km** : Idéal pour les familles et les jeunes enfants, ce circuit accessible aux poussettes tout terrain emprunte des chemins accessibles et avec un faible dénivelé, tout en proposant des passages dans la nature paisible de Montanay.
 * **Parcours Aventure - 10 km** : Une belle promenade qui vous offrira l'occasion de découvrir des paysages et des chemins variés. Un relais sera à votre disposition.
-* **Parcours Habitat Partagé - 17 km** : Après un tour de l'arboretum de Sathonay-Champ, ce parcours vous mènera jusqu'au **cœur de notre habitat partagé** où nous vous accueillerons pour une pause bien mérité avant de repartir à l'assaut des sentiers.
+* **Parcours Habitat Partagé - 17 km** : Après un tour de l'arboretum de Sathonay-Caamp, ce parcours vous mènera jusqu'au **cœur de notre habitat partagé** où nous vous accueillerons pour une pause bien méritée avant de repartir à l'assaut des sentiers.
 
 ![Photo de l'arboretum de Sathonay-Camp](/img/pxl_20250223_150320921.mp.jpg "Photo de l'arboretum de Sathonay-Camp")
 
