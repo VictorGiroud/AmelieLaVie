@@ -3,16 +3,20 @@
 
 /rando/5/fp https://footpathapp.com/routes/1427ba41-5e2d-4d1b-be89-58cf9d56dfd3
 /rando/10/fp https://footpathapp.com/routes/8ee6c4c9-fea4-4280-bdd6-7206732b98f8
-/rando/17/fp https://footpathapp.com/routes/52cdd843-2585-4f09-a0f7-b3133ba2fd49
+/rando/15/fp https://footpathapp.com/routes/ba822164-e8cf-4f34-9269-055f1b8db73e
+/rando/17/fp https://footpathapp.com/routes/ba822164-e8cf-4f34-9269-055f1b8db73e
 
 /rando/5/gpx /assets/rando/rando-2025-5km.gpx
 /rando/10/gpx /assets/rando/rando-2025-10km.gpx
+/rando/15/gpx /assets/rando/rando-2025-17km.gpx
 /rando/17/gpx /assets/rando/rando-2025-17km.gpx
 
 /rando/5 /rando/5/gpx
 /rando/10 /rando/10/gpx
+/rando/15 /rando/15/gpx
 /rando/17 /rando/17/gpx
 
 /5 /rando/5/gpx
 /10 /rando/10/gpx
+/15 /rando/15/gpx
 /17 /rando/17/gpx
