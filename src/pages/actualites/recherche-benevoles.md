@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Les Colibris ont besoin de vous !
-date: 2025-02-01T20:15:08.478Z
+date: 2025-04-01T19:15:08.478Z
 description: "Notre habitat ouvert à Sathonay-Camp grandit, et nous avons besoin
   de renfort ! Que ce soit pour accompagner nos locataires, aider à la gestion
   de l’association ou participer à nos événements, chaque coup de main compte. "
