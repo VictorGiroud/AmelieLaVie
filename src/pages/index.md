@@ -2,8 +2,7 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: "Prochaine manifestation : randonnée pédestre le 23 mars 2025 départ de
-  Montanay"
+alerte: Merci pour votre présence lors de notre randonnée pédèstre !
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
