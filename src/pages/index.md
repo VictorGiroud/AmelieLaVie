@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Un habitat partagé pour adultes cérébrolésés
 heading: Habitat partagé
-alerte: Merci pour votre présence lors de notre randonnée pédèstre !
+alerte: Merci pour votre présence lors de notre randonnée pédestre !
 presentation:
   image: /img/logo.jpg
   title: Notre histoire, nos missions
