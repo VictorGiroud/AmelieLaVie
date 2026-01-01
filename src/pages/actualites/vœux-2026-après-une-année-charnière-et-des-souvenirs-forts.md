@@ -2,9 +2,9 @@
 templateKey: blog-post
 title: "2025 : une année charnière et des souvenirs forts"
 date: 2026-01-01T20:33:40.290Z
-description: "Bonne année 2026 ! Après l'ouverture historique des Colibris,
+description: Bonne année 2026 ! Après l'ouverture historique des Colibris,
   l'aventure continue. Découvrez nos vœux, les nouvelles de l'habitat et la date
-  de la prochaine rando "
+  de la prochaine rando.
 featuredimage: /img/img_4449.png
 published: true
 tags:
