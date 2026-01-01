@@ -5,7 +5,7 @@ date: 2026-01-01T20:33:40.290Z
 description: Bonne année 2026 ! Après l'ouverture historique des Colibris,
   l'aventure continue. Découvrez nos vœux, les nouvelles de l'habitat et la date
   de la prochaine rando.
-featuredimage: /img/img_4449.png
+featuredimage: /img/img_4449_2.png
 published: true
 tags:
   - Rétrospective
@@ -30,7 +30,7 @@ Désormais, les Colibris ne sont plus un projet sur papier, mais un véritable f
 
 Le cœur de la maison bat dans la grande salle commune, véritable lieu de rencontres. Grâce à la présence bienveillante de Florence, notre animatrice, et à celles de tous les bénévoles, le quotidien est rythmé par de beaux moments de partage : des repas en commun, des soirées films projetés sur le grand écran de la partie commune, des activités peinture et jardin, ou encore des sorties culturelles comme au cinéma ou au Parc des Oiseaux. Une vraie vie de quartier s'est installée ! 
 
-![Les locataires des Colibris en sortie au parc des oiseaux !](/img/img_4449.png "Les locataires des Colibris en sortie au parc des oiseaux !")
+![Les locataires des Colibris en sortie au parc des oiseaux !](/img/img_4449_2.png "Les locataires des Colibris en sortie au parc des oiseaux !")
 
 Cette réussite a une résonance particulière pour nous. Amélie, qui a inspiré ce combat, a pu connaître la douceur de ce nouveau foyer. Elle y a résidé deux mois, le temps de voir ce rêve devenir réalité, avant de s'en aller injustement en début d'année 2025. Savoir qu'elle a pu vivre l'aboutissement de ce projet restera notre plus belle récompense. 
 
