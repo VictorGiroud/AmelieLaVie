@@ -48,4 +48,4 @@ Accéder à la boutique en ligne  pour vous préinscrire ou pour réserver vos 
 
 Pour toute question, n'hésitez pas à nous [contacter par téléphone, Messenger ou via notre formulaire en ligne](https://amelielavie.com/contact).
 
-Nous avons hâte de vous retrouver le 29 mars 2025.
+Nous avons hâte de vous retrouver le 29 mars 2026.
