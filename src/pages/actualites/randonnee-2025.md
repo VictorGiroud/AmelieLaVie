@@ -1,40 +1,41 @@
 ---
 templateKey: blog-post
-title: Randonnée pédestre 2026
+title: Randonnée pédestre 2025
 date: 2025-02-23T20:00:30.242Z
-description: Nous vous accueillerons le dimanche 29 mars 2026 pour notre
+description: Nous vous accueillerons le dimanche 23 mars 2025 pour notre
   traditionnelle randonnée pédestre, au départ de Montanay.
-featuredimage: /img/pxl_20250323_081443355.raw-01.cover.jpg
+featuredimage: /img/pxl_20250223_172846506.night.raw-01.cover.jpg
 published: true
 tags:
   - Randonnée pédestre
 ---
-La date est fixée : l'association **Amélie la Vie** vous attend le **dimanche 29 mars 2026** pour sa nouvelle édition de la randonnée pédestre.
+Le printemps approche, et avec lui, notre randonnée annuelle.
 
-Que vous soyez marcheur du dimanche ou randonneur aguerri, venez partager ce moment convivial au départ de la [place de la Poype](https://www.google.com/maps/search/?api=1&query=Montanay%20Place%20de%20la%20Poype).
+Le dimanche **23 mars 2025**, nous vous donnons une nouvelle fois rendez-vous à Montanay, [place de la Poype](https://www.google.com/maps/search/?api=1&query=Montanay%20Place%20de%20la%20Poype).
 
-![Photo d'un paysage depuis les sentiers de Montanay](/img/pxl_20250323_081443355.raw-01.cover.jpg "Photo d'un paysage depuis les sentiers de Montanay")
+![Photo d'un paysage depuis les sentiers de Montanay](/img/pxl_20250223_172846506.night.raw-01.cover.jpg "Photo d'un paysage depuis les sentiers de Montanay")
 
-## **Trois parcours à découvrir**
+## **Trois parcours pour tous les niveaux**
 
-Pour cette année, nous avons souhaité renouveler l'expérience. Si les distances restent les mêmes, **les itinéraires ont été retravaillés** pour vous offrir un peu de changement et de nouvelles perspectives sur les sentiers de Montanay et ses environs.
+Cette année encore, nous avons préparé trois itinéraires pour satisfaire toutes les envies, que vous soyez amateur de balades tranquilles ou adepte de randonnées plus sportives.
 
-**Au programme, 3 circuits balisés :**
+* **Parcours Famille - 5 km** : Idéal pour les familles et les jeunes enfants, ce circuit accessible aux poussettes tout terrain emprunte des chemins accessibles et avec un faible dénivelé, tout en proposant des passages dans la nature paisible de Montanay.
+* **Parcours Aventure - 10 km** : Une belle promenade qui vous offrira l'occasion de découvrir des paysages et des chemins variés. Un relais sera à votre disposition.
+* **Parcours Habitat Partagé - 17 km** : Après un tour de l'arboretum de Sathonay-Caamp, ce parcours vous mènera jusqu'au **cœur de notre habitat partagé** où nous vous accueillerons pour une pause bien méritée avant de repartir à l'assaut des sentiers.
 
-* **Le 5 km (Parcours Famille) :** Une balade sans difficulté, pensée pour être praticable par tous, y compris en poussette tout-terrain. C'est le format idéal pour prendre l'air tranquillement.
-* **Le 10 km (Parcours Aventure) :** Un tracé intermédiaire qui permet de profiter pleinement des paysages variés de la région (ravitaillement sur le parcours).
-* **Le 17 km (Parcours Habitat Partagé) :** Pour les plus motivés, ce grand parcours vous réserve une étape clé. Suite à vos excellents retours l'an passé, nous avons fait en sorte que **l'itinéraire passe toujours par notre habitat partagé**. Ce sera l'occasion de faire une halte au cœur de notre lieu de vie et de faire connaissanves avec les locataires avant de continuer votre route.
+![Photo de l'arboretum de Sathonay-Camp](/img/pxl_20250223_150320921.mp.jpg "Photo de l'arboretum de Sathonay-Camp")
 
 ## **Départs et inscriptions**
 
-Les départs seront possibles entre 9h et 15h. Vous pouvez vous inscrire en ligne ou directement sur place le jour J.
+Les départs seront possibles entre 9h et 15h. Vous pouvez vous [inscrire en ligne](https://amelielavie.com/reservation) ou directement sur place le jour J.
 
 ## **Un moment de détente et de gourmandise**
 
-Après l'effort, place au réconfort ! Retrouvez notre stand de cakes maison aux saveurs variées pour votre pause gourmande.\
-Chocolat, crême de marron, caramel beurre salé, praline, citron : tous vos parfums favoris seront de retour !
+Après l'effort, place au réconfort ! Retrouvez notre stand de cakes maison aux saveurs variées pour votre pause gourmande.
 
-![Photo issue d'une de nos ventes de cakes](/img/pxl_20250323_074626348.raw-01.mp.cover.jpg "Photo issue d'une de nos ventes de cakes")
+Nouveauté de cette année : le parfum **caramel beurre salé** vous attend !
+
+![Photo issue d'une de nos ventes de cakes](/img/cakes.jpg "Photo issue d'une de nos ventes de cakes")
 
 ## **Suivez votre parcours en temps réel**
 
@@ -44,8 +45,10 @@ Pour une expérience plus fluide, tous les circuits sont accessibles via l'appli
 
 ## **Réservations et contact**
 
-Accéder à la boutique en ligne  pour vous préinscrire ou pour réserver vos parfums de cake préférés. Certains pourraient partir vite !
+[Accéder à la boutique en ligne](https://amelielavie.com/reservation)  pour vous préinscrire ou pour réserver vos parfums de cake préférés. Certains pourraient partir vite !
 
 Pour toute question, n'hésitez pas à nous [contacter par téléphone, Messenger ou via notre formulaire en ligne](https://amelielavie.com/contact).
 
-Nous avons hâte de vous retrouver le 29 mars 2025.
+Nous avons hâte de vous retrouver le 23 mars 2025.
+
+![Photo depuis notre habitat partagé](/img/1000000363-1-1-.jpg "Photo depuis notre habitat partagé")
