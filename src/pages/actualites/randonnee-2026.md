@@ -23,11 +23,13 @@ Pour cette année, nous avons souhaité renouveler l'expérience. Si les distanc
 
 * **Le 5 km (Parcours Famille) :** Une balade sans difficulté, pensée pour être praticable par tous, y compris en poussette tout-terrain. C'est le format idéal pour prendre l'air tranquillement.
 * **Le 10 km (Parcours Aventure) :** Un tracé intermédiaire qui permet de profiter pleinement des paysages variés de la région (ravitaillement sur le parcours).
-* **Le 17 km (Parcours Habitat Partagé) :** Pour les plus motivés, ce grand parcours vous réserve une étape clé. Suite à vos excellents retours l'an passé, nous avons fait en sorte que **l'itinéraire passe toujours par notre habitat partagé**. Ce sera l'occasion de faire une halte au cœur de notre lieu de vie et de faire connaissanves avec les locataires avant de continuer votre route.
+* **Le 17 km (Parcours Habitat Partagé) :** Pour les plus motivés, ce grand parcours vous réserve une étape clé. Suite à vos excellents retours l'an passé, nous avons fait en sorte que **l'itinéraire passe toujours par notre habitat partagé**. Ce sera l'occasion de faire une halte au cœur de notre lieu de vie et de faire connaissance avec les locataires avant de continuer votre route.
 
 ## **Départs et inscriptions**
 
 Les départs seront possibles entre 9h et 15h. Vous pouvez vous inscrire en ligne ou directement sur place le jour J.
+
+Pour le parcours de 17 km, le dernier départ est à **13h30** pour pouvoir profiter de l'accueil à l'habitat partagé.
 
 ## **Un moment de détente et de gourmandise**
 
@@ -44,7 +46,7 @@ Pour une expérience plus fluide, tous les circuits sont accessibles via l'appli
 
 ## **Réservations et contact**
 
-Accéder à la boutique en ligne  pour vous préinscrire ou pour réserver vos parfums de cake préférés. Certains pourraient partir vite !
+[Accéder à la boutique en ligne](https://amelielavie.com/reservation) pour vous préinscrire ou pour réserver vos parfums de cake préférés. Certains pourraient partir vite !
 
 Pour toute question, n'hésitez pas à nous [contacter par téléphone, Messenger ou via notre formulaire en ligne](https://amelielavie.com/contact).
 
