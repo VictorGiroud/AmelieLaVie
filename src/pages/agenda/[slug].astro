@@ -3,7 +3,8 @@ import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/ui/Container.astro";
 import SanityImage from "@components/ui/Image.astro";
 import PortableText from "@components/PortableText.astro";
-import { getAllEvenementsSlugs, getEvenementBySlug } from "@lib/sanity/queries";
+import { getAllEvenementsSlugs, getEvenementBySlug, getSiteSettings } from "@lib/sanity/queries";
+import { eventJsonLd } from "@lib/seo/jsonld";
 
 export async function getStaticPaths() {
   const slugs = await getAllEvenementsSlugs();
@@ -13,7 +14,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 if (!slug) return Astro.redirect("/404/");
 
-const event = await getEvenementBySlug(slug);
+const [event, siteSettings] = await Promise.all([getEvenementBySlug(slug), getSiteSettings()]);
 if (!event) return Astro.redirect("/404/");
 
 const fmt = new Intl.DateTimeFormat("fr-FR", {
@@ -21,6 +22,10 @@ const fmt = new Intl.DateTimeFormat("fr-FR", {
   timeStyle: "short",
 });
 const isPast = new Date(event.startDate) < new Date();
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.org";
+const canonicalUrl = new URL(`/agenda/${event.slug.current}/`, siteUrl).toString();
+const jsonLd = eventJsonLd({ event, siteSettings, canonicalUrl });
 ---
 
 <PageLayout
@@ -28,6 +33,7 @@ const isPast = new Date(event.startDate) < new Date();
   description={event.resume}
   seo={event.seo}
   canonicalPath={`/agenda/${event.slug.current}/`}
+  jsonLd={jsonLd}
 >
   <article>
     <Container width="prose" class="pt-14 sm:pt-20">

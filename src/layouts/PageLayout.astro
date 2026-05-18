@@ -4,6 +4,7 @@ import Navbar from "@components/Navbar.astro";
 import Footer from "@components/Footer.astro";
 import { getContactInfo, getNavigation, getSiteSettings } from "@lib/sanity/queries";
 import { imageUrl } from "@lib/sanity/image";
+import { organizationJsonLd, serializeJsonLd } from "@lib/seo/jsonld";
 import type { Seo } from "@lib/sanity/types";
 
 interface Props {
@@ -12,9 +13,11 @@ interface Props {
   description?: string;
   seo?: Seo | null;
   canonicalPath?: string;
+  /** JSON-LD additionnel propre à la page (Article, Event, …). */
+  jsonLd?: object | object[] | null;
 }
 
-const { title, description, seo, canonicalPath } = Astro.props;
+const { title, description, seo, canonicalPath, jsonLd } = Astro.props;
 
 // Settings globaux nécessaires à toutes les pages
 const [siteSettings, navigation, contactInfo] = await Promise.all([
@@ -33,6 +36,12 @@ const metaDescription = seo?.metaDescription || description || siteSettings?.lon
 const ogImageSource = seo?.ogImage?.asset ? seo.ogImage : siteSettings?.defaultOgImage;
 const ogImageUrl = ogImageSource?.asset ? imageUrl(ogImageSource, 1200) : undefined;
 const noindex = seo?.noIndex ?? false;
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.org";
+
+// JSON-LD : Organization (toujours) + autres si fournis par la page
+const orgLd = organizationJsonLd({ siteSettings, contactInfo, navigation, siteUrl });
+const allLd = [orgLd, ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [])];
 ---
 
 <BaseLayout
@@ -42,6 +51,15 @@ const noindex = seo?.noIndex ?? false;
   noindex={noindex}
   canonicalPath={canonicalPath}
 >
+  <Fragment slot="head-extra">
+    {
+      allLd.map((ld) => (
+        /* set:html sûr : serializeJsonLd échappe < > & et les line/paragraph separators */
+        /* eslint-disable-next-line astro/no-set-html-directive */
+        <script type="application/ld+json" is:inline set:html={serializeJsonLd(ld as never)} />
+      ))
+    }
+  </Fragment>
   <Navbar navigation={navigation} siteSettings={siteSettings} />
   <main id="main">
     <slot />

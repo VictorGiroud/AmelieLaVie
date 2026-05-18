@@ -3,7 +3,8 @@ import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/ui/Container.astro";
 import SanityImage from "@components/ui/Image.astro";
 import PortableText from "@components/PortableText.astro";
-import { getActualiteBySlug, getAllActualitesSlugs } from "@lib/sanity/queries";
+import { getActualiteBySlug, getAllActualitesSlugs, getSiteSettings } from "@lib/sanity/queries";
+import { articleJsonLd } from "@lib/seo/jsonld";
 
 export async function getStaticPaths() {
   const slugs = await getAllActualitesSlugs();
@@ -13,10 +14,14 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 if (!slug) return Astro.redirect("/404/");
 
-const article = await getActualiteBySlug(slug);
+const [article, siteSettings] = await Promise.all([getActualiteBySlug(slug), getSiteSettings()]);
 if (!article) return Astro.redirect("/404/");
 
 const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.org";
+const canonicalUrl = new URL(`/actualites/${article.slug.current}/`, siteUrl).toString();
+const jsonLd = articleJsonLd({ article, siteSettings, siteUrl, canonicalUrl });
 ---
 
 <PageLayout
@@ -24,6 +29,7 @@ const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
   description={article.description}
   seo={article.seo}
   canonicalPath={`/actualites/${article.slug.current}/`}
+  jsonLd={jsonLd}
 >
   <article>
     <Container width="prose" class="pt-14 sm:pt-20">
