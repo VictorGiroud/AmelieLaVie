@@ -1,0 +1,15 @@
+# Astro génère les pages avec trailingSlash='always'.
+# Ce fichier sert à 1) normaliser les anciennes URLs sans slash, 2) préparer les redirections legacy.
+
+# Normalisation : ajout du trailing slash (HTTP 301)
+/actualites/:slug      /actualites/:slug/      301!
+/agenda/:slug          /agenda/:slug/          301!
+/tags/:slug            /tags/:slug/            301!
+/association           /association/           301!
+/habitat-partage       /habitat-partage/       301!
+/contact               /contact/               301!
+/nous-soutenir         /nous-soutenir/         301!
+/mentions-legales      /mentions-legales/      301!
+
+# Ancien chemin admin Netlify CMS — pendant la transition Phase 7, on redirigera vers Sanity Studio.
+# /admin/*  https://amelielavie.sanity.studio/:splat  302

@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [master, feature/**]
+  pull_request:
+    branches: [master]
+
+env:
+  PUBLIC_SANITY_PROJECT_ID: dummyproject
+  PUBLIC_SANITY_DATASET: production
+  PUBLIC_SANITY_API_VERSION: "2025-01-01"
+  PUBLIC_SITE_URL: https://amelielavie.org
+
+jobs:
+  quality:
+    name: Lint, typecheck & build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint (ESLint + Prettier)
+        run: pnpm lint
+
+      - name: Type check (astro check)
+        run: pnpm check
+
+      - name: Build (Astro static)
+        run: pnpm build

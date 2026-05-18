@@ -1,0 +1,9 @@
+dist
+.astro
+node_modules
+legacy
+studio/dist
+studio/.sanity
+pnpm-lock.yaml
+*.min.*
+.env*

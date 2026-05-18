@@ -1,8 +1,15 @@
 [build]
-  publish = "public"
-  command = "npm run build"
-  functions = "lambda"
+  publish = "dist"
+  command = "pnpm build"
+
 [build.environment]
-  NODE_VERSION = "16"
-  YARN_VERSION = "1.22.4"
-  YARN_FLAGS = "--no-ignore-optional"
+  NODE_VERSION = "22"
+  PNPM_VERSION = "10"
+  NPM_FLAGS = "--version"
+
+# Astro génère un site statique : pas de fonctions, pas de SSR.
+# Les en-têtes / redirects vivent dans /public/_headers et /public/_redirects.
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  # Lighthouse audit non-bloquant — supprime ce bloc si tu n'as pas activé le plugin sur Netlify.

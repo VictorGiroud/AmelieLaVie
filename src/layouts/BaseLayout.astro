@@ -1,0 +1,55 @@
+---
+import "@fontsource-variable/lora";
+import "@/styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+  canonicalPath?: string;
+}
+
+const {
+  title,
+  description = "Amélie la Vie — association pour l'habitat partagé et l'inclusion.",
+  image,
+  noindex = false,
+  canonicalPath,
+} = Astro.props;
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.org";
+const canonical = canonicalPath ? new URL(canonicalPath, siteUrl).toString() : Astro.url.toString();
+const ogImage = image ? new URL(image, siteUrl).toString() : `${siteUrl}/og-default.png`;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
+    <main id="main">
+      <slot />
+    </main>
+  </body>
+</html>

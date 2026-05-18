@@ -1,10 +1,46 @@
-# Project dependencies
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
-node_modules
-.cache/
-# Build directory
-public/
-static/admin/*.bundle.*
-.DS_Store
-yarn-error.log
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+.astro/
+.output/
+studio/dist/
+
+# Sanity
+studio/.sanity/
+
+# Env files (only .env.example is committed)
+.env
+.env.local
+.env.*.local
 .env.development
+.env.production
+studio/.env
+studio/.env.local
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test / coverage
+coverage/
+
+# Memory and plan files (assistant-managed)
+.claude/
+
+# Legacy Gatsby build artifacts (kept in tree for migration reference, but no build output)
+legacy/public/
+legacy/.cache/
+
+# Misc
+*.log

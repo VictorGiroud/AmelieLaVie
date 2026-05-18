@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* === Palette === */
+  /* Orange ALV : le #ffaf40 historique passe à une variante AA-compliant pour le texte.
+     L'ancienne teinte reste disponible via --color-brand-light pour décorations. */
+  --color-brand-50: #fff7eb;
+  --color-brand-100: #ffe9c8;
+  --color-brand-200: #ffd28a;
+  --color-brand-300: #ffb84d;
+  --color-brand-400: #ffaf40; /* historique — décoratif uniquement */
+  --color-brand-500: #f08a00;
+  --color-brand-600: #c66a00; /* AA pour texte sur fond blanc */
+  --color-brand-700: #9b5300;
+  --color-brand-800: #714000;
+  --color-brand-900: #4a2a00;
+
+  --color-ink: #1a1a1a;
+  --color-ink-muted: #4a4a4a;
+  --color-paper: #ffffff;
+  --color-paper-alt: #f7f4ee;
+  --color-border: #e6e1d6;
+  --color-success: #1f7a3a;
+  --color-danger: #b3261e;
+
+  /* === Typography === */
+  --font-sans: "Lora Variable", "Lora", Georgia, "Times New Roman", serif;
+  --font-display: "Lora Variable", "Lora", Georgia, serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* === Layout === */
+  --container-screen: 80rem;
+  --container-prose: 42rem;
+
+  /* === Motion === */
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: var(--color-paper);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100dvh;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    line-height: 1.2;
+    text-wrap: balance;
+    color: var(--color-ink);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Skip-link a11y — visible uniquement au focus clavier */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  padding: 0.75rem 1rem;
+  z-index: 100;
+  transition: top 150ms var(--ease-out-soft);
+}
+.skip-link:focus-visible {
+  top: 0;
+}
