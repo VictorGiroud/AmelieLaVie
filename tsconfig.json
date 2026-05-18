@@ -16,8 +16,7 @@
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@lib/*": ["src/lib/*"],
-      "@sanity/*": ["src/lib/sanity/*"]
+      "@lib/*": ["src/lib/*"]
     }
   }
 }

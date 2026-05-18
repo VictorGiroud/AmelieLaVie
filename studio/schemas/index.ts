@@ -1,7 +1,58 @@
-/**
- * Schemas Sanity — squelette Phase 0.
- *
- * Les définitions complètes (champs, validations, previews) seront ajoutées en Phase 1
- * conformément au plan : C:\Users\conta\.claude\plans\j-ai-ce-projet-que-jolly-pixel.md
- */
-export const schemaTypes = [];
+import type { SchemaTypeDefinition } from "sanity";
+
+// Objets réutilisables
+import { seo, ctaLink, altImage } from "./objects";
+
+// Documents
+import { tag, partenaire, actualite, evenement, page } from "./documents";
+
+// Singletons
+import { siteSettings, navigation, contactInfo, homePage } from "./singletons";
+
+// Sections (page builder)
+import {
+  sectionHero,
+  sectionRichText,
+  sectionImageText,
+  sectionBlurbs,
+  sectionGallery,
+  sectionActualitesList,
+  sectionAgendaList,
+  sectionPartenairesGrid,
+  sectionCta,
+  sectionEmbed,
+  sectionNewsletter,
+} from "./sections";
+
+export const schemaTypes: SchemaTypeDefinition[] = [
+  // Objets
+  seo,
+  ctaLink,
+  altImage,
+  // Documents
+  tag,
+  partenaire,
+  actualite,
+  evenement,
+  page,
+  // Singletons
+  siteSettings,
+  navigation,
+  contactInfo,
+  homePage,
+  // Sections
+  sectionHero,
+  sectionRichText,
+  sectionImageText,
+  sectionBlurbs,
+  sectionGallery,
+  sectionActualitesList,
+  sectionAgendaList,
+  sectionPartenairesGrid,
+  sectionCta,
+  sectionEmbed,
+  sectionNewsletter,
+];
+
+export { SINGLETON_TYPES } from "./singletons";
+export type { SingletonType } from "./singletons";

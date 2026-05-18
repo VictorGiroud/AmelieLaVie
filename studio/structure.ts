@@ -1,7 +1,17 @@
 import type { StructureResolver } from "sanity/structure";
-import { CogIcon, HomeIcon, EarthGlobeIcon, MenuIcon, UserIcon } from "@sanity/icons";
+import {
+  CogIcon,
+  HomeIcon,
+  EarthGlobeIcon,
+  MenuIcon,
+  UserIcon,
+  DocumentTextIcon,
+  CalendarIcon,
+  HeartFilledIcon,
+  TagIcon,
+} from "@sanity/icons";
 
-type SingletonType = "siteSettings" | "navigation" | "contactInfo" | "homePage";
+import type { SingletonType } from "./schemas";
 
 const singleton = (
   S: Parameters<StructureResolver>[0],
@@ -18,6 +28,7 @@ export const structure: StructureResolver = (S) =>
   S.list()
     .title("Contenu")
     .items([
+      // ═══ Réglages ═══
       S.listItem()
         .title("Réglages")
         .icon(CogIcon)
@@ -30,13 +41,22 @@ export const structure: StructureResolver = (S) =>
               singleton(S, "contactInfo", "Coordonnées & intégrations", UserIcon),
             ]),
         ),
+
       S.divider(),
-      singleton(S, "homePage", "Page d’accueil", HomeIcon),
+
+      // ═══ Pages ═══
+      singleton(S, "homePage", "Page d'accueil", HomeIcon),
       S.documentTypeListItem("page").title("Pages").icon(EarthGlobeIcon),
+
       S.divider(),
-      S.documentTypeListItem("actualite").title("Actualités"),
-      S.documentTypeListItem("evenement").title("Agenda"),
+
+      // ═══ Contenu éditorial ═══
+      S.documentTypeListItem("actualite").title("Actualités").icon(DocumentTextIcon),
+      S.documentTypeListItem("evenement").title("Agenda").icon(CalendarIcon),
+
       S.divider(),
-      S.documentTypeListItem("partenaire").title("Partenaires"),
-      S.documentTypeListItem("tag").title("Tags"),
+
+      // ═══ Référentiels ═══
+      S.documentTypeListItem("partenaire").title("Partenaires").icon(HeartFilledIcon),
+      S.documentTypeListItem("tag").title("Tags").icon(TagIcon),
     ]);
