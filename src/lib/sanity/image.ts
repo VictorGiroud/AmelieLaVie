@@ -14,6 +14,16 @@ export function imageUrl(source: SanityImageSource, width = 1200, quality = 80):
   return urlFor(source).width(width).quality(quality).url();
 }
 
+/**
+ * URL spécifique aux logos / illustrations transparents :
+ * - pas de `auto=format` (le WebP/AVIF dégrade souvent les PNG plats)
+ * - qualité plus haute par défaut
+ * - `fit=max` pour ne jamais upscaler au-dessus du source
+ */
+export function transparentImageUrl(source: SanityImageSource, width = 600, quality = 92): string {
+  return builder.image(source).fit("max").width(width).quality(quality).url();
+}
+
 /** Récupère le placeholder LQIP (Low Quality Image Placeholder) si disponible. */
 export function lqip(source: { asset?: { metadata?: { lqip?: string } } } | null): string | null {
   return source?.asset?.metadata?.lqip ?? null;

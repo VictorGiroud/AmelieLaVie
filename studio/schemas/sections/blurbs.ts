@@ -13,6 +13,13 @@ export const sectionBlurbs = defineType({
       type: "string",
     }),
     defineField({
+      name: "subheading",
+      title: "Sous-titre (optionnel)",
+      type: "text",
+      rows: 2,
+      description: "Accroche ou résumé affiché sous le titre principal.",
+    }),
+    defineField({
       name: "items",
       title: "Tuiles",
       type: "array",
@@ -58,6 +65,19 @@ export const sectionBlurbs = defineType({
         }),
       ],
       validation: (R) => R.required().min(1).max(6),
+    }),
+    defineField({
+      name: "footerNote",
+      title: "Note de bas de section (optionnel)",
+      type: "string",
+      description:
+        "Phrase courte affichée sous les tuiles (ex: « L'habitat a été inauguré en juin 2025 ! »).",
+    }),
+    defineField({
+      name: "cta",
+      title: "Bouton d'action (optionnel)",
+      type: "ctaLink",
+      description: "Affiché tout en bas de la section pour rediriger vers une page détaillée.",
     }),
   ],
   preview: {

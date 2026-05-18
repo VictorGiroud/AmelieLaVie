@@ -44,3 +44,17 @@ legacy/.cache/
 
 # Misc
 *.log
+
+# Playwright MCP artifacts + manual audit screenshots
+.playwright-mcp/
+home-*.png
+local-*.png
+prod-*.png
+audit-*.png
+compare-*.png
+zoom-*.png
+mentions-*.png
+final-*.png
+helloasso-*.png
+footer-*.png
+sitemap-prod.xml

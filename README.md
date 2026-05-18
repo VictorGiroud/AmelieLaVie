@@ -18,7 +18,7 @@ Site officiel de l'association **Amélie la Vie**.
 | Langage         | TypeScript strict                          | `noUncheckedIndexedAccess`, path aliases `@/*`   |
 | Styles          | [Tailwind CSS v4](https://tailwindcss.com) | Config-as-CSS via `@tailwindcss/vite`            |
 | CMS             | [Sanity 3](https://www.sanity.io)          | Studio dans `studio/`, free tier, Visual Editing |
-| Polices         | `@fontsource-variable/lora`                | Self-hosted (plus de Google Fonts bloquant)      |
+| Polices         | Stack système                              | `-apple-system`, Segoe UI, Roboto… (zéro download) |
 | Runtime         | Node 22 LTS                                | gérée via `.nvmrc`                               |
 | Package manager | pnpm 10                                    | workspace : racine (Astro) + `studio` (Sanity)   |
 | Hébergement     | Netlify                                    | Free tier, build statique                        |
@@ -153,6 +153,8 @@ Une fois en prod :
 2. **Inviter un admin** : [sanity.io/manage/project/zw89b09w/members](https://www.sanity.io/manage/project/zw89b09w/members) → Invite member → rôle "Editor"
 3. **L'admin** se connecte (Google/email), édite, clique "Publish" → le site se rebuild seul
 
+Guide bénévole détaillé : [`ONBOARDING.md`](./ONBOARDING.md) — à partager avec les nouveaux éditeurs.
+
 ### Visual Editing (preview à côté du formulaire)
 
 Le Studio inclut **Presentation Tool** (panneau de gauche) :
@@ -169,5 +171,6 @@ Le Studio inclut **Presentation Tool** (panneau de gauche) :
 - [x] **Phase 3** — Design system Astro
 - [x] **Phase 4** — Templates de pages (42 pages générées)
 - [x] **Phase 5** — Formulaire contact (Netlify Forms) + Presentation Tool Sanity
-- [ ] **Phase 6** — A11y / Perf / SEO (Lighthouse > 95, axe zero violation, JSON-LD, sitemap enrichi)
-- [ ] **Phase 7** — Cut-over (suppression `legacy/`, bascule `master`)
+- [x] **Phase 6** — SEO enrichi (JSON-LD, RSS, OG/Twitter), sitemap, redirects 301 legacy
+- [x] **Phase 7** — Refonte UI complète (Hero citation, sections resserrées, tuiles Soutenez, fix images PNG transparents, restructuration Habitat partagé)
+- [ ] **Phase 8** — Cut-over Netlify : DNS, webhook Sanity, suppression `legacy/`

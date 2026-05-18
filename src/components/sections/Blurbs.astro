@@ -11,32 +11,39 @@ interface Props {
 const { section } = Astro.props;
 const cols = Math.min(section.items.length, 3);
 const colClass = cols >= 3 ? "md:grid-cols-3" : cols === 2 ? "md:grid-cols-2" : "max-w-xl mx-auto";
+const hasHeader = !!section.heading || !!section.subheading;
 ---
 
 <Section background="alt" width="wide">
   {
-    section.heading && (
-      <h2 class="mb-10 text-center text-3xl font-semibold sm:text-4xl">{section.heading}</h2>
+    hasHeader && (
+      <header class="mx-auto mb-8 max-w-3xl text-center">
+        {section.heading && <h2 class="text-2xl font-semibold sm:text-3xl">{section.heading}</h2>}
+        {section.subheading && (
+          <p class="text-ink-muted mx-auto mt-3 max-w-2xl text-base sm:text-lg">
+            {section.subheading}
+          </p>
+        )}
+      </header>
     )
   }
-  <ul class={`grid gap-8 ${colClass}`}>
+  <ul class={`grid gap-6 ${colClass}`}>
     {
       section.items.map((item) => (
-        <li class="bg-paper border-border flex flex-col rounded-lg border p-6">
+        <li class="bg-paper border-border flex flex-col rounded-lg border p-5">
           {item.image?.asset && (
             <SanityImage
               image={item.image}
-              width={400}
+              width={500}
               sizes="(min-width: 768px) 33vw, 100vw"
-              class="aspect-video w-full rounded object-cover"
+              transparent
+              class="mx-auto h-40 w-auto object-contain"
             />
           )}
-          {item.title && <h3 class="mt-4 text-xl font-semibold">{item.title}</h3>}
-          {item.text && (
-            <p class="text-ink-muted mt-3 flex-1 text-sm leading-relaxed">{item.text}</p>
-          )}
+          {item.title && <h3 class="mt-4 text-lg font-semibold">{item.title}</h3>}
+          {item.text && <p class="text-ink mt-3 flex-1 text-[15px] leading-relaxed">{item.text}</p>}
           {item.link && (
-            <div class="mt-5">
+            <div class="mt-4">
               <Button cta={item.link} variant="ghost" />
             </div>
           )}
@@ -44,4 +51,18 @@ const colClass = cols >= 3 ? "md:grid-cols-3" : cols === 2 ? "md:grid-cols-2" : 
       ))
     }
   </ul>
+
+  {
+    section.footerNote && (
+      <p class="text-ink-muted mt-8 text-center text-base italic">{section.footerNote}</p>
+    )
+  }
+
+  {
+    section.cta && (
+      <div class="mt-6 flex justify-center">
+        <Button cta={section.cta} size="lg" />
+      </div>
+    )
+  }
 </Section>

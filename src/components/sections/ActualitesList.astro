@@ -17,8 +17,8 @@ const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
 ---
 
 <Section background="white" width="wide">
-  <div class="mb-8 flex items-baseline justify-between">
-    <h2 class="text-3xl font-semibold sm:text-4xl">{section.heading}</h2>
+  <div class="mb-6 flex items-baseline justify-between">
+    <h2 class="text-2xl font-semibold sm:text-3xl">{section.heading}</h2>
     {
       section.showSeeAllLink && (
         <a href="/actualites/" class="text-brand-700 text-sm font-medium hover:underline">
@@ -34,7 +34,7 @@ const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
         {uiLabels?.actualitesEmptyState ?? "Aucune actualité pour le moment."}
       </p>
     ) : (
-      <ul class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <ul class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {articles.map((a) => (
           <li>
             <article class="bg-paper border-border h-full overflow-hidden rounded-lg border">
@@ -44,19 +44,21 @@ const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
                     image={a.featuredImage}
                     width={600}
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    class="aspect-video w-full object-cover"
+                    class="aspect-[16/9] w-full object-cover"
                   />
                 )}
-                <div class="p-5">
+                <div class="p-4">
                   <time
                     datetime={a.publishedAt}
                     class="text-ink-muted text-xs tracking-wider uppercase"
                   >
                     {fmt.format(new Date(a.publishedAt))}
                   </time>
-                  <h3 class="text-brand-700 mt-2 text-lg font-semibold">{a.title}</h3>
+                  <h3 class="text-brand-700 mt-1 text-base leading-snug font-semibold">
+                    {a.title}
+                  </h3>
                   <p class="text-ink-muted mt-2 line-clamp-3 text-sm">{a.description}</p>
-                  <p class="text-brand-700 mt-4 text-sm font-medium">
+                  <p class="text-brand-700 mt-3 text-sm font-medium">
                     {uiLabels?.actualitesReadMoreLabel ?? "Lire la suite"} →
                   </p>
                 </div>

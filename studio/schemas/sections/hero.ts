@@ -14,6 +14,19 @@ export const sectionHero = defineType({
       validation: (R) => R.required().min(3).max(140),
     }),
     defineField({
+      name: "displayStyle",
+      title: "Style d'affichage du titre",
+      type: "string",
+      initialValue: "default",
+      options: {
+        list: [
+          { title: "Standard (h1 classique)", value: "default" },
+          { title: "Citation (italique, guillemets, centrée)", value: "quote" },
+        ],
+        layout: "radio",
+      },
+    }),
+    defineField({
       name: "subtitle",
       title: "Sous-titre / accroche",
       type: "text",

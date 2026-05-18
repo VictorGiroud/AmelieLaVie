@@ -195,6 +195,7 @@ export interface SectionHero {
   _type: "section.hero";
   _key: string;
   title: string;
+  displayStyle?: "default" | "quote";
   subtitle?: string;
   alerte?: string;
   backgroundImage?: SanityImage;
@@ -223,6 +224,7 @@ export interface SectionBlurbs {
   _type: "section.blurbs";
   _key: string;
   heading?: string;
+  subheading?: string;
   items: {
     _key: string;
     image?: SanityImage;
@@ -230,6 +232,8 @@ export interface SectionBlurbs {
     text?: string;
     link?: CtaLink;
   }[];
+  footerNote?: string;
+  cta?: CtaLink;
 }
 
 export interface SectionGallery {

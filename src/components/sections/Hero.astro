@@ -12,6 +12,7 @@ interface Props {
 
 const { section, index = 0 } = Astro.props;
 const isFirst = index === 0;
+const isQuote = section.displayStyle === "quote";
 ---
 
 <section class="relative overflow-hidden">
@@ -30,25 +31,37 @@ const isFirst = index === 0;
       </div>
     )
   }
-  <Container width="screen" class="py-16 sm:py-24 lg:py-32">
+  <Container width="screen" class={isQuote ? "py-6 sm:py-10 text-center" : "py-10 sm:py-14"}>
     {
       section.alerte && (
-        <p class="bg-brand-100 text-brand-800 mb-6 inline-flex rounded-full px-4 py-1.5 text-sm font-medium">
+        <p
+          class={`bg-brand-100 text-brand-800 mb-5 inline-flex rounded-full px-4 py-1.5 text-sm font-medium ${isQuote ? "" : ""}`}
+        >
           {section.alerte}
         </p>
       )
     }
-    <h1 class="max-w-3xl text-4xl font-semibold sm:text-5xl lg:text-6xl">
-      {section.title}
-    </h1>
+    {
+      isQuote ? (
+        <h1 class="hero-quote text-ink mx-auto max-w-3xl font-serif text-3xl leading-snug italic sm:text-4xl">
+          {section.title}
+        </h1>
+      ) : (
+        <h1 class="max-w-3xl text-3xl font-semibold sm:text-4xl">{section.title}</h1>
+      )
+    }
     {
       section.subtitle && (
-        <p class="text-ink-muted mt-6 max-w-2xl text-lg sm:text-xl">{section.subtitle}</p>
+        <p
+          class={`text-ink-muted mt-3 text-base sm:text-lg ${isQuote ? "mx-auto max-w-2xl" : "max-w-2xl"}`}
+        >
+          {section.subtitle}
+        </p>
       )
     }
     {
       section.ctas && section.ctas.length > 0 && (
-        <div class="mt-8 flex flex-wrap gap-3">
+        <div class={`mt-6 flex flex-wrap gap-3 ${isQuote ? "justify-center" : ""}`}>
           {section.ctas.map((cta) => (
             <Button cta={cta} size="lg" />
           ))}
@@ -57,3 +70,19 @@ const isFirst = index === 0;
     }
   </Container>
 </section>
+
+<style>
+  /* Guillemets typographiques français (style citation) */
+  .hero-quote::before {
+    content: "«\00a0";
+    font-style: normal;
+    color: var(--color-brand-500);
+    opacity: 0.7;
+  }
+  .hero-quote::after {
+    content: "\00a0»";
+    font-style: normal;
+    color: var(--color-brand-500);
+    opacity: 0.7;
+  }
+</style>

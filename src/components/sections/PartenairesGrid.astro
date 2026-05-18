@@ -16,7 +16,7 @@ const partenaires =
 ---
 
 <Section background="white" width="wide">
-  <h2 class="mb-10 text-center text-2xl font-semibold sm:text-3xl">{section.heading}</h2>
+  <h2 class="mb-6 text-center text-2xl font-semibold">{section.heading}</h2>
   <ul class="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
     {
       partenaires.map((p) => {
@@ -27,14 +27,15 @@ const partenaires =
               href={p.url}
               target={p.url ? "_blank" : undefined}
               rel={p.url ? "noopener noreferrer" : undefined}
-              class="inline-flex h-16 items-center justify-center grayscale transition hover:grayscale-0"
+              class="inline-flex h-16 items-center justify-center opacity-90 transition hover:opacity-100"
               aria-label={p.url ? `${p.name} (ouvre dans un nouvel onglet)` : p.name}
               title={p.name}
             >
               <SanityImage
                 image={p.logo}
-                width={240}
+                width={320}
                 sizes="240px"
+                transparent
                 class="h-16 w-auto object-contain"
                 alt={p.name}
               />

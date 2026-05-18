@@ -37,9 +37,10 @@ const socialIcons: Record<string, string> = {
         siteSettings?.logo ? (
           <SanityImage
             image={siteSettings.logo}
-            width={140}
-            sizes="140px"
+            width={200}
+            sizes="200px"
             loading="eager"
+            transparent
             class="h-9 w-auto"
             alt={siteSettings.title}
           />
@@ -122,6 +123,26 @@ const socialIcons: Record<string, string> = {
                 {link.label}
               </a>
             ))
+          }
+          {
+            navigation?.social && navigation.social.length > 0 && (
+              <ul class="border-border mt-2 flex items-center gap-2 border-t px-6 py-3">
+                {navigation.social.map((s) => (
+                  <li>
+                    <a
+                      href={s.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={s.label}
+                      class="hover:text-brand-700 text-ink-muted inline-flex h-10 w-10 items-center justify-center rounded transition-colors"
+                    >
+                      {/* eslint-disable-next-line astro/no-set-html-directive */}
+                      <span class="block h-6 w-6" set:html={socialIcons[s.platform] ?? ""} />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )
           }
         </nav>
       </div>

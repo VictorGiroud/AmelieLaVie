@@ -2,10 +2,22 @@
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/ui/Container.astro";
 import SanityImage from "@components/ui/Image.astro";
-import { getActualites, getUiLabels } from "@lib/sanity/queries";
+import { getActualites, getAllTags, getUiLabels } from "@lib/sanity/queries";
 
-const [articles, ui] = await Promise.all([getActualites(100), getUiLabels()]);
+const [articles, tags, ui] = await Promise.all([getActualites(100), getAllTags(), getUiLabels()]);
 const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
+
+// Tags réellement utilisés par au moins un article publié.
+// Note: les actualités projettent `slug` en string via GROQ, tandis que
+// getAllTags renvoie `slug: { current }`. On normalise pour comparer.
+const usedTagSlugs = new Set<string>();
+for (const a of articles) {
+  for (const t of a.tags ?? []) {
+    const slug = typeof t.slug === "string" ? t.slug : t.slug?.current;
+    if (slug) usedTagSlugs.add(slug);
+  }
+}
+const activeTags = tags.filter((t) => usedTagSlugs.has(t.slug.current));
 ---
 
 <PageLayout
@@ -13,12 +25,28 @@ const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
   description={ui?.actualitesDescription}
   canonicalPath="/actualites/"
 >
-  <Container width="wide" class="py-14 sm:py-20">
-    <header class="mb-12 max-w-2xl">
-      <h1 class="text-4xl font-semibold sm:text-5xl">{ui?.actualitesHeading ?? "Actualités"}</h1>
+  <Container width="wide" class="py-8 sm:py-12">
+    <header class="mb-8 max-w-3xl">
+      <h1 class="text-3xl font-semibold sm:text-4xl">{ui?.actualitesHeading ?? "Actualités"}</h1>
       {
         ui?.actualitesDescription && (
-          <p class="text-ink-muted mt-4 text-lg">{ui.actualitesDescription}</p>
+          <p class="text-ink-muted mt-3 text-base sm:text-lg">{ui.actualitesDescription}</p>
+        )
+      }
+      {
+        activeTags.length > 0 && (
+          <ul class="mt-6 flex flex-wrap gap-2">
+            {activeTags.map((t) => (
+              <li>
+                <a
+                  href={`/tags/${t.slug.current}/`}
+                  class="bg-paper-alt text-ink hover:bg-brand-50 hover:text-brand-700 inline-flex rounded-full px-3 py-1 text-xs font-medium transition-colors"
+                >
+                  #{t.title}
+                </a>
+              </li>
+            ))}
+          </ul>
         )
       }
     </header>
@@ -27,32 +55,34 @@ const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
       articles.length === 0 ? (
         <p class="text-ink-muted">{ui?.actualitesEmptyState}</p>
       ) : (
-        <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <ul class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((a) => (
             <li>
-              <article class="border-border bg-paper h-full overflow-hidden rounded-lg border">
-                <a href={`/actualites/${a.slug.current}/`}>
+              <article class="border-border bg-paper h-full overflow-hidden rounded-lg border transition-shadow hover:shadow-md">
+                <a href={`/actualites/${a.slug.current}/`} class="block">
                   {a.featuredImage?.asset && (
                     <SanityImage
                       image={a.featuredImage}
-                      width={600}
+                      width={800}
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      class="aspect-video w-full object-cover"
+                      class="aspect-[16/9] w-full object-cover"
                     />
                   )}
-                  <div class="p-5">
+                  <div class="p-4">
                     <time
                       datetime={a.publishedAt}
                       class="text-ink-muted text-xs tracking-wider uppercase"
                     >
                       {fmt.format(new Date(a.publishedAt))}
                     </time>
-                    <h2 class="text-brand-700 mt-2 text-lg font-semibold">{a.title}</h2>
+                    <h2 class="text-brand-700 mt-1 text-base leading-snug font-semibold">
+                      {a.title}
+                    </h2>
                     <p class="text-ink-muted mt-2 line-clamp-3 text-sm">{a.description}</p>
                     {a.tags && a.tags.length > 0 && (
-                      <ul class="mt-4 flex flex-wrap gap-2">
+                      <ul class="mt-3 flex flex-wrap gap-1">
                         {a.tags.map((t) => (
-                          <li class="bg-paper-alt text-ink-muted rounded px-2 py-0.5 text-xs">
+                          <li class="bg-brand-50 text-brand-700 inline-flex rounded-full px-2 py-0.5 text-[11px] font-medium">
                             #{t.title}
                           </li>
                         ))}

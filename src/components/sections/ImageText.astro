@@ -19,16 +19,17 @@ const imageOnLeft = (section.imagePosition ?? "left") === "left";
       <SanityImage
         image={section.image}
         width={800}
-        sizes="(min-width: 768px) 50vw, 100vw"
-        class="aspect-[4/3] w-full rounded-lg object-cover"
+        sizes="(min-width: 768px) 40vw, 80vw"
+        transparent
+        class="mx-auto max-h-80 w-auto max-w-full object-contain md:max-h-96"
       />
     </div>
     <div class={imageOnLeft ? "md:order-2" : "md:order-1"}>
-      <h2 class="text-3xl font-semibold sm:text-4xl">{section.title}</h2>
-      <PortableText value={section.body} class="mt-6 space-y-4 leading-relaxed" />
+      <h2 class="text-2xl font-semibold sm:text-3xl">{section.title}</h2>
+      <PortableText value={section.body} class="mt-4 space-y-3 leading-relaxed" />
       {
         section.ctas && section.ctas.length > 0 && (
-          <div class="mt-8 flex flex-wrap gap-3">
+          <div class="mt-6 flex flex-wrap gap-3">
             {section.ctas.map((cta) => (
               <Button cta={cta} />
             ))}

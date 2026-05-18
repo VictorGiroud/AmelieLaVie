@@ -39,7 +39,7 @@ const SECTIONS_FRAGMENT = `sections[]{
   _key, _type,
   // hero
   _type == "section.hero" => {
-    title, subtitle, alerte,
+    title, displayStyle, subtitle, alerte,
     backgroundImage ${IMAGE_FRAGMENT},
     ctas[] ${CTA_LINK_FRAGMENT}
   },
@@ -57,7 +57,8 @@ const SECTIONS_FRAGMENT = `sections[]{
   },
   // blurbs
   _type == "section.blurbs" => {
-    heading,
+    heading, subheading, footerNote,
+    cta ${CTA_LINK_FRAGMENT},
     items[]{
       _key, title, text,
       image ${IMAGE_FRAGMENT},

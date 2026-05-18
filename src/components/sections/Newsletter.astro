@@ -14,49 +14,50 @@ const hasEndpoint = endpoint.length > 0;
 
 <Section background="alt" width="screen" id="newsletter">
   <div class="mx-auto max-w-2xl text-center">
-    <h2 class="text-3xl font-semibold sm:text-4xl">{section.heading}</h2>
-    {section.description && <p class="text-ink-muted mt-4 text-lg">{section.description}</p>}
+    <h2 class="text-2xl font-semibold sm:text-3xl">{section.heading}</h2>
+    {section.description && <p class="text-ink-muted mt-3 text-base">{section.description}</p>}
+
+    <form
+      action={hasEndpoint ? endpoint : "#"}
+      method="post"
+      target={hasEndpoint ? "_blank" : undefined}
+      novalidate
+      aria-disabled={!hasEndpoint}
+      class={`mt-6 grid gap-3 text-left sm:grid-cols-[1fr_auto] ${hasEndpoint ? "" : "opacity-70"}`}
+    >
+      <label class="sr-only" for="newsletter-email">
+        {section.emailLabel ?? "Votre adresse email"}
+      </label>
+      <input
+        id="newsletter-email"
+        type="email"
+        name="EMAIL"
+        required
+        autocomplete="email"
+        disabled={!hasEndpoint}
+        placeholder={section.emailLabel ?? "Votre adresse email"}
+        class="border-border bg-paper rounded-md border px-4 py-3 text-base disabled:cursor-not-allowed"
+      />
+      {/* Honeypot anti-spam (champ caché, mais lisible pour bots) */}
+      <div style="position:absolute;left:-5000px" aria-hidden="true">
+        <input type="text" name="b_honeypot" tabindex="-1" value="" />
+      </div>
+      <button
+        type="submit"
+        disabled={!hasEndpoint}
+        class="bg-brand-500 text-paper hover:bg-brand-600 inline-flex items-center justify-center rounded-md px-5 py-3 font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60"
+      >
+        {section.ctaLabel}
+      </button>
+    </form>
 
     {
-      hasEndpoint ? (
-        <form
-          action={endpoint}
-          method="post"
-          target="_blank"
-          novalidate
-          class="mt-8 grid gap-3 sm:grid-cols-[1fr_auto]"
-        >
-          <label class="sr-only" for="newsletter-email">
-            {section.emailLabel ?? "Votre adresse email"}
-          </label>
-          <input
-            id="newsletter-email"
-            type="email"
-            name="EMAIL"
-            required
-            autocomplete="email"
-            placeholder={section.emailLabel ?? "Votre adresse email"}
-            class="border-border bg-paper rounded-md border px-4 py-3 text-base"
-          />
-          {/* Honeypot anti-spam (champ caché, mais lisible pour bots) */}
-          <div style="position:absolute;left:-5000px" aria-hidden="true">
-            <input type="text" name="b_honeypot" tabindex="-1" value="" />
-          </div>
-          <button
-            type="submit"
-            class="bg-brand-600 text-paper hover:bg-brand-700 inline-flex items-center justify-center rounded-md px-5 py-3 font-semibold transition-colors"
-          >
-            {section.ctaLabel}
-          </button>
-        </form>
-      ) : (
-        <p class="bg-paper text-ink-muted mt-8 rounded-md p-4 text-sm">
-          (Endpoint Mailchimp à configurer dans Sanity Studio → Réglages → Coordonnées &
-          intégrations.)
+      !hasEndpoint && (
+        <p class="text-ink-muted mt-3 text-xs">
+          L'inscription sera bientôt activée. Pour être informé, contactez-nous.
         </p>
       )
     }
-
-    {section.privacyNote && <p class="text-ink-muted mt-6 text-xs">{section.privacyNote}</p>}
+    {section.privacyNote && <p class="text-ink-muted mt-2 text-xs">{section.privacyNote}</p>}
   </div>
 </Section>
