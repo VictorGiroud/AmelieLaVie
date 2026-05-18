@@ -1,0 +1,89 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/ui/Container.astro";
+import SanityImage from "@components/ui/Image.astro";
+import PortableText from "@components/PortableText.astro";
+import { getAllEvenementsSlugs, getEvenementBySlug } from "@lib/sanity/queries";
+
+export async function getStaticPaths() {
+  const slugs = await getAllEvenementsSlugs();
+  return slugs.map(({ slug }) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+if (!slug) return Astro.redirect("/404/");
+
+const event = await getEvenementBySlug(slug);
+if (!event) return Astro.redirect("/404/");
+
+const fmt = new Intl.DateTimeFormat("fr-FR", {
+  dateStyle: "full",
+  timeStyle: "short",
+});
+const isPast = new Date(event.startDate) < new Date();
+---
+
+<PageLayout
+  title={event.title}
+  description={event.resume}
+  seo={event.seo}
+  canonicalPath={`/agenda/${event.slug.current}/`}
+>
+  <article>
+    <Container width="prose" class="pt-14 sm:pt-20">
+      <header>
+        <p class="text-brand-700 text-sm font-medium tracking-widest uppercase">
+          {isPast ? "Événement passé" : "À venir"}
+        </p>
+        <h1 class="mt-3 text-4xl font-semibold sm:text-5xl">{event.title}</h1>
+        <dl class="text-ink-muted mt-6 space-y-2 text-sm">
+          <div class="flex gap-2">
+            <dt class="font-medium">Date :</dt>
+            <dd>
+              <time datetime={event.startDate}>{fmt.format(new Date(event.startDate))}</time>
+              {
+                event.endDate && (
+                  <>
+                    {" — "}
+                    <time datetime={event.endDate}>{fmt.format(new Date(event.endDate))}</time>
+                  </>
+                )
+              }
+            </dd>
+          </div>
+          {
+            event.address && (
+              <div class="flex gap-2">
+                <dt class="font-medium">Lieu :</dt>
+                <dd>{event.address}</dd>
+              </div>
+            )
+          }
+        </dl>
+        {event.resume && <p class="mt-6 text-lg">{event.resume}</p>}
+      </header>
+    </Container>
+
+    {
+      event.image?.asset && (
+        <Container width="wide" class="mt-10">
+          <SanityImage
+            image={event.image}
+            width={1600}
+            sizes="(min-width: 1024px) 1024px, 100vw"
+            loading="eager"
+            class="aspect-video w-full rounded-lg object-cover"
+          />
+        </Container>
+      )
+    }
+
+    {
+      event.body && event.body.length > 0 && (
+        <Container width="prose" class="py-10 sm:py-14">
+          <PortableText value={event.body} class="space-y-4 leading-relaxed" />
+        </Container>
+      )
+    }
+  </article>
+</PageLayout>

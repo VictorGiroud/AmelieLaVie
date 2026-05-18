@@ -1,0 +1,45 @@
+---
+import type { SanityImage } from "@lib/sanity/types";
+import { imageUrl, lqip } from "@lib/sanity/image";
+
+interface Props {
+  image: SanityImage | null | undefined;
+  /** Largeur cible pour la version la plus grande du srcset. */
+  width?: number;
+  /** Si vrai, marquée aria-hidden (déco). */
+  decorative?: boolean;
+  /** Attribut sizes pour le srcset responsive. */
+  sizes?: string;
+  /** Loading hint : "eager" pour le LCP, "lazy" pour le reste. */
+  loading?: "eager" | "lazy";
+  class?: string;
+  /** Override alt si différent du champ Sanity. */
+  alt?: string;
+}
+
+const {
+  image,
+  width = 1200,
+  decorative = false,
+  sizes = "(min-width: 768px) 50vw, 100vw",
+  loading = "lazy",
+  class: className = "",
+  alt: altProp,
+} = Astro.props;
+---
+
+{
+  image?.asset && (
+    <img
+      src={imageUrl(image, width)}
+      srcset={`${imageUrl(image, Math.round(width / 2))} ${Math.round(width / 2)}w, ${imageUrl(image, width)} ${width}w, ${imageUrl(image, width * 2)} ${width * 2}w`}
+      sizes={sizes}
+      alt={decorative ? "" : (altProp ?? image.alt ?? "")}
+      aria-hidden={decorative ? "true" : undefined}
+      loading={loading}
+      decoding="async"
+      style={lqip(image) ? `background:url(${lqip(image)}) center/cover` : undefined}
+      class={className}
+    />
+  )
+}

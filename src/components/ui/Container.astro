@@ -1,0 +1,26 @@
+---
+interface Props {
+  /** Largeur max du contenu. "prose" ≈ 42rem pour lecture confort. */
+  width?: "screen" | "prose" | "wide";
+  /** Padding horizontal responsive. */
+  pad?: boolean;
+  as?: "div" | "section" | "header" | "footer" | "main" | "article";
+  class?: string;
+}
+
+const { width = "screen", pad = true, as = "div", class: className = "" } = Astro.props;
+
+const widthClass =
+  width === "prose"
+    ? "max-w-[var(--container-prose)]"
+    : width === "wide"
+      ? "max-w-7xl"
+      : "max-w-[var(--container-screen)]";
+const padClass = pad ? "px-6 sm:px-8" : "";
+
+const Tag = as;
+---
+
+<Tag class={`mx-auto w-full ${widthClass} ${padClass} ${className}`}>
+  <slot />
+</Tag>

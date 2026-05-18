@@ -26,6 +26,12 @@ export function resolveLegacyAsset(url) {
   if (!url) return null;
   if (/^https?:\/\//.test(url)) return null; // URL externe : pas à uploader
   const clean = url.replace(/^\/+/, "");
+  // Cas 1 : path déjà relatif au repo root (ex: "legacy/src/img/x.png" depuis une fixture)
+  if (clean.startsWith("legacy/") || clean.startsWith("scripts/")) {
+    const direct = resolve(ROOT, clean);
+    return existsSync(direct) ? direct : null;
+  }
+  // Cas 2 : URL legacy à la Gatsby (ex: "/img/x.png") — on cherche dans plusieurs racines
   const candidates = [
     resolve(ROOT, "legacy", clean), // /img/x → legacy/img/x
     resolve(ROOT, "legacy", "src", clean), // /img/x → legacy/src/img/x

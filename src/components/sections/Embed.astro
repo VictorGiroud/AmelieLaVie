@@ -1,0 +1,37 @@
+---
+import Section from "@components/ui/Section.astro";
+import type { SectionEmbed } from "@lib/sanity/types";
+
+interface Props {
+  section: SectionEmbed;
+}
+
+const { section } = Astro.props;
+const height = section.height ?? 720;
+
+/** Convertit une URL YouTube en URL embed. */
+function youtubeEmbedUrl(url: string): string {
+  const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/);
+  return match ? `https://www.youtube.com/embed/${match[1]}` : url;
+}
+
+const embedUrl = section.provider === "youtube" ? youtubeEmbedUrl(section.url) : section.url;
+const aspect = section.provider === "youtube" ? "aspect-video" : "";
+---
+
+<Section background="white" width="wide">
+  {section.title && <h2 class="mb-6 text-3xl font-semibold sm:text-4xl">{section.title}</h2>}
+  <div class={`overflow-hidden rounded-lg ${aspect}`} style={!aspect ? `height:${height}px` : ""}>
+    <iframe
+      src={embedUrl}
+      title={section.title ?? `Intégration ${section.provider}`}
+      class="h-full w-full"
+      loading="lazy"
+      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+      allow={section.provider === "youtube"
+        ? "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        : undefined}
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen></iframe>
+  </div>
+</Section>

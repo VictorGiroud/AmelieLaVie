@@ -1,0 +1,50 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Navbar from "@components/Navbar.astro";
+import Footer from "@components/Footer.astro";
+import { getContactInfo, getNavigation, getSiteSettings } from "@lib/sanity/queries";
+import { imageUrl } from "@lib/sanity/image";
+import type { Seo } from "@lib/sanity/types";
+
+interface Props {
+  /** Titre de l'onglet (sans suffixe site). */
+  title: string;
+  description?: string;
+  seo?: Seo | null;
+  canonicalPath?: string;
+}
+
+const { title, description, seo, canonicalPath } = Astro.props;
+
+// Settings globaux nécessaires à toutes les pages
+const [siteSettings, navigation, contactInfo] = await Promise.all([
+  getSiteSettings(),
+  getNavigation(),
+  getContactInfo(),
+]);
+
+// Computed SEO : seo custom > description prop > description site
+const metaTitle = seo?.metaTitle || title;
+const fullTitle =
+  metaTitle === siteSettings?.title
+    ? metaTitle
+    : `${metaTitle} — ${siteSettings?.title ?? "Amélie la Vie"}`;
+const metaDescription = seo?.metaDescription || description || siteSettings?.longDescription;
+const ogImageSource = seo?.ogImage?.asset ? seo.ogImage : siteSettings?.defaultOgImage;
+const ogImageUrl = ogImageSource?.asset ? imageUrl(ogImageSource, 1200) : undefined;
+const noindex = seo?.noIndex ?? false;
+---
+
+<BaseLayout
+  title={fullTitle}
+  description={metaDescription}
+  image={ogImageUrl}
+  noindex={noindex}
+  canonicalPath={canonicalPath}
+>
+  <Navbar navigation={navigation} siteSettings={siteSettings} />
+  <main id="main">
+    <slot />
+  </main>
+  <Footer navigation={navigation} siteSettings={siteSettings} contactInfo={contactInfo} />
+</BaseLayout>

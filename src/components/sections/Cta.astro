@@ -1,0 +1,25 @@
+---
+import Section from "@components/ui/Section.astro";
+import Button from "@components/ui/Button.astro";
+import type { SectionCta } from "@lib/sanity/types";
+
+interface Props {
+  section: SectionCta;
+}
+
+const { section } = Astro.props;
+const bg = section.background ?? "brand";
+---
+
+<Section background={bg} width="wide">
+  <div class="grid items-center gap-8 md:grid-cols-12">
+    <div class="md:col-span-8">
+      <h2 class="text-3xl font-semibold sm:text-4xl">{section.heading}</h2>
+      {section.body && <p class="text-ink-muted mt-4 max-w-xl text-lg">{section.body}</p>}
+    </div>
+    <div class="flex flex-wrap gap-3 md:col-span-4 md:justify-end">
+      <Button cta={section.primaryCta} size="lg" variant="primary" />
+      {section.secondaryCta && <Button cta={section.secondaryCta} size="lg" variant="secondary" />}
+    </div>
+  </div>
+</Section>

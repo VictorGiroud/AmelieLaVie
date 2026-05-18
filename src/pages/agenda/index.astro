@@ -1,0 +1,81 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/ui/Container.astro";
+import { getEvenements, getUiLabels } from "@lib/sanity/queries";
+
+const ui = await getUiLabels();
+const [upcoming, past] = await Promise.all([getEvenements(50, false), getEvenements(50, true)]);
+// Filtrer pour avoir les passés seulement
+const now = new Date();
+const upcomingEvents = upcoming;
+const pastEvents = past.filter((e) => new Date(e.startDate) < now);
+
+const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", timeStyle: "short" });
+---
+
+<PageLayout
+  title={ui?.agendaHeading ?? "Agenda"}
+  description={ui?.agendaDescription}
+  canonicalPath="/agenda/"
+>
+  <Container width="wide" class="py-14 sm:py-20">
+    <header class="mb-12 max-w-2xl">
+      <h1 class="text-4xl font-semibold sm:text-5xl">{ui?.agendaHeading ?? "Agenda"}</h1>
+      {ui?.agendaDescription && <p class="text-ink-muted mt-4 text-lg">{ui.agendaDescription}</p>}
+    </header>
+
+    {
+      upcomingEvents.length === 0 && pastEvents.length === 0 ? (
+        <p class="text-ink-muted">{ui?.agendaEmptyState}</p>
+      ) : (
+        <>
+          {upcomingEvents.length > 0 && (
+            <ul class="divide-border border-border bg-paper divide-y overflow-hidden rounded-lg border">
+              {upcomingEvents.map((e) => (
+                <li>
+                  <a
+                    href={`/agenda/${e.slug.current}/`}
+                    class="hover:bg-paper-alt flex flex-col gap-1 px-6 py-5 sm:flex-row sm:items-center sm:justify-between"
+                  >
+                    <div>
+                      <h2 class="text-brand-700 text-lg font-semibold">{e.title}</h2>
+                      {e.address && <p class="text-ink-muted mt-1 text-sm">{e.address}</p>}
+                    </div>
+                    <time datetime={e.startDate} class="text-ink-muted text-sm whitespace-nowrap">
+                      {fmt.format(new Date(e.startDate))}
+                    </time>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+          {pastEvents.length > 0 && (
+            <section class="mt-12">
+              <h2 class="text-ink-muted text-sm font-semibold tracking-wider uppercase">
+                {ui?.agendaPastSeparator ?? "Événements passés"}
+              </h2>
+              <ul class="divide-border border-border bg-paper-alt mt-4 divide-y overflow-hidden rounded-lg border">
+                {pastEvents.map((e) => (
+                  <li>
+                    <a
+                      href={`/agenda/${e.slug.current}/`}
+                      class="hover:bg-paper flex flex-col gap-1 px-6 py-4 opacity-80 sm:flex-row sm:items-center sm:justify-between"
+                    >
+                      <div>
+                        <h3 class="text-ink text-base font-medium">{e.title}</h3>
+                        {e.address && <p class="text-ink-muted mt-1 text-xs">{e.address}</p>}
+                      </div>
+                      <time datetime={e.startDate} class="text-ink-muted text-xs whitespace-nowrap">
+                        {fmt.format(new Date(e.startDate))}
+                      </time>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </>
+      )
+    }
+  </Container>
+</PageLayout>

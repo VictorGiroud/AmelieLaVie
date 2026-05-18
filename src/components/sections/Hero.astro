@@ -1,0 +1,59 @@
+---
+import Container from "@components/ui/Container.astro";
+import Button from "@components/ui/Button.astro";
+import SanityImage from "@components/ui/Image.astro";
+import type { SectionHero } from "@lib/sanity/types";
+
+interface Props {
+  section: SectionHero;
+  /** Index dans la page (le premier hero = LCP). */
+  index?: number;
+}
+
+const { section, index = 0 } = Astro.props;
+const isFirst = index === 0;
+---
+
+<section class="relative overflow-hidden">
+  {
+    section.backgroundImage?.asset && (
+      <div class="absolute inset-0 -z-10">
+        <SanityImage
+          image={section.backgroundImage}
+          width={1920}
+          sizes="100vw"
+          loading={isFirst ? "eager" : "lazy"}
+          class="h-full w-full object-cover"
+          decorative={!section.backgroundImage.alt}
+        />
+        <div class="bg-paper/70 absolute inset-0" aria-hidden="true" />
+      </div>
+    )
+  }
+  <Container width="screen" class="py-16 sm:py-24 lg:py-32">
+    {
+      section.alerte && (
+        <p class="bg-brand-100 text-brand-800 mb-6 inline-flex rounded-full px-4 py-1.5 text-sm font-medium">
+          {section.alerte}
+        </p>
+      )
+    }
+    <h1 class="max-w-3xl text-4xl font-semibold sm:text-5xl lg:text-6xl">
+      {section.title}
+    </h1>
+    {
+      section.subtitle && (
+        <p class="text-ink-muted mt-6 max-w-2xl text-lg sm:text-xl">{section.subtitle}</p>
+      )
+    }
+    {
+      section.ctas && section.ctas.length > 0 && (
+        <div class="mt-8 flex flex-wrap gap-3">
+          {section.ctas.map((cta) => (
+            <Button cta={cta} size="lg" />
+          ))}
+        </div>
+      )
+    }
+  </Container>
+</section>

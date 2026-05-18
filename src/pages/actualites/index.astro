@@ -1,0 +1,70 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/ui/Container.astro";
+import SanityImage from "@components/ui/Image.astro";
+import { getActualites, getUiLabels } from "@lib/sanity/queries";
+
+const [articles, ui] = await Promise.all([getActualites(100), getUiLabels()]);
+const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
+---
+
+<PageLayout
+  title={ui?.actualitesHeading ?? "Actualités"}
+  description={ui?.actualitesDescription}
+  canonicalPath="/actualites/"
+>
+  <Container width="wide" class="py-14 sm:py-20">
+    <header class="mb-12 max-w-2xl">
+      <h1 class="text-4xl font-semibold sm:text-5xl">{ui?.actualitesHeading ?? "Actualités"}</h1>
+      {
+        ui?.actualitesDescription && (
+          <p class="text-ink-muted mt-4 text-lg">{ui.actualitesDescription}</p>
+        )
+      }
+    </header>
+
+    {
+      articles.length === 0 ? (
+        <p class="text-ink-muted">{ui?.actualitesEmptyState}</p>
+      ) : (
+        <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {articles.map((a) => (
+            <li>
+              <article class="border-border bg-paper h-full overflow-hidden rounded-lg border">
+                <a href={`/actualites/${a.slug.current}/`}>
+                  {a.featuredImage?.asset && (
+                    <SanityImage
+                      image={a.featuredImage}
+                      width={600}
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      class="aspect-video w-full object-cover"
+                    />
+                  )}
+                  <div class="p-5">
+                    <time
+                      datetime={a.publishedAt}
+                      class="text-ink-muted text-xs tracking-wider uppercase"
+                    >
+                      {fmt.format(new Date(a.publishedAt))}
+                    </time>
+                    <h2 class="text-brand-700 mt-2 text-lg font-semibold">{a.title}</h2>
+                    <p class="text-ink-muted mt-2 line-clamp-3 text-sm">{a.description}</p>
+                    {a.tags && a.tags.length > 0 && (
+                      <ul class="mt-4 flex flex-wrap gap-2">
+                        {a.tags.map((t) => (
+                          <li class="bg-paper-alt text-ink-muted rounded px-2 py-0.5 text-xs">
+                            #{t.title}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </a>
+              </article>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </Container>
+</PageLayout>

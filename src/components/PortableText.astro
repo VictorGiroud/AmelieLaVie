@@ -1,0 +1,146 @@
+---
+import { imageUrl } from "@lib/sanity/image";
+import type {
+  PortableTextBlock,
+  PortableTextContent,
+  PortableTextImage,
+  PortableTextMarkDef,
+  PortableTextSpan,
+} from "@lib/sanity/types";
+
+interface Props {
+  value: PortableTextContent | null | undefined;
+  /** Classes Tailwind ajoutées au conteneur (typo, espacement). */
+  class?: string;
+}
+
+const { value, class: className = "" } = Astro.props;
+
+function isImage(block: PortableTextBlock | PortableTextImage): block is PortableTextImage {
+  return block._type === "image";
+}
+
+function markToTag(mark: string, markDefs: PortableTextMarkDef[]): { open: string; close: string } {
+  if (mark === "strong") return { open: "<strong>", close: "</strong>" };
+  if (mark === "em") return { open: "<em>", close: "</em>" };
+  if (mark === "code")
+    return {
+      open: '<code class="rounded bg-paper-alt px-1 py-0.5 text-[0.95em]">',
+      close: "</code>",
+    };
+  const def = markDefs.find((d) => d._key === mark);
+  if (def && def._type === "link") {
+    const target = def.external ? ' target="_blank" rel="noopener noreferrer"' : "";
+    const ext = def.external
+      ? ' <span aria-hidden="true" class="text-xs">↗</span><span class="sr-only"> (ouvre dans un nouvel onglet)</span>'
+      : "";
+    return {
+      open: `<a href="${escapeAttr(def.href)}" class="text-brand-700 underline decoration-brand-500 decoration-1 underline-offset-4 hover:decoration-2"${target}>`,
+      close: `${ext}</a>`,
+    };
+  }
+  return { open: "", close: "" };
+}
+
+function escapeAttr(s: string): string {
+  return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+}
+function escapeHtml(s: string): string {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function renderSpans(children: PortableTextSpan[], markDefs: PortableTextMarkDef[]): string {
+  return children
+    .map((span) => {
+      let text = escapeHtml(span.text ?? "");
+      // Préserver les retours à la ligne explicites
+      text = text.replace(/\n/g, "<br/>");
+      for (const mark of [...(span.marks ?? [])].reverse()) {
+        const { open, close } = markToTag(mark, markDefs);
+        text = `${open}${text}${close}`;
+      }
+      return text;
+    })
+    .join("");
+}
+
+function renderBlock(block: PortableTextBlock): string {
+  const inner = renderSpans(block.children, block.markDefs ?? []);
+  if (block.listItem) {
+    return `<li>${inner}</li>`;
+  }
+  switch (block.style) {
+    case "h2":
+      return `<h2 class="mt-10 text-3xl font-semibold sm:text-4xl">${inner}</h2>`;
+    case "h3":
+      return `<h3 class="mt-8 text-2xl font-semibold sm:text-3xl">${inner}</h3>`;
+    case "h4":
+      return `<h4 class="mt-6 text-xl font-semibold">${inner}</h4>`;
+    case "blockquote":
+      return `<blockquote class="border-brand-500 my-6 border-l-4 pl-6 italic text-ink-muted">${inner}</blockquote>`;
+    default:
+      return `<p>${inner}</p>`;
+  }
+}
+
+function renderImage(img: PortableTextImage): string {
+  if (!img.asset) return "";
+  const src = imageUrl(img, 1200);
+  const alt = escapeAttr(img.alt ?? "");
+  const caption = img.caption
+    ? `<figcaption class="mt-2 text-sm text-ink-muted">${escapeHtml(img.caption)}</figcaption>`
+    : "";
+  return `<figure class="my-8"><img src="${src}" alt="${alt}" loading="lazy" decoding="async" class="w-full rounded-md"/>${caption}</figure>`;
+}
+
+/**
+ * Sérialise le tableau de blocks en HTML. Les listes consécutives sont
+ * regroupées dans un seul <ul>/<ol>.
+ */
+function renderBlocks(blocks: PortableTextContent): string {
+  let html = "";
+  let listType: "bullet" | "number" | null = null;
+
+  const closeList = () => {
+    if (listType) {
+      html += listType === "number" ? "</ol>" : "</ul>";
+      listType = null;
+    }
+  };
+
+  for (const block of blocks) {
+    if (isImage(block)) {
+      closeList();
+      html += renderImage(block);
+      continue;
+    }
+    if (block.listItem) {
+      const want = block.listItem;
+      if (listType !== want) {
+        closeList();
+        html +=
+          want === "number" ? '<ol class="list-decimal pl-6">' : '<ul class="list-disc pl-6">';
+        listType = want;
+      }
+      html += renderBlock(block);
+    } else {
+      closeList();
+      html += renderBlock(block);
+    }
+  }
+  closeList();
+  return html;
+}
+
+const html = value && value.length > 0 ? renderBlocks(value) : "";
+---
+
+{
+  /* set:html sûr : tout le texte utilisateur passe par escapeHtml()/escapeAttr() avant d'être concaténé. Pas d'injection possible. */
+}
+{/* eslint-disable-next-line astro/no-set-html-directive */}
+{html && <div class={className} set:html={html} />}

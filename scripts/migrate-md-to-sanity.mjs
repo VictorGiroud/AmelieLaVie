@@ -444,6 +444,44 @@ function mapContactInfo() {
   return doc;
 }
 
+function mapUiLabels() {
+  // Valeurs par défaut en français. L'admin pourra les modifier dans le Studio.
+  // Aligné sur les `initialValue` du schema (studio/schemas/singletons/uiLabels.ts).
+  return {
+    _id: "uiLabels",
+    _type: "uiLabels",
+    // 404
+    notFoundTitle: "Page introuvable",
+    notFoundMessage:
+      "La page que vous cherchez n'existe pas ou plus. Elle a peut-être été déplacée.",
+    notFoundCtaLabel: "Retour à l'accueil",
+    notFoundCtaHref: "/",
+    // Actualités
+    actualitesHeading: "Actualités",
+    actualitesDescription:
+      "Retrouvez ici toutes nos actualités : projets en cours, rencontres, évolutions de l'association.",
+    actualitesEmptyState: "Aucune actualité pour le moment. Revenez bientôt !",
+    actualitesReadMoreLabel: "Lire la suite",
+    // Agenda
+    agendaHeading: "Agenda",
+    agendaDescription:
+      "Tous les événements à venir et passés : randonnées, marchés de Noël, assemblées générales.",
+    agendaEmptyState: "Aucun événement prévu pour le moment.",
+    agendaPastSeparator: "Événements passés",
+    // Contact
+    contactFormHeading: "Nous écrire",
+    contactFormNameLabel: "Votre nom",
+    contactFormEmailLabel: "Votre email",
+    contactFormMessageLabel: "Votre message",
+    contactFormSubmitLabel: "Envoyer",
+    contactFormSuccessMessage: "Merci pour votre message ! Nous reviendrons vers vous rapidement.",
+    contactFormErrorMessage:
+      "Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous contacter directement par email.",
+    contactFormPrivacyNote:
+      "Vos données ne sont utilisées que pour répondre à votre message. Elles ne seront ni partagées ni stockées au-delà du nécessaire.",
+  };
+}
+
 // ─── Main ────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -457,23 +495,26 @@ async function main() {
   const tx = COMMIT ? client.transaction() : null;
   const stats = { actualite: 0, evenement: 0, page: 0, tag: 0, homePage: 0, settings: 0 };
 
-  // ─── Settings globaux (siteSettings, navigation, contactInfo) ──
+  // ─── Settings globaux (siteSettings, navigation, contactInfo, uiLabels) ──
   if (include("settings")) {
     console.log("⚙️  Settings globaux");
     const siteSettings = await mapSiteSettings(client);
     const navigation = mapNavigation();
     const contactInfo = mapContactInfo();
+    const uiLabels = mapUiLabels();
     console.log(`  • siteSettings — ${siteSettings.title}`);
     console.log(
       `  • navigation   — ${navigation.headerLinks.length} liens header, ${navigation.footerColumns.length} colonnes footer, ${navigation.social.length} réseaux sociaux`,
     );
     console.log(`  • contactInfo  — ${contactInfo.email ?? "(pas d'email)"}`);
+    console.log(`  • uiLabels     — libellés 404 / actus / agenda / contact (FR par défaut)`);
     if (COMMIT) {
       tx.createOrReplace(siteSettings);
       tx.createOrReplace(navigation);
       tx.createOrReplace(contactInfo);
+      tx.createOrReplace(uiLabels);
     }
-    stats.settings = 3;
+    stats.settings = 4;
     console.log();
   }
 

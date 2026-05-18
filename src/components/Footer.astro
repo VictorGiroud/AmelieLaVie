@@ -1,0 +1,110 @@
+---
+import Container from "@components/ui/Container.astro";
+import SanityImage from "@components/ui/Image.astro";
+import type { ContactInfo, Navigation, SiteSettings } from "@lib/sanity/types";
+
+interface Props {
+  navigation: Navigation | null;
+  siteSettings: SiteSettings | null;
+  contactInfo: ContactInfo | null;
+}
+
+const { navigation, siteSettings, contactInfo } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-ink text-paper mt-20">
+  <Container width="screen" class="py-14 sm:py-20">
+    <div class="grid gap-10 md:grid-cols-12">
+      <div class="md:col-span-4">
+        <a href="/" class="inline-flex items-center gap-3" aria-label="Accueil">
+          {
+            siteSettings?.logo ? (
+              <SanityImage
+                image={siteSettings.logo}
+                width={200}
+                sizes="200px"
+                loading="lazy"
+                class="h-12 w-auto brightness-0 invert"
+                alt={siteSettings.title}
+              />
+            ) : (
+              <span class="text-xl font-semibold">{siteSettings?.title ?? "Amélie la Vie"}</span>
+            )
+          }
+        </a>
+        {
+          siteSettings?.shortDescription && (
+            <p class="text-paper/70 mt-4 max-w-sm text-sm">{siteSettings.shortDescription}</p>
+          )
+        }
+      </div>
+
+      {
+        navigation?.footerColumns?.map((col) => (
+          <nav class="md:col-span-3" aria-label={col.heading}>
+            <h2 class="text-paper text-sm font-semibold tracking-wider uppercase">{col.heading}</h2>
+            <ul class="mt-4 space-y-2 text-sm">
+              {col.links?.map((link) => (
+                <li>
+                  <a
+                    href={link.href}
+                    class="text-paper/80 hover:text-paper hover:underline"
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))
+      }
+
+      <div class="md:col-span-2">
+        <h2 class="text-paper text-sm font-semibold tracking-wider uppercase">Contact</h2>
+        <ul class="mt-4 space-y-2 text-sm">
+          {
+            contactInfo?.email && (
+              <li>
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  class="text-paper/80 hover:text-paper hover:underline"
+                >
+                  {contactInfo.email}
+                </a>
+              </li>
+            )
+          }
+          {
+            contactInfo?.phone && (
+              <li>
+                <a
+                  href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
+                  class="text-paper/80 hover:text-paper hover:underline"
+                >
+                  {contactInfo.phone}
+                </a>
+              </li>
+            )
+          }
+          {contactInfo?.address && <li class="text-paper/80 text-sm">{contactInfo.address}</li>}
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="border-paper/10 mt-12 flex flex-col items-center justify-between gap-4 border-t pt-6 text-xs sm:flex-row"
+    >
+      <p class="text-paper/60">
+        © {year}
+        {siteSettings?.title ?? "Amélie la Vie"}.
+        {navigation?.footerLegalNote}
+      </p>
+      <p class="text-paper/40">
+        <a href="https://amelielavie.sanity.studio" class="hover:text-paper/80">Admin</a>
+      </p>
+    </div>
+  </Container>
+</footer>

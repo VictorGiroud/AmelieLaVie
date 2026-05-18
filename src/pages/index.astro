@@ -1,30 +1,21 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import SectionRenderer from "@components/SectionRenderer.astro";
+import { getContactInfo, getHomePage, getUiLabels } from "@lib/sanity/queries";
+
+const [homePage, uiLabels, contactInfo] = await Promise.all([
+  getHomePage(),
+  getUiLabels(),
+  getContactInfo(),
+]);
+
+if (!homePage) {
+  throw new Error(
+    "Le singleton homePage est introuvable dans Sanity. Lance la migration : pnpm migrate:content --commit",
+  );
+}
 ---
 
-<BaseLayout
-  title="Amélie la Vie — refonte en cours"
-  description="Le nouveau site Amélie la Vie est en cours de construction (Astro + Sanity)."
-  noindex={true}
->
-  <section
-    class="mx-auto flex min-h-[60dvh] max-w-[var(--container-prose)] flex-col justify-center px-6 py-16"
-  >
-    <p class="text-brand-600 text-sm font-medium tracking-widest uppercase">Amélie la Vie</p>
-    <h1 class="mt-4 text-4xl font-semibold sm:text-5xl">Refonte en cours</h1>
-    <p class="text-ink-muted mt-6 text-lg">
-      Le nouveau site est en construction. Stack : <strong>Astro 5</strong> · <strong>Sanity</strong
-      >
-      · <strong>Tailwind CSS v4</strong>. La version actuelle reste accessible sur
-      <a
-        class="decoration-brand-500 hover:text-brand-700 underline decoration-2 underline-offset-4"
-        href="https://amelielavie.org">amelielavie.org</a
-      >.
-    </p>
-    <p class="text-ink-muted mt-4 text-sm">
-      Plan détaillé&nbsp;: voir <code class="bg-paper-alt rounded px-1.5 py-0.5 text-xs"
-        >.claude/plans/j-ai-ce-projet-que-jolly-pixel.md</code
-      >
-    </p>
-  </section>
-</BaseLayout>
+<PageLayout title="Accueil" canonicalPath="/">
+  <SectionRenderer sections={homePage.sections} uiLabels={uiLabels} contactInfo={contactInfo} />
+</PageLayout>

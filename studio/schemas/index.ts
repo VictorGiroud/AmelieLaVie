@@ -7,7 +7,7 @@ import { seo, ctaLink, altImage } from "./objects";
 import { tag, partenaire, actualite, evenement, page } from "./documents";
 
 // Singletons
-import { siteSettings, navigation, contactInfo, homePage } from "./singletons";
+import { siteSettings, navigation, contactInfo, uiLabels, homePage } from "./singletons";
 
 // Sections (page builder)
 import {
@@ -39,6 +39,7 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   siteSettings,
   navigation,
   contactInfo,
+  uiLabels,
   homePage,
   // Sections
   sectionHero,

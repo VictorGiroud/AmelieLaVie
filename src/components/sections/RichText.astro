@@ -1,0 +1,16 @@
+---
+import Section from "@components/ui/Section.astro";
+import PortableText from "@components/PortableText.astro";
+import type { SectionRichText } from "@lib/sanity/types";
+
+interface Props {
+  section: SectionRichText;
+}
+
+const { section } = Astro.props;
+---
+
+<Section background={section.background ?? "white"} width="prose">
+  {section.heading && <h2 class="mb-6 text-3xl font-semibold sm:text-4xl">{section.heading}</h2>}
+  <PortableText value={section.body} class="space-y-4 leading-relaxed" />
+</Section>

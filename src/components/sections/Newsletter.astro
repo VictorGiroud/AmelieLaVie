@@ -1,0 +1,62 @@
+---
+import Section from "@components/ui/Section.astro";
+import type { ContactInfo, SectionNewsletter } from "@lib/sanity/types";
+
+interface Props {
+  section: SectionNewsletter;
+  contactInfo: ContactInfo | null;
+}
+
+const { section, contactInfo } = Astro.props;
+const endpoint = contactInfo?.mailchimpEndpoint ?? "";
+const hasEndpoint = endpoint.length > 0;
+---
+
+<Section background="alt" width="screen" id="newsletter">
+  <div class="mx-auto max-w-2xl text-center">
+    <h2 class="text-3xl font-semibold sm:text-4xl">{section.heading}</h2>
+    {section.description && <p class="text-ink-muted mt-4 text-lg">{section.description}</p>}
+
+    {
+      hasEndpoint ? (
+        <form
+          action={endpoint}
+          method="post"
+          target="_blank"
+          novalidate
+          class="mt-8 grid gap-3 sm:grid-cols-[1fr_auto]"
+        >
+          <label class="sr-only" for="newsletter-email">
+            {section.emailLabel ?? "Votre adresse email"}
+          </label>
+          <input
+            id="newsletter-email"
+            type="email"
+            name="EMAIL"
+            required
+            autocomplete="email"
+            placeholder={section.emailLabel ?? "Votre adresse email"}
+            class="border-border bg-paper rounded-md border px-4 py-3 text-base"
+          />
+          {/* Honeypot anti-spam (champ caché, mais lisible pour bots) */}
+          <div style="position:absolute;left:-5000px" aria-hidden="true">
+            <input type="text" name="b_honeypot" tabindex="-1" value="" />
+          </div>
+          <button
+            type="submit"
+            class="bg-brand-600 text-paper hover:bg-brand-700 inline-flex items-center justify-center rounded-md px-5 py-3 font-semibold transition-colors"
+          >
+            {section.ctaLabel}
+          </button>
+        </form>
+      ) : (
+        <p class="bg-paper text-ink-muted mt-8 rounded-md p-4 text-sm">
+          (Endpoint Mailchimp à configurer dans Sanity Studio → Réglages → Coordonnées &
+          intégrations.)
+        </p>
+      )
+    }
+
+    {section.privacyNote && <p class="text-ink-muted mt-6 text-xs">{section.privacyNote}</p>}
+  </div>
+</Section>

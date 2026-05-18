@@ -1,6 +1,7 @@
 import type { StructureResolver } from "sanity/structure";
 import {
   CogIcon,
+  ControlsIcon,
   HomeIcon,
   EarthGlobeIcon,
   MenuIcon,
@@ -39,6 +40,7 @@ export const structure: StructureResolver = (S) =>
               singleton(S, "siteSettings", "Identité du site", CogIcon),
               singleton(S, "navigation", "Navigation (header & footer)", MenuIcon),
               singleton(S, "contactInfo", "Coordonnées & intégrations", UserIcon),
+              singleton(S, "uiLabels", "Libellés d'interface", ControlsIcon),
             ]),
         ),
 

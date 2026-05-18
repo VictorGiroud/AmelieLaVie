@@ -1,0 +1,47 @@
+---
+import Section from "@components/ui/Section.astro";
+import SanityImage from "@components/ui/Image.astro";
+import { getAllPartenaires } from "@lib/sanity/queries";
+import type { SectionPartenairesGrid } from "@lib/sanity/types";
+
+interface Props {
+  section: SectionPartenairesGrid;
+}
+
+const { section } = Astro.props;
+const partenaires =
+  section.partenaires && section.partenaires.length > 0
+    ? section.partenaires
+    : await getAllPartenaires();
+---
+
+<Section background="white" width="wide">
+  <h2 class="mb-10 text-center text-2xl font-semibold sm:text-3xl">{section.heading}</h2>
+  <ul class="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
+    {
+      partenaires.map((p) => {
+        const Tag = p.url ? "a" : "div";
+        return (
+          <li>
+            <Tag
+              href={p.url}
+              target={p.url ? "_blank" : undefined}
+              rel={p.url ? "noopener noreferrer" : undefined}
+              class="inline-flex h-16 items-center justify-center grayscale transition hover:grayscale-0"
+              aria-label={p.url ? `${p.name} (ouvre dans un nouvel onglet)` : p.name}
+              title={p.name}
+            >
+              <SanityImage
+                image={p.logo}
+                width={240}
+                sizes="240px"
+                class="h-16 w-auto object-contain"
+                alt={p.name}
+              />
+            </Tag>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>

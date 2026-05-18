@@ -1,0 +1,53 @@
+---
+import Hero from "@components/sections/Hero.astro";
+import RichText from "@components/sections/RichText.astro";
+import ImageText from "@components/sections/ImageText.astro";
+import Blurbs from "@components/sections/Blurbs.astro";
+import Gallery from "@components/sections/Gallery.astro";
+import ActualitesList from "@components/sections/ActualitesList.astro";
+import AgendaList from "@components/sections/AgendaList.astro";
+import PartenairesGrid from "@components/sections/PartenairesGrid.astro";
+import Cta from "@components/sections/Cta.astro";
+import Embed from "@components/sections/Embed.astro";
+import Newsletter from "@components/sections/Newsletter.astro";
+import type { ContactInfo, Section, UiLabels } from "@lib/sanity/types";
+
+interface Props {
+  sections: Section[];
+  uiLabels?: UiLabels | null;
+  contactInfo?: ContactInfo | null;
+}
+
+const { sections, uiLabels = null, contactInfo = null } = Astro.props;
+---
+
+{
+  sections.map((section, i) => {
+    switch (section._type) {
+      case "section.hero":
+        return <Hero section={section} index={i} />;
+      case "section.richText":
+        return <RichText section={section} />;
+      case "section.imageText":
+        return <ImageText section={section} />;
+      case "section.blurbs":
+        return <Blurbs section={section} />;
+      case "section.gallery":
+        return <Gallery section={section} />;
+      case "section.actualitesList":
+        return <ActualitesList section={section} uiLabels={uiLabels} />;
+      case "section.agendaList":
+        return <AgendaList section={section} />;
+      case "section.partenairesGrid":
+        return <PartenairesGrid section={section} />;
+      case "section.cta":
+        return <Cta section={section} />;
+      case "section.embed":
+        return <Embed section={section} />;
+      case "section.newsletter":
+        return <Newsletter section={section} contactInfo={contactInfo} />;
+      default:
+        return null;
+    }
+  })
+}
