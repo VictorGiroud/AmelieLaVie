@@ -22,6 +22,7 @@ import {
   sectionCta,
   sectionEmbed,
   sectionNewsletter,
+  sectionContactForm,
 } from "./sections";
 
 export const schemaTypes: SchemaTypeDefinition[] = [
@@ -53,6 +54,7 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   sectionCta,
   sectionEmbed,
   sectionNewsletter,
+  sectionContactForm,
 ];
 
 export { SINGLETON_TYPES } from "./singletons";

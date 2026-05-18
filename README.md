@@ -100,22 +100,74 @@ pnpm studio:deploy    # déploie Studio sur amelielavie.sanity.studio
 
 ## Déploiement
 
-Netlify build à partir de `dist/`. Les variables d'environnement doivent être configurées dans [Site settings → Environment](https://app.netlify.com/sites/amelielavie/settings/env) :
+### 1. Variables d'env Netlify
 
-- `PUBLIC_SANITY_PROJECT_ID`, `PUBLIC_SANITY_DATASET`, `PUBLIC_SANITY_API_VERSION`
+À configurer dans [Site settings → Environment](https://app.netlify.com/sites/amelielavie/settings/env) :
+
+- `PUBLIC_SANITY_PROJECT_ID=zw89b09w`
+- `PUBLIC_SANITY_DATASET=production`
+- `PUBLIC_SANITY_API_VERSION=2025-01-01`
 - `PUBLIC_SITE_URL=https://amelielavie.org`
-- `PUBLIC_RECAPTCHA_KEY`, `PUBLIC_MAILCHIMP_ENDPOINT`
-- `SANITY_API_READ_TOKEN` (rôle Viewer, pour les previews)
+- `PUBLIC_MAILCHIMP_ENDPOINT` (URL du form Mailchimp si on garde la newsletter)
+- `NODE_OPTIONS=--use-system-ca` (uniquement si build derrière proxy d'entreprise)
 
-Le rebuild est déclenché par un webhook Sanity (à configurer dans Studio → API → Webhooks) qui pointe vers un Netlify Build Hook.
+### 2. Déployer le Studio Sanity
+
+```powershell
+pnpm studio:deploy
+# choisir un sous-domaine (ex: amelielavie) → URL = amelielavie.sanity.studio
+```
+
+### 3. Webhook Sanity → rebuild Netlify automatique
+
+Pour que le site rebuild dès qu'un admin clique "Publish" dans Studio :
+
+**a. Côté Netlify** — [Site settings → Build hooks](https://app.netlify.com/sites/amelielavie/settings/deploys#build-hooks)
+
+- "Add build hook" → Name: `Sanity publish` → branche `master` (ou la branche déployée)
+- Copier l'URL générée (type `https://api.netlify.com/build_hooks/abc123`)
+
+**b. Côté Sanity** — [sanity.io/manage/project/zw89b09w/api](https://www.sanity.io/manage/project/zw89b09w/api) → Webhooks
+
+- "Create webhook" → Name: `Netlify rebuild` → URL: l'URL du Build Hook
+- Dataset: `production` → Trigger on: `Create`, `Update`, `Delete`
+- HTTP method: `POST` → Filter: laisser vide (tout)
+
+Résultat : chaque publish déclenche un rebuild Netlify (~30-60s) puis le site est mis à jour automatiquement.
+
+### 4. Formulaire de contact (Netlify Forms)
+
+Le formulaire `<form data-netlify="true" name="contact">` dans [src/components/sections/ContactForm.astro](src/components/sections/ContactForm.astro) est automatiquement détecté par Netlify au build. Les soumissions arrivent dans Netlify → Forms et un email de notification peut être envoyé à l'adresse de l'asso.
+
+À configurer après le 1er déploiement :
+
+- [Site settings → Forms → Form notifications](https://app.netlify.com/sites/amelielavie/settings/forms) → ajouter l'email destinataire
+- (Optionnel) reCAPTCHA v2 : "Enable reCAPTCHA" pour renforcer l'antispam (déjà honeypot par défaut)
+- Limite free tier : 100 submissions/mois
+
+## Édition par les admins
+
+Une fois en prod :
+
+1. **Le Studio est sur** `https://amelielavie.sanity.studio` (rien à installer côté admin)
+2. **Inviter un admin** : [sanity.io/manage/project/zw89b09w/members](https://www.sanity.io/manage/project/zw89b09w/members) → Invite member → rôle "Editor"
+3. **L'admin** se connecte (Google/email), édite, clique "Publish" → le site se rebuild seul
+
+### Visual Editing (preview à côté du formulaire)
+
+Le Studio inclut **Presentation Tool** (panneau de gauche) :
+
+- L'admin ouvre Presentation → voit le site en iframe à droite, le formulaire d'édition à gauche
+- Navigue dans le site → les documents correspondants s'ouvrent automatiquement à gauche
+- Édite → cliquer "Publish" → l'iframe se rafraîchit
 
 ## État de la refonte
 
-- [x] **Phase 0** — Setup workspace, configs, squelette Astro/Sanity ← _en cours_
-- [ ] **Phase 1** — Schemas Sanity complets
-- [ ] **Phase 2** — Migration contenu (`legacy/src/pages/**/*.md` → Sanity)
-- [ ] **Phase 3** — Design system Astro
-- [ ] **Phase 4** — Templates de pages
-- [ ] **Phase 5** — Visual Editing + intégrations (Mailchimp / reCAPTCHA / HelloAsso)
-- [ ] **Phase 6** — A11y / Perf / SEO (Lighthouse > 95, axe zero violation)
+- [x] **Phase 0** — Setup workspace, configs, squelette Astro/Sanity
+- [x] **Phase 1** — Schemas Sanity complets (26 types)
+- [x] **Phase 2** — Migration contenu (43 docs + assets)
+- [x] **Phase 3** — Design system Astro
+- [x] **Phase 4** — Templates de pages (42 pages générées)
+- [x] **Phase 5** — Formulaire contact (Netlify Forms) + Presentation Tool Sanity
+- [ ] **Phase 6** — A11y / Perf / SEO (Lighthouse > 95, axe zero violation, JSON-LD, sitemap enrichi)
 - [ ] **Phase 7** — Cut-over (suppression `legacy/`, bascule `master`)

@@ -297,6 +297,12 @@ export interface SectionNewsletter {
   privacyNote?: string;
 }
 
+export interface SectionContactForm {
+  _type: "section.contactForm";
+  _key: string;
+  introText?: string;
+}
+
 export type Section =
   | SectionHero
   | SectionRichText
@@ -308,7 +314,8 @@ export type Section =
   | SectionPartenairesGrid
   | SectionCta
   | SectionEmbed
-  | SectionNewsletter;
+  | SectionNewsletter
+  | SectionContactForm;
 
 export interface HomePage {
   _type: "homePage";

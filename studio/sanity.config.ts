@@ -1,5 +1,6 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
+import { presentationTool } from "sanity/presentation";
 import { visionTool } from "@sanity/vision";
 import { media } from "sanity-plugin-media";
 
@@ -24,7 +25,48 @@ export default defineConfig({
   title: "Amélie la Vie",
   projectId,
   dataset,
-  plugins: [structureTool({ structure }), visionTool(), media()],
+  plugins: [
+    structureTool({ structure }),
+    // Presentation Tool : affiche le site live à côté du Studio.
+    // L'admin voit une iframe avec le site, et peut naviguer entre les pages.
+    // En cliquant sur un document, le panneau d'édition s'ouvre à droite.
+    presentationTool({
+      previewUrl: {
+        origin: previewUrl,
+        previewMode: { enable: "/api/preview" },
+      },
+      resolve: {
+        locations: {
+          page: {
+            select: { slug: "slug.current", title: "title" },
+            resolve: (doc) =>
+              doc?.slug
+                ? { locations: [{ href: `/${doc.slug}/`, title: doc.title }] }
+                : { locations: [] },
+          },
+          actualite: {
+            select: { slug: "slug.current", title: "title" },
+            resolve: (doc) =>
+              doc?.slug
+                ? { locations: [{ href: `/actualites/${doc.slug}/`, title: doc.title }] }
+                : { locations: [] },
+          },
+          evenement: {
+            select: { slug: "slug.current", title: "title" },
+            resolve: (doc) =>
+              doc?.slug
+                ? { locations: [{ href: `/agenda/${doc.slug}/`, title: doc.title }] }
+                : { locations: [] },
+          },
+          homePage: {
+            resolve: () => ({ locations: [{ href: "/", title: "Page d'accueil" }] }),
+          },
+        },
+      },
+    }),
+    visionTool(),
+    media(),
+  ],
   schema: {
     types: schemaTypes,
     // Cache les singletons dans le bouton global "Create new document"

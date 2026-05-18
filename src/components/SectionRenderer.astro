@@ -10,6 +10,7 @@ import PartenairesGrid from "@components/sections/PartenairesGrid.astro";
 import Cta from "@components/sections/Cta.astro";
 import Embed from "@components/sections/Embed.astro";
 import Newsletter from "@components/sections/Newsletter.astro";
+import ContactForm from "@components/sections/ContactForm.astro";
 import type { ContactInfo, Section, UiLabels } from "@lib/sanity/types";
 
 interface Props {
@@ -46,6 +47,8 @@ const { sections, uiLabels = null, contactInfo = null } = Astro.props;
         return <Embed section={section} />;
       case "section.newsletter":
         return <Newsletter section={section} contactInfo={contactInfo} />;
+      case "section.contactForm":
+        return <ContactForm section={section} />;
       default:
         return null;
     }

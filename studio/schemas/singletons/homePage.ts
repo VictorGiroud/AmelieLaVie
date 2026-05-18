@@ -13,6 +13,7 @@ const SECTION_TYPES = [
   "section.cta",
   "section.embed",
   "section.newsletter",
+  "section.contactForm",
 ] as const;
 
 export const homePage = defineType({

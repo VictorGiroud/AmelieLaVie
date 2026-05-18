@@ -100,6 +100,10 @@ const SECTIONS_FRAGMENT = `sections[]{
   _type == "section.newsletter" => {
     heading, description, emailLabel, ctaLabel,
     successMessage, errorMessage, privacyNote
+  },
+  // contactForm
+  _type == "section.contactForm" => {
+    introText
   }
 }`;
 

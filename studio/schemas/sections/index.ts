@@ -9,3 +9,4 @@ export { sectionPartenairesGrid } from "./partenairesGrid";
 export { sectionCta } from "./cta";
 export { sectionEmbed } from "./embed";
 export { sectionNewsletter } from "./newsletter";
+export { sectionContactForm } from "./contactForm";

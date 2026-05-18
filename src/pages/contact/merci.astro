@@ -1,0 +1,29 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/ui/Container.astro";
+import Button from "@components/ui/Button.astro";
+import { getUiLabels } from "@lib/sanity/queries";
+
+const ui = await getUiLabels();
+---
+
+<PageLayout
+  title="Message envoyé"
+  description="Votre message a bien été envoyé. Nous reviendrons vers vous rapidement."
+  canonicalPath="/contact/merci/"
+>
+  <Container width="prose" class="flex min-h-[60vh] flex-col justify-center py-20 text-center">
+    <p class="text-brand-600 text-5xl" aria-hidden="true">✓</p>
+    <h1 class="mt-6 text-3xl font-semibold sm:text-4xl">Message envoyé</h1>
+    <p class="text-ink-muted mt-4 text-lg">
+      {
+        ui?.contactFormSuccessMessage ??
+          "Merci pour votre message ! Nous reviendrons vers vous rapidement."
+      }
+    </p>
+    <div class="mt-8 flex justify-center gap-3">
+      <Button href="/" label="Retour à l'accueil" size="lg" variant="primary" />
+      <Button href="/actualites/" label="Lire les actualités" variant="secondary" />
+    </div>
+  </Container>
+</PageLayout>

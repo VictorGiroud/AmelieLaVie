@@ -342,14 +342,22 @@ async function mapPage(filePath, client) {
     backgroundImage: heroImage ?? undefined,
   });
 
-  // Pour la page Contact : on garde le body comme richText. Le formulaire de contact
-  // sera ajouté manuellement (composant Astro dédié, pas une section CMS).
   if (content.trim()) {
     sections.push({
       _key: key(),
       _type: "section.richText",
       body: await toPT(content),
       background: "white",
+    });
+  }
+
+  // Cas particulier "contact" : on ajoute la section formulaire après le richText.
+  if (slug === "contact") {
+    sections.push({
+      _key: key(),
+      _type: "section.contactForm",
+      introText:
+        "Pour toute question, suggestion ou demande d'information, écrivez-nous via le formulaire ci-dessous.",
     });
   }
 

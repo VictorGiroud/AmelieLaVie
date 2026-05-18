@@ -1,0 +1,129 @@
+---
+import Section from "@components/ui/Section.astro";
+import { getContactInfo, getUiLabels } from "@lib/sanity/queries";
+import type { SectionContactForm } from "@lib/sanity/types";
+
+interface Props {
+  section: SectionContactForm;
+}
+
+const { section } = Astro.props;
+const [ui, contact] = await Promise.all([getUiLabels(), getContactInfo()]);
+
+// Le formulaire envoie vers Netlify Forms.
+// Au build, Netlify détecte les <form data-netlify="true">, crée un endpoint
+// et stocke les soumissions dans le dashboard. Free tier : 100 submissions/mois.
+// Doc : https://docs.netlify.com/forms/setup/
+const FORM_NAME = "contact";
+---
+
+<Section background="white" width="screen" id="contact-form">
+  <div class="mx-auto max-w-2xl">
+    {
+      ui?.contactFormHeading && (
+        <h2 class="text-3xl font-semibold sm:text-4xl">{ui.contactFormHeading}</h2>
+      )
+    }
+    {section.introText && <p class="text-ink-muted mt-4 text-lg">{section.introText}</p>}
+
+    {/* Formulaire géré par Netlify Forms. La page de succès est /contact/merci/ */}
+    <form
+      name={FORM_NAME}
+      method="POST"
+      action="/contact/merci/"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      class="mt-8 grid gap-5"
+    >
+      <input type="hidden" name="form-name" value={FORM_NAME} />
+
+      {/* Honeypot anti-spam : caché aux humains, visible aux bots */}
+      <p class="hidden" aria-hidden="true">
+        <label>
+          Ne pas remplir si vous êtes humain :
+          <input name="bot-field" type="text" tabindex="-1" autocomplete="off" />
+        </label>
+      </p>
+
+      <div class="grid gap-1.5">
+        <label for="contact-name" class="text-sm font-medium">
+          {ui?.contactFormNameLabel ?? "Votre nom"}
+          <span class="text-danger" aria-hidden="true">*</span>
+        </label>
+        <input
+          id="contact-name"
+          name="name"
+          type="text"
+          required
+          autocomplete="name"
+          class="border-border bg-paper focus-visible:border-brand-600 rounded-md border px-4 py-2.5 text-base"
+        />
+      </div>
+
+      <div class="grid gap-1.5">
+        <label for="contact-email" class="text-sm font-medium">
+          {ui?.contactFormEmailLabel ?? "Votre email"}
+          <span class="text-danger" aria-hidden="true">*</span>
+        </label>
+        <input
+          id="contact-email"
+          name="email"
+          type="email"
+          required
+          autocomplete="email"
+          class="border-border bg-paper focus-visible:border-brand-600 rounded-md border px-4 py-2.5 text-base"
+        />
+      </div>
+
+      <div class="grid gap-1.5">
+        <label for="contact-message" class="text-sm font-medium">
+          {ui?.contactFormMessageLabel ?? "Votre message"}
+          <span class="text-danger" aria-hidden="true">*</span>
+        </label>
+        <textarea
+          id="contact-message"
+          name="message"
+          rows="6"
+          required
+          class="border-border bg-paper focus-visible:border-brand-600 rounded-md border px-4 py-2.5 text-base"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="bg-brand-600 text-paper hover:bg-brand-700 mt-2 inline-flex items-center justify-center rounded-md px-5 py-3 font-semibold transition-colors"
+      >
+        {ui?.contactFormSubmitLabel ?? "Envoyer"}
+      </button>
+
+      {
+        ui?.contactFormPrivacyNote && (
+          <p class="text-ink-muted text-xs">{ui.contactFormPrivacyNote}</p>
+        )
+      }
+    </form>
+
+    {
+      contact?.email && (
+        <p class="text-ink-muted border-border mt-10 border-t pt-6 text-sm">
+          Vous préférez nous écrire directement ?{" "}
+          <a href={`mailto:${contact.email}`} class="text-brand-700 underline hover:no-underline">
+            {contact.email}
+          </a>
+          {contact.phone && (
+            <>
+              {" — ou nous appeler au "}
+              <a
+                href={`tel:${contact.phone.replace(/\s/g, "")}`}
+                class="text-brand-700 underline hover:no-underline"
+              >
+                {contact.phone}
+              </a>
+              .
+            </>
+          )}
+        </p>
+      )
+    }
+  </div>
+</Section>
