@@ -21,7 +21,6 @@ const hasEndpoint = endpoint.length > 0;
       action={hasEndpoint ? endpoint : "#"}
       method="post"
       target={hasEndpoint ? "_blank" : undefined}
-      novalidate
       aria-disabled={!hasEndpoint}
       class={`mt-6 grid gap-3 text-left ${hasEndpoint ? "" : "opacity-70"}`}
     >
@@ -29,11 +28,13 @@ const hasEndpoint = endpoint.length > 0;
         <div>
           <label class="text-ink-muted text-xs font-medium" for="newsletter-fname">
             Prénom
+            <span class="text-danger" aria-hidden="true">*</span>
           </label>
           <input
             id="newsletter-fname"
             type="text"
             name="FNAME"
+            required
             autocomplete="given-name"
             disabled={!hasEndpoint}
             class="border-border bg-paper mt-1 w-full rounded-md border px-4 py-2.5 text-base disabled:cursor-not-allowed"
@@ -42,11 +43,13 @@ const hasEndpoint = endpoint.length > 0;
         <div>
           <label class="text-ink-muted text-xs font-medium" for="newsletter-lname">
             Nom
+            <span class="text-danger" aria-hidden="true">*</span>
           </label>
           <input
             id="newsletter-lname"
             type="text"
             name="LNAME"
+            required
             autocomplete="family-name"
             disabled={!hasEndpoint}
             class="border-border bg-paper mt-1 w-full rounded-md border px-4 py-2.5 text-base disabled:cursor-not-allowed"
