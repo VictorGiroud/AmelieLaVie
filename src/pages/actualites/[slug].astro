@@ -6,6 +6,7 @@ import PortableText from "@components/PortableText.astro";
 import ShareButtons from "@components/ShareButtons.astro";
 import { getActualiteBySlug, getAllActualitesSlugs, getSiteSettings } from "@lib/sanity/queries";
 import { articleJsonLd } from "@lib/seo/jsonld";
+import { readingTimeMinutes } from "@lib/readingTime";
 
 export async function getStaticPaths() {
   const slugs = await getAllActualitesSlugs();
@@ -19,6 +20,7 @@ const [article, siteSettings] = await Promise.all([getActualiteBySlug(slug), get
 if (!article) return Astro.redirect("/404/");
 
 const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
+const minutes = readingTimeMinutes(article.body);
 
 const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.org";
 const canonicalUrl = new URL(`/actualites/${article.slug.current}/`, siteUrl).toString();
@@ -41,12 +43,18 @@ const jsonLd = articleJsonLd({ article, siteSettings, siteUrl, canonicalUrl });
         <span aria-hidden="true">←</span> Toutes les actualités
       </a>
       <header class="mt-6">
-        <time
-          datetime={article.publishedAt}
-          class="text-brand-700 text-sm font-medium tracking-wider uppercase"
-        >
-          {fmt.format(new Date(article.publishedAt))}
-        </time>
+        <div class="flex flex-wrap items-center gap-3 text-sm">
+          <time
+            datetime={article.publishedAt}
+            class="text-brand-700 font-medium tracking-wider uppercase"
+          >
+            {fmt.format(new Date(article.publishedAt))}
+          </time>
+          <span class="text-ink-muted" aria-hidden="true">·</span>
+          <span class="text-ink-muted">
+            {minutes}&nbsp;min de lecture
+          </span>
+        </div>
         <h1 class="mt-2 text-3xl font-semibold sm:text-4xl">{article.title}</h1>
         {
           article.description && (

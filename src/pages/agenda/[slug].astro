@@ -69,7 +69,17 @@ const jsonLd = eventJsonLd({ event, siteSettings, canonicalUrl });
             event.address && (
               <>
                 <dt class="font-medium">Lieu</dt>
-                <dd>{event.address}</dd>
+                <dd>
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.address)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-brand-700 hover:underline"
+                  >
+                    {event.address}
+                    <span class="sr-only"> (ouvre Google Maps dans un nouvel onglet)</span>
+                  </a>
+                </dd>
               </>
             )
           }

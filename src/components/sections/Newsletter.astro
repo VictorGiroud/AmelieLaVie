@@ -23,29 +23,62 @@ const hasEndpoint = endpoint.length > 0;
       target={hasEndpoint ? "_blank" : undefined}
       novalidate
       aria-disabled={!hasEndpoint}
-      class={`mt-6 grid gap-3 text-left sm:grid-cols-[1fr_auto] ${hasEndpoint ? "" : "opacity-70"}`}
+      class={`mt-6 grid gap-3 text-left ${hasEndpoint ? "" : "opacity-70"}`}
     >
-      <label class="sr-only" for="newsletter-email">
-        {section.emailLabel ?? "Votre adresse email"}
-      </label>
-      <input
-        id="newsletter-email"
-        type="email"
-        name="EMAIL"
-        required
-        autocomplete="email"
-        disabled={!hasEndpoint}
-        placeholder={section.emailLabel ?? "Votre adresse email"}
-        class="border-border bg-paper rounded-md border px-4 py-3 text-base disabled:cursor-not-allowed"
-      />
+      <div class="grid gap-3 sm:grid-cols-2">
+        <div>
+          <label class="text-ink-muted text-xs font-medium" for="newsletter-fname">
+            Prénom
+          </label>
+          <input
+            id="newsletter-fname"
+            type="text"
+            name="FNAME"
+            autocomplete="given-name"
+            disabled={!hasEndpoint}
+            class="border-border bg-paper mt-1 w-full rounded-md border px-4 py-2.5 text-base disabled:cursor-not-allowed"
+          />
+        </div>
+        <div>
+          <label class="text-ink-muted text-xs font-medium" for="newsletter-lname">
+            Nom
+          </label>
+          <input
+            id="newsletter-lname"
+            type="text"
+            name="LNAME"
+            autocomplete="family-name"
+            disabled={!hasEndpoint}
+            class="border-border bg-paper mt-1 w-full rounded-md border px-4 py-2.5 text-base disabled:cursor-not-allowed"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label class="text-ink-muted text-xs font-medium" for="newsletter-email">
+          {section.emailLabel ?? "Votre adresse email"}
+          <span class="text-danger" aria-hidden="true">*</span>
+        </label>
+        <input
+          id="newsletter-email"
+          type="email"
+          name="EMAIL"
+          required
+          autocomplete="email"
+          disabled={!hasEndpoint}
+          class="border-border bg-paper mt-1 w-full rounded-md border px-4 py-2.5 text-base disabled:cursor-not-allowed"
+        />
+      </div>
+
       {/* Honeypot anti-spam (champ caché, mais lisible pour bots) */}
       <div style="position:absolute;left:-5000px" aria-hidden="true">
         <input type="text" name="b_honeypot" tabindex="-1" value="" />
       </div>
+
       <button
         type="submit"
         disabled={!hasEndpoint}
-        class="bg-brand-700 text-paper hover:bg-brand-800 inline-flex items-center justify-center rounded-md px-5 py-3 font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60"
+        class="bg-brand-700 text-paper hover:bg-brand-800 mt-1 inline-flex items-center justify-center rounded-md px-5 py-3 font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60"
       >
         {section.ctaLabel}
       </button>
