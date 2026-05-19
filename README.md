@@ -12,17 +12,17 @@ Site officiel de l'association **Amélie la Vie**.
 
 ## Stack
 
-| Couche          | Outil                                      | Détails                                          |
-| --------------- | ------------------------------------------ | ------------------------------------------------ |
-| Framework       | [Astro 5](https://astro.build)             | SSG, zero-JS par défaut, islands React au besoin |
-| Langage         | TypeScript strict                          | `noUncheckedIndexedAccess`, path aliases `@/*`   |
-| Styles          | [Tailwind CSS v4](https://tailwindcss.com) | Config-as-CSS via `@tailwindcss/vite`            |
-| CMS             | [Sanity 3](https://www.sanity.io)          | Studio dans `studio/`, free tier, Visual Editing |
+| Couche          | Outil                                      | Détails                                            |
+| --------------- | ------------------------------------------ | -------------------------------------------------- |
+| Framework       | [Astro 5](https://astro.build)             | SSG, zero-JS par défaut, islands React au besoin   |
+| Langage         | TypeScript strict                          | `noUncheckedIndexedAccess`, path aliases `@/*`     |
+| Styles          | [Tailwind CSS v4](https://tailwindcss.com) | Config-as-CSS via `@tailwindcss/vite`              |
+| CMS             | [Sanity 3](https://www.sanity.io)          | Studio dans `studio/`, free tier, Visual Editing   |
 | Polices         | Stack système                              | `-apple-system`, Segoe UI, Roboto… (zéro download) |
-| Runtime         | Node 22 LTS                                | gérée via `.nvmrc`                               |
-| Package manager | pnpm 10                                    | workspace : racine (Astro) + `studio` (Sanity)   |
-| Hébergement     | Netlify                                    | Free tier, build statique                        |
-| CI              | GitHub Actions                             | lint, type-check, build                          |
+| Runtime         | Node 22 LTS                                | gérée via `.nvmrc`                                 |
+| Package manager | pnpm 10                                    | workspace : racine (Astro) + `studio` (Sanity)     |
+| Hébergement     | Netlify                                    | Free tier, build statique                          |
+| CI              | GitHub Actions                             | lint, type-check, build                            |
 
 ## Structure
 

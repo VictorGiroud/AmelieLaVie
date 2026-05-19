@@ -18,7 +18,6 @@ const { url, title, description = "", class: className = "" } = Astro.props;
 
 const encodedUrl = encodeURIComponent(url);
 const encodedTitle = encodeURIComponent(title);
-const encodedDesc = encodeURIComponent(description);
 const emailBody = encodeURIComponent(`${description ? description + "\n\n" : ""}${url}`);
 
 const shares = [

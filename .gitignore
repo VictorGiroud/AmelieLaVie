@@ -59,5 +59,9 @@ helloasso-*.png
 footer-*.png
 sitemap-prod.xml
 
+# Lighthouse audit reports
+lighthouse*.json
+lh-*.json
+
 # Local Netlify folder
 .netlify
