@@ -55,7 +55,9 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "globals": "^17.6.0",
     "gray-matter": "^4.0.3",
+    "lighthouse": "^13.3.0",
     "marked": "^18.0.3",
+    "netlify-cli": "^26.0.2",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.9"

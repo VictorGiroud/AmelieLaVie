@@ -58,3 +58,6 @@ final-*.png
 helloasso-*.png
 footer-*.png
 sitemap-prod.xml
+
+# Local Netlify folder
+.netlify

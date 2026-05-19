@@ -52,6 +52,9 @@ const ogImage = image ? new URL(image, siteUrl).toString() : `${siteUrl}/og-defa
     <meta name="twitter:image" content={ogImage} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {/* Connexion anticipée au CDN Sanity (toutes les images viennent de là) */}
+    <link rel="preconnect" href="https://cdn.sanity.io" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.sanity.io" />
     <link
       rel="alternate"
       type="application/rss+xml"

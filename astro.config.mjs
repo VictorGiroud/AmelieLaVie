@@ -22,7 +22,9 @@ export default defineConfig({
   },
   build: {
     assets: "_assets",
-    inlineStylesheets: "auto",
+    // Inline 100% du CSS dans le <head> : évite la requête bloquante (perf
+    // Lighthouse) — Tailwind v4 + tree-shaking gardent le CSS < 50 KB par page.
+    inlineStylesheets: "always",
   },
   image: {
     domains: ["cdn.sanity.io"],

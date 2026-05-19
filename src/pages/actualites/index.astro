@@ -82,7 +82,7 @@ const activeTags = tags.filter((t) => usedTagSlugs.has(t.slug.current));
                     {a.tags && a.tags.length > 0 && (
                       <ul class="mt-3 flex flex-wrap gap-1">
                         {a.tags.map((t) => (
-                          <li class="bg-brand-50 text-brand-700 inline-flex rounded-full px-2 py-0.5 text-[11px] font-medium">
+                          <li class="bg-brand-50 text-brand-700 inline-flex rounded-full px-2 py-0.5 text-xs font-medium">
                             #{t.title}
                           </li>
                         ))}
