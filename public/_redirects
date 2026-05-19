@@ -1,34 +1,29 @@
 # Astro génère les pages avec trailingSlash='always'.
-# Ce fichier sert à 1) normaliser les anciennes URLs sans slash, 2) préparer les redirections legacy.
+# La normalisation du slash final est gérée par Netlify (Site settings →
+# Build & deploy → Pretty URLs). Inutile (et dangereux : boucle 301) de la
+# redéclarer ici avec un `301!` qui force le redirect même quand l'URL est
+# déjà conforme.
 
-# Normalisation : ajout du trailing slash (HTTP 301)
-/actualites/:slug      /actualites/:slug/      301!
-/agenda/:slug          /agenda/:slug/          301!
-/tags/:slug            /tags/:slug/            301!
-/association           /association/           301!
-/habitat-partage       /habitat-partage/       301!
-/contact               /contact/               301!
-/nous-soutenir         /nous-soutenir/         301!
-/mentions-legales      /mentions-legales/      301!
-
-# Legacy : slugs Gatsby accentués → nouveaux slugs ASCII Sanity (preserve SEO)
-# Note : Netlify accepte les caractères Unicode bruts dans le path source.
-/actualites/appel-à-projet-geotec/                                              /actualites/appel-a-projet-geotec/                                  301!
-/actualites/appel-à-projet-qualitel/                                            /actualites/appel-a-projet-qualitel/                                301!
-/actualites/appel-à-projets-klesia/                                             /actualites/appel-a-projets-klesia/                                 301!
-/actualites/bilan-randonnée-2022/                                               /actualites/bilan-randonnee-2022/                                   301!
-/actualites/lauréat-appel-à-projet-qualitel/                                    /actualites/laureat-appel-a-projet-qualitel/                        301!
-/actualites/ouverture-prochaine-été-2024/                                       /actualites/ouverture-prochaine-ete-2024/                           301!
-/actualites/premières-photos-des-colibris/                                      /actualites/premieres-photos-des-colibris/                          301!
-/actualites/randonnée-2021/                                                     /actualites/randonnee-2021/                                         301!
-/actualites/randonnée-2022/                                                     /actualites/randonnee-2022/                                         301!
-/actualites/randonnée-2023/                                                     /actualites/randonnee-2023/                                         301!
-/actualites/remise-de-chèque-par-sports-dimanche/                               /actualites/remise-de-cheque-par-sports-dimanche/                   301!
-/actualites/vœux-2026-après-une-année-charnière-et-des-souvenirs-forts/         /actualites/v-ux-2026-apres-une-annee-charniere-et-des-souvenirs-forts/   301!
-/agenda/assemblé-générale/                                                      /agenda/assemble-generale/                                          301!
-/agenda/marché-de-noël-montanay/                                                /agenda/marche-de-noel-montanay/                                    301!
-/agenda/randonnée-pédestre-1/                                                   /agenda/randonnee-pedestre-1/                                       301!
-/agenda/randonnée-pédestre/                                                     /agenda/randonnee-pedestre/                                         301!
+# Legacy : slugs Gatsby accentués → nouveaux slugs ASCII Sanity (preserve SEO).
+# Sources écrites en percent-encoded : le navigateur encode les caractères
+# Unicode dans le path avant l'envoi, donc le matching côté Netlify se fait
+# sur la version encodée (le format Unicode brut ne match pas en pratique).
+/actualites/appel-%C3%A0-projet-geotec/                                                       /actualites/appel-a-projet-geotec/                                       301!
+/actualites/appel-%C3%A0-projet-qualitel/                                                     /actualites/appel-a-projet-qualitel/                                     301!
+/actualites/appel-%C3%A0-projets-klesia/                                                      /actualites/appel-a-projets-klesia/                                      301!
+/actualites/bilan-randonn%C3%A9e-2022/                                                        /actualites/bilan-randonnee-2022/                                        301!
+/actualites/laur%C3%A9at-appel-%C3%A0-projet-qualitel/                                        /actualites/laureat-appel-a-projet-qualitel/                             301!
+/actualites/ouverture-prochaine-%C3%A9t%C3%A9-2024/                                           /actualites/ouverture-prochaine-ete-2024/                                301!
+/actualites/premi%C3%A8res-photos-des-colibris/                                               /actualites/premieres-photos-des-colibris/                               301!
+/actualites/randonn%C3%A9e-2021/                                                              /actualites/randonnee-2021/                                              301!
+/actualites/randonn%C3%A9e-2022/                                                              /actualites/randonnee-2022/                                              301!
+/actualites/randonn%C3%A9e-2023/                                                              /actualites/randonnee-2023/                                              301!
+/actualites/remise-de-ch%C3%A8que-par-sports-dimanche/                                        /actualites/remise-de-cheque-par-sports-dimanche/                        301!
+/actualites/v%C5%93ux-2026-apr%C3%A8s-une-ann%C3%A9e-charni%C3%A8re-et-des-souvenirs-forts/   /actualites/v-ux-2026-apres-une-annee-charniere-et-des-souvenirs-forts/  301!
+/agenda/assembl%C3%A9-g%C3%A9n%C3%A9rale/                                                     /agenda/assemble-generale/                                               301!
+/agenda/march%C3%A9-de-no%C3%ABl-montanay/                                                    /agenda/marche-de-noel-montanay/                                         301!
+/agenda/randonn%C3%A9e-p%C3%A9destre-1/                                                       /agenda/randonnee-pedestre-1/                                            301!
+/agenda/randonn%C3%A9e-p%C3%A9destre/                                                         /agenda/randonnee-pedestre/                                              301!
 
 # Raccourcis utiles (historiques) — pointent vers la rando courante.
 /randonnee     /actualites/randonnee-2026/                                                                    301!
