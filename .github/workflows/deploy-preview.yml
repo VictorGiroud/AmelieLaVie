@@ -1,0 +1,31 @@
+name: Deploy preview Netlify
+
+# Déclenche un rebuild du site preview Netlify (amelielavie-astro-preview)
+# à chaque push sur la branche feature/astro-sanity.
+#
+# Fonctionne sans avoir à connecter le repo dans le dashboard Netlify :
+# on appelle juste le build hook qui est déjà configuré côté Netlify.
+#
+# URL du build hook : stockée comme secret GitHub `NETLIFY_PREVIEW_BUILD_HOOK`.
+#   Settings → Secrets and variables → Actions → New repository secret
+#   Name : NETLIFY_PREVIEW_BUILD_HOOK
+#   Value : https://api.netlify.com/build_hooks/6a0c6a608064013237b88572
+
+on:
+  push:
+    branches:
+      - feature/astro-sanity
+  workflow_dispatch:
+
+jobs:
+  trigger-netlify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify build hook
+        run: |
+          if [ -z "${{ secrets.NETLIFY_PREVIEW_BUILD_HOOK }}" ]; then
+            echo "::error::Secret NETLIFY_PREVIEW_BUILD_HOOK manquant. Voir le commentaire en tête du workflow."
+            exit 1
+          fi
+          curl --fail-with-body -X POST -d '{}' "${{ secrets.NETLIFY_PREVIEW_BUILD_HOOK }}"
+          echo "✓ Build Netlify déclenché"
