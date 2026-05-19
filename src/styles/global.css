@@ -36,7 +36,9 @@
 
   /* === Layout === */
   --container-screen: 80rem;
-  --container-prose: 42rem;
+  /* ~75 caractères par ligne — sweet spot lecture confort (45-75 CPL).
+     Source : Butterick's Practical Typography. */
+  --container-prose: 48rem;
 
   /* === Motion === */
   --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
