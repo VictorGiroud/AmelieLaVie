@@ -3,6 +3,7 @@ import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/ui/Container.astro";
 import SanityImage from "@components/ui/Image.astro";
 import PortableText from "@components/PortableText.astro";
+import ShareButtons from "@components/ShareButtons.astro";
 import { getActualiteBySlug, getAllActualitesSlugs, getSiteSettings } from "@lib/sanity/queries";
 import { articleJsonLd } from "@lib/seo/jsonld";
 
@@ -90,6 +91,10 @@ const jsonLd = articleJsonLd({ article, siteSettings, siteUrl, canonicalUrl });
 
     <Container width="prose" class="py-8 sm:py-12">
       <PortableText value={article.body} class="space-y-4 leading-relaxed" />
+    </Container>
+
+    <Container width="prose" class="border-border border-t py-8">
+      <ShareButtons url={canonicalUrl} title={article.title} description={article.description} />
     </Container>
 
     <Container width="prose" class="border-border mb-12 border-t pt-8">
