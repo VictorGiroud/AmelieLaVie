@@ -95,7 +95,7 @@ const SECTIONS_FRAGMENT = `sections[]{
   },
   // embed
   _type == "section.embed" => {
-    title, provider, url, height
+    title, provider, helloAssoLink, url, height
   },
   // newsletter
   _type == "section.newsletter" => {

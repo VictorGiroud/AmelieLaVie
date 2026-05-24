@@ -44,7 +44,7 @@ const { sections, uiLabels = null, contactInfo = null } = Astro.props;
       case "section.cta":
         return <Cta section={section} />;
       case "section.embed":
-        return <Embed section={section} />;
+        return <Embed section={section} contactInfo={contactInfo} />;
       case "section.newsletter":
         return <Newsletter section={section} contactInfo={contactInfo} />;
       case "section.contactForm":

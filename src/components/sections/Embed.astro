@@ -1,12 +1,13 @@
 ---
 import Section from "@components/ui/Section.astro";
-import type { SectionEmbed } from "@lib/sanity/types";
+import type { ContactInfo, SectionEmbed } from "@lib/sanity/types";
 
 interface Props {
   section: SectionEmbed;
+  contactInfo: ContactInfo | null;
 }
 
-const { section } = Astro.props;
+const { section, contactInfo } = Astro.props;
 const height = section.height ?? 720;
 
 /** Convertit une URL YouTube en URL embed. */
@@ -21,20 +22,31 @@ function helloAssoEmbedUrl(url: string): string {
   return url.replace(/\/+$/, "") + "/widget-bouton";
 }
 
-let embedUrl = section.url;
-if (section.provider === "youtube") embedUrl = youtubeEmbedUrl(section.url);
-if (section.provider === "helloasso") embedUrl = helloAssoEmbedUrl(section.url);
+/** Résout l'URL HelloAsso depuis les coordonnées centralisées ou un override. */
+function resolveHelloAssoUrl(): string | undefined {
+  const link = section.helloAssoLink ?? "custom";
+  if (link === "adhesion") return contactInfo?.helloAssoAdhesionUrl;
+  if (link === "don") return contactInfo?.helloAssoDonUrl;
+  if (link === "reservation") return contactInfo?.helloAssoReservationUrl;
+  return section.url;
+}
 
-const isHelloBouton = section.provider === "helloasso" && /widget-bouton/.test(embedUrl);
+const rawUrl =
+  section.provider === "helloasso" ? resolveHelloAssoUrl() : section.url;
+
+const embedUrl = !rawUrl
+  ? null
+  : section.provider === "youtube"
+    ? youtubeEmbedUrl(rawUrl)
+    : section.provider === "helloasso"
+      ? helloAssoEmbedUrl(rawUrl)
+      : rawUrl;
+
+const isHelloBouton = !!embedUrl && section.provider === "helloasso" && /widget-bouton/.test(embedUrl);
 const aspect = section.provider === "youtube" ? "aspect-video" : "";
 const isYoutube = section.provider === "youtube";
 
-const wrapperClass = isHelloBouton
-  ? "mx-auto max-w-md"
-  : isYoutube
-    ? "mx-auto max-w-4xl"
-    : "mx-auto max-w-4xl";
-
+const wrapperClass = isHelloBouton ? "mx-auto max-w-md" : "mx-auto max-w-4xl";
 const innerStyle = isYoutube ? "" : isHelloBouton ? "height:110px" : `height:${height}px`;
 const innerClass = isHelloBouton
   ? "overflow-hidden rounded-xl"
@@ -49,19 +61,30 @@ const innerClass = isHelloBouton
       <h2 class="mb-4 text-center text-2xl font-semibold sm:text-3xl">{section.title}</h2>
     )
   }
-  <div class={wrapperClass}>
-    <div class={innerClass} style={innerStyle}>
-      <iframe
-        src={embedUrl}
-        title={section.title ?? `Intégration ${section.provider}`}
-        class="h-full w-full"
-        loading="lazy"
-        sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
-        allow={isYoutube
-          ? "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          : undefined}
-        referrerpolicy="no-referrer-when-downgrade"
-        allowfullscreen></iframe>
-    </div>
-  </div>
+  {
+    embedUrl ? (
+      <div class={wrapperClass}>
+        <div class={innerClass} style={innerStyle}>
+          <iframe
+            src={embedUrl}
+            title={section.title ?? `Intégration ${section.provider}`}
+            class="h-full w-full"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+            allow={
+              isYoutube
+                ? "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                : undefined
+            }
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          />
+        </div>
+      </div>
+    ) : (
+      <p class="text-ink-muted text-center text-sm">
+        (URL d'intégration manquante — vérifier la configuration côté Studio.)
+      </p>
+    )
+  }
 </Section>

@@ -114,7 +114,12 @@ export interface ContactInfo {
   email?: string;
   phone?: string;
   address?: string;
-  helloAssoUrl?: string;
+  /** Lien HelloAsso d'adhésion (année en cours). */
+  helloAssoAdhesionUrl?: string;
+  /** Lien HelloAsso du formulaire de don pérenne. */
+  helloAssoDonUrl?: string;
+  /** Lien HelloAsso de la boutique réservation rando. */
+  helloAssoReservationUrl?: string;
   mailchimpEndpoint?: string;
 }
 
@@ -285,7 +290,11 @@ export interface SectionEmbed {
   _key: string;
   title?: string;
   provider: "helloasso" | "youtube";
-  url: string;
+  /** Pour HelloAsso : utiliser une URL centrale (adhésion / don / réservation)
+   *  plutôt que d'en saisir une à la main. */
+  helloAssoLink?: "adhesion" | "don" | "reservation" | "custom";
+  /** URL utilisée pour YouTube ou HelloAsso en mode `custom`. */
+  url?: string;
   height?: number;
 }
 
