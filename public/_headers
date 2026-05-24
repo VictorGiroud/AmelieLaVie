@@ -1,0 +1,28 @@
+# En-têtes globaux
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+# Cache long pour les assets versionnés émis par Astro (hash dans le nom de fichier)
+/_assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Téléchargements pérennes (PDFs subventions, GPX rando)
+/assets/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# HTML : revalidation fréquente
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Sitemap & RSS : crawler-friendly, courte revalidation
+/sitemap-*.xml
+  Cache-Control: public, max-age=3600
+/rss.xml
+  Cache-Control: public, max-age=3600

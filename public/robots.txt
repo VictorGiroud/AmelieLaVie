@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amelielavie.com/sitemap-index.xml

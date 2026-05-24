@@ -1,0 +1,27 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import SectionRenderer from "@components/SectionRenderer.astro";
+import { getAllPageSlugs, getContactInfo, getPageBySlug, getUiLabels } from "@lib/sanity/queries";
+
+export async function getStaticPaths() {
+  const slugs = await getAllPageSlugs();
+  return slugs.map(({ slug }) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+if (!slug) return Astro.redirect("/404/");
+
+const [page, uiLabels, contactInfo] = await Promise.all([
+  getPageBySlug(slug),
+  getUiLabels(),
+  getContactInfo(),
+]);
+
+if (!page) {
+  return Astro.redirect("/404/");
+}
+---
+
+<PageLayout title={page.title} seo={page.seo} canonicalPath={`/${page.slug.current}/`}>
+  <SectionRenderer sections={page.sections} uiLabels={uiLabels} contactInfo={contactInfo} />
+</PageLayout>

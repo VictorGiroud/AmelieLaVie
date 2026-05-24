@@ -1,0 +1,26 @@
+<!--
+  Form detection helper pour Netlify Forms.
+  Astro génère du HTML statique mais le parser Netlify n'identifie pas toujours
+  les <form data-netlify="true"> dans des layouts complexes. Ce fichier copie
+  le formulaire dans une page minimaliste que Netlify scanne au build : ça
+  enregistre la définition du form côté Netlify. Le vrai formulaire est servi
+  depuis /contact/ et soumet vers cette même définition.
+
+  Ne pas supprimer. Ne pas indexer (déjà sous `__` et bloqué par robots).
+-->
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form detection — Amélie la Vie</title>
+    <meta name="robots" content="noindex,nofollow" />
+  </head>
+  <body>
+    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+  </body>
+</html>

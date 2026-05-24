@@ -1,0 +1,76 @@
+---
+import type { SanityImage } from "@lib/sanity/types";
+import { imageUrl, transparentImageUrl, lqip } from "@lib/sanity/image";
+
+interface Props {
+  image: SanityImage | null | undefined;
+  /** Largeur cible pour la version la plus grande du srcset. */
+  width?: number;
+  /** Si vrai, marquée aria-hidden (déco). */
+  decorative?: boolean;
+  /** Attribut sizes pour le srcset responsive. */
+  sizes?: string;
+  /** Loading hint : "eager" pour le LCP, "lazy" pour le reste. */
+  loading?: "eager" | "lazy";
+  /** Hint priorité réseau : "high" pour le LCP image, "auto" sinon. */
+  fetchpriority?: "high" | "low" | "auto";
+  /**
+   * Logo / illustration transparente : désactive le LQIP en arrière-plan
+   * (sinon, le placeholder flou apparaît à travers la transparence) et garde
+   * le format natif (auto-format/WebP peut écraser les petits PNG nets).
+   */
+  transparent?: boolean;
+  class?: string;
+  /** Override alt si différent du champ Sanity. */
+  alt?: string;
+}
+
+const {
+  image,
+  width = 1200,
+  decorative = false,
+  sizes = "(min-width: 768px) 50vw, 100vw",
+  loading = "lazy",
+  fetchpriority,
+  transparent = false,
+  class: className = "",
+  alt: altProp,
+} = Astro.props;
+
+function buildUrl(w: number): string {
+  return transparent
+    ? transparentImageUrl(image as SanityImage, w)
+    : imageUrl(image as SanityImage, w);
+}
+
+const small = Math.round(width / 2);
+const large = width * 2;
+const placeholder = !transparent ? lqip(image as SanityImage | null) : null;
+
+// Dimensions intrinsèques depuis Sanity → permet au navigateur de réserver
+// l'espace (élimine le Cumulative Layout Shift, +Lighthouse perf).
+const dims = image?.asset?.metadata?.dimensions;
+const intrinsicWidth = dims?.width;
+const intrinsicHeight = dims?.height;
+const ratio = intrinsicWidth && intrinsicHeight ? intrinsicHeight / intrinsicWidth : null;
+const renderedHeight = ratio ? Math.round(width * ratio) : undefined;
+---
+
+{
+  image?.asset && (
+    <img
+      src={buildUrl(width)}
+      srcset={`${buildUrl(small)} ${small}w, ${buildUrl(width)} ${width}w, ${buildUrl(large)} ${large}w`}
+      sizes={sizes}
+      width={width}
+      height={renderedHeight}
+      alt={decorative ? "" : (altProp ?? image.alt ?? "")}
+      aria-hidden={decorative ? "true" : undefined}
+      loading={loading}
+      decoding={loading === "eager" ? "sync" : "async"}
+      fetchpriority={fetchpriority ?? (loading === "eager" ? "high" : undefined)}
+      style={placeholder ? `background:url(${placeholder}) center/cover` : undefined}
+      class={className}
+    />
+  )
+}

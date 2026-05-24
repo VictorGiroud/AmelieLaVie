@@ -1,0 +1,122 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/ui/Container.astro";
+import SanityImage from "@components/ui/Image.astro";
+import PortableText from "@components/PortableText.astro";
+import ShareButtons from "@components/ShareButtons.astro";
+import { getActualiteBySlug, getAllActualitesSlugs, getSiteSettings } from "@lib/sanity/queries";
+import { articleJsonLd } from "@lib/seo/jsonld";
+import { readingTimeMinutes } from "@lib/readingTime";
+
+export async function getStaticPaths() {
+  const slugs = await getAllActualitesSlugs();
+  return slugs.map(({ slug }) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+if (!slug) return Astro.redirect("/404/");
+
+const [article, siteSettings] = await Promise.all([getActualiteBySlug(slug), getSiteSettings()]);
+if (!article) return Astro.redirect("/404/");
+
+const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
+const minutes = readingTimeMinutes(article.body);
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.com";
+const canonicalUrl = new URL(`/actualites/${article.slug.current}/`, siteUrl).toString();
+const jsonLd = articleJsonLd({ article, siteSettings, siteUrl, canonicalUrl });
+---
+
+<PageLayout
+  title={article.title}
+  description={article.description}
+  seo={article.seo}
+  canonicalPath={`/actualites/${article.slug.current}/`}
+  jsonLd={jsonLd}
+>
+  <article>
+    <Container width="prose" class="pt-8 sm:pt-12">
+      <a
+        href="/actualites/"
+        class="text-ink-muted hover:text-brand-700 inline-flex items-center gap-1 text-sm font-medium transition-colors"
+      >
+        <span aria-hidden="true">←</span> Toutes les actualités
+      </a>
+      <header class="mt-6">
+        <div class="flex flex-wrap items-center gap-3 text-sm">
+          <time
+            datetime={article.publishedAt}
+            class="text-brand-700 font-medium tracking-wider uppercase"
+          >
+            {fmt.format(new Date(article.publishedAt))}
+          </time>
+          <span class="text-ink-muted" aria-hidden="true">·</span>
+          <span class="text-ink-muted">
+            {minutes}&nbsp;min de lecture
+          </span>
+        </div>
+        <h1 class="mt-2 text-3xl font-semibold sm:text-4xl">{article.title}</h1>
+        {
+          article.description && (
+            <p class="text-ink-muted mt-3 text-lg leading-relaxed">{article.description}</p>
+          )
+        }
+        {
+          article.tags && article.tags.length > 0 && (
+            <ul class="mt-5 flex flex-wrap gap-2">
+              {article.tags.map((t) => {
+                const slug = typeof t.slug === "string" ? t.slug : t.slug?.current;
+                return (
+                  <li>
+                    <a
+                      href={`/tags/${slug}/`}
+                      class="bg-brand-50 text-brand-700 hover:bg-brand-100 inline-flex rounded-full px-3 py-1 text-xs font-medium transition-colors"
+                    >
+                      #{t.title}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          )
+        }
+      </header>
+    </Container>
+
+    {
+      article.featuredImage?.asset && (
+        <Container width="wide" class="mt-8">
+          <SanityImage
+            image={article.featuredImage}
+            width={1600}
+            sizes="(min-width: 1024px) 1024px, 100vw"
+            loading="eager"
+            class="aspect-video w-full rounded-lg object-cover"
+          />
+        </Container>
+      )
+    }
+
+    <Container width="prose" class="py-8 sm:py-12">
+      <PortableText value={article.body} class="space-y-4 leading-relaxed" />
+    </Container>
+
+    <Container width="prose" class="border-border border-t py-8">
+      <ShareButtons url={canonicalUrl} title={article.title} description={article.description} />
+    </Container>
+
+    <Container width="prose" class="border-border mb-12 border-t pt-8">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <a href="/actualites/" class="text-brand-700 hover:text-brand-900 text-sm font-medium">
+          ← Toutes les actualités
+        </a>
+        <a
+          href="/nous-soutenir/"
+          class="bg-brand-700 text-paper hover:bg-brand-800 inline-flex rounded-md px-4 py-2 text-sm font-semibold shadow-sm transition-colors"
+        >
+          Soutenir l'association
+        </a>
+      </div>
+    </Container>
+  </article>
+</PageLayout>

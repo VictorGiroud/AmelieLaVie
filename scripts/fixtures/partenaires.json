@@ -1,0 +1,104 @@
+[
+  {
+    "name": "AG2R La Mondiale",
+    "url": "https://www.ag2rlamondiale.fr",
+    "logo": "legacy/src/img/ag2r.png",
+    "order": 10
+  },
+  {
+    "name": "Malakoff Humanis",
+    "url": "https://www.malakoffhumanis.com",
+    "logo": "legacy/src/img/malakoff.png",
+    "order": 20
+  },
+  {
+    "name": "CCAH",
+    "url": "https://www.ccah.fr",
+    "logo": "legacy/src/img/ccah.png",
+    "order": 30
+  },
+  {
+    "name": "Familles Solidaires",
+    "url": "https://familles-solidaires.com",
+    "logo": "legacy/src/img/famillessolidaires.png",
+    "order": 40
+  },
+  {
+    "name": "Géotec",
+    "url": "https://www.geotec.fr",
+    "logo": "legacy/src/img/geotec.png",
+    "order": 50
+  },
+  {
+    "name": "Dynacité",
+    "url": "https://www.dynacite.fr",
+    "logo": "legacy/src/img/dynacite.png",
+    "order": 60
+  },
+  {
+    "name": "Qualitel",
+    "url": "https://www.qualitel.org",
+    "logo": "legacy/src/img/qualitel.png",
+    "order": 70
+  },
+  {
+    "name": "Domea Conseil",
+    "url": "http://www.domeaconseil.fr",
+    "logo": "legacy/src/img/domea.png",
+    "order": 80
+  },
+  {
+    "name": "CNSA",
+    "url": "https://www.cnsa.fr",
+    "logo": "legacy/src/img/cnsa.png",
+    "order": 90
+  },
+  {
+    "name": "Fondation MMA solidarité",
+    "url": "https://www.mma.fr/a-propos/fondation-mma.html",
+    "logo": "legacy/src/img/mma.png",
+    "order": 100
+  },
+  {
+    "name": "Fondation FDJ",
+    "url": "https://www.groupefdj.com/fr/fondation.html",
+    "logo": "legacy/src/img/fdj.png",
+    "order": 110
+  },
+  {
+    "name": "Fonds Groupe SEB",
+    "url": "https://www.groupeseb.com/fr/fonds-groupe-seb",
+    "logo": "legacy/src/img/seb.png",
+    "order": 120
+  },
+  {
+    "name": "Métropole de Lyon",
+    "url": "https://www.grandlyon.com",
+    "logo": "legacy/src/img/grandlyon.svg",
+    "order": 130
+  },
+  {
+    "name": "Fondation Caisse d'Épargne",
+    "url": "https://www.caissedepargnerhonealpes.fr/responsable-solidaire/la-fondation/",
+    "logo": "legacy/src/img/caissedepargne.png",
+    "order": 140
+  },
+  {
+    "name": "Sport Dimanche",
+    "url": "https://www.facebook.com/SportDimanche",
+    "logo": "legacy/src/img/sportdimanche.png",
+    "order": 150
+  },
+  {
+    "name": "Fondation Macif",
+    "url": "https://www.fondation-macif.org",
+    "logo": "legacy/src/img/macif.png",
+    "order": 160
+  },
+  {
+    "name": "Lions Clubs",
+    "url": "https://www.lions-france.org",
+    "logo": "legacy/src/img/lionsclub.png",
+    "order": 170
+  }
+]

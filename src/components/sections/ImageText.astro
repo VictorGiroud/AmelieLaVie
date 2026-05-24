@@ -1,0 +1,41 @@
+---
+import Section from "@components/ui/Section.astro";
+import PortableText from "@components/PortableText.astro";
+import SanityImage from "@components/ui/Image.astro";
+import Button from "@components/ui/Button.astro";
+import type { SectionImageText } from "@lib/sanity/types";
+
+interface Props {
+  section: SectionImageText;
+}
+
+const { section } = Astro.props;
+const imageOnLeft = (section.imagePosition ?? "left") === "left";
+---
+
+<Section background="white" width="wide">
+  <div class="grid items-center gap-10 md:grid-cols-2 lg:gap-16">
+    <div class={imageOnLeft ? "md:order-1" : "md:order-2"}>
+      <SanityImage
+        image={section.image}
+        width={800}
+        sizes="(min-width: 768px) 40vw, 80vw"
+        transparent
+        class="mx-auto max-h-80 w-auto max-w-full object-contain md:max-h-96"
+      />
+    </div>
+    <div class={imageOnLeft ? "md:order-2" : "md:order-1"}>
+      <h2 class="text-2xl font-semibold sm:text-3xl">{section.title}</h2>
+      <PortableText value={section.body} class="mt-4 space-y-3 leading-relaxed" />
+      {
+        section.ctas && section.ctas.length > 0 && (
+          <div class="mt-6 flex flex-wrap gap-3">
+            {section.ctas.map((cta) => (
+              <Button cta={cta} />
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</Section>

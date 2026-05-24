@@ -1,0 +1,95 @@
+---
+import Section from "@components/ui/Section.astro";
+import type { SectionCta, CtaLink } from "@lib/sanity/types";
+
+interface Props {
+  section: SectionCta;
+}
+
+const { section } = Astro.props;
+const bg = section.background ?? "brand";
+
+const heartIcon = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
+const envelopeIcon = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>`;
+const phoneIcon = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24c1.16.39 2.42.6 3.71.6a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.3.21 2.55.6 3.71a1 1 0 01-.24 1.05l-2.24 2.03z"/></svg>`;
+const megaphoneIcon = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 11l-7 4V7l7 4zm-9-4v8H8a4 4 0 110-8h4zm-2 12h2v2h-2v-2z"/></svg>`;
+const handsIcon = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8 2 5 4 4 8c-.5 2 0 4 1.5 5L7 11.5 5 13l4 4 4-4-2-1.5L12.5 13c1.5-1 2-3 1.5-5C13 4 16 2 12 2zm-5 16l-2 2h14l-2-2H7z"/></svg>`;
+
+function iconFor(name: string | undefined): string {
+  switch (name) {
+    case "heart":
+      return heartIcon;
+    case "phone":
+      return phoneIcon;
+    case "hands":
+      return handsIcon;
+    case "megaphone":
+      return megaphoneIcon;
+    default:
+      return envelopeIcon;
+  }
+}
+
+function inferIconFromCta(cta: CtaLink): string {
+  const href = (cta.href ?? "").toLowerCase();
+  const label = (cta.label ?? "").toLowerCase();
+  if (href.includes("contact") || label.includes("contact") || label.includes("écrire"))
+    return phoneIcon;
+  if (
+    href.includes("soutenir") ||
+    label.includes("soutenir") ||
+    label.includes("donner") ||
+    label.includes("don")
+  )
+    return heartIcon;
+  if (href.includes("adher") || label.includes("adhér")) return handsIcon;
+  return envelopeIcon;
+}
+
+const primaryIcon =
+  section.illustration && section.illustration !== "none"
+    ? iconFor(section.illustration)
+    : inferIconFromCta(section.primaryCta);
+const secondaryIcon = section.secondaryCta ? inferIconFromCta(section.secondaryCta) : null;
+---
+
+<Section background={bg} width="wide">
+  <div class="mx-auto max-w-3xl text-center">
+    <h2 class="text-2xl font-semibold sm:text-3xl">{section.heading}</h2>
+    {section.body && <p class="text-ink-muted mt-3 text-base">{section.body}</p>}
+  </div>
+
+  <div class="mt-8 grid gap-4 sm:mx-auto sm:max-w-3xl sm:grid-cols-2">
+    <a
+      href={section.primaryCta.href}
+      target={section.primaryCta.external ? "_blank" : undefined}
+      rel={section.primaryCta.external ? "noopener noreferrer" : undefined}
+      class="group bg-brand-700 hover:bg-brand-800 text-paper inline-flex items-center justify-center gap-3 rounded-2xl px-6 py-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+    >
+      <span
+        class="bg-paper/20 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full"
+      >
+        {/* eslint-disable-next-line astro/no-set-html-directive */}
+        <span class="block h-5 w-5" set:html={primaryIcon} />
+      </span>
+      <span class="text-base font-semibold">{section.primaryCta.label}</span>
+    </a>
+
+    {
+      section.secondaryCta && (
+        <a
+          href={section.secondaryCta.href}
+          target={section.secondaryCta.external ? "_blank" : undefined}
+          rel={section.secondaryCta.external ? "noopener noreferrer" : undefined}
+          class="group bg-paper text-ink hover:bg-paper-alt border-border inline-flex items-center justify-center gap-3 rounded-2xl border px-6 py-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+        >
+          <span class="bg-brand-100 text-brand-700 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
+            {/* eslint-disable-next-line astro/no-set-html-directive */}
+            <span class="block h-5 w-5" set:html={secondaryIcon ?? envelopeIcon} />
+          </span>
+          <span class="text-base font-semibold">{section.secondaryCta.label}</span>
+        </a>
+      )
+    }
+  </div>
+</Section>

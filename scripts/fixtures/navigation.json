@@ -1,0 +1,42 @@
+{
+  "headerLinks": [
+    { "label": "L'association", "href": "/association/", "external": false },
+    { "label": "Actualités", "href": "/actualites/", "external": false },
+    { "label": "Habitat partagé", "href": "/habitat-partage/", "external": false },
+    { "label": "Nous soutenir", "href": "/nous-soutenir/", "external": false },
+    { "label": "Contact", "href": "/contact/", "external": false }
+  ],
+  "footerColumns": [
+    {
+      "heading": "Découvrir",
+      "links": [
+        { "label": "Accueil", "href": "/", "external": false },
+        { "label": "L'association", "href": "/association/", "external": false },
+        { "label": "Habitat partagé", "href": "/habitat-partage/", "external": false },
+        { "label": "Actualités", "href": "/actualites/", "external": false },
+        { "label": "Agenda", "href": "/agenda/", "external": false }
+      ]
+    },
+    {
+      "heading": "Participer",
+      "links": [
+        { "label": "Nous soutenir", "href": "/nous-soutenir/", "external": false },
+        { "label": "Nous contacter", "href": "/contact/", "external": false },
+        { "label": "Mentions légales", "href": "/mentions-legales/", "external": false }
+      ]
+    }
+  ],
+  "footerLegalNote": "Association loi 1901 — Reconnue d'intérêt général",
+  "social": [
+    {
+      "platform": "facebook",
+      "url": "https://facebook.com/associationamelielavie",
+      "label": "Amélie la Vie sur Facebook"
+    },
+    {
+      "platform": "youtube",
+      "url": "https://www.youtube.com/channel/UCxTbiQ0ffRnZfrjdbNAf10w",
+      "label": "Amélie la Vie sur YouTube"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/ui/Container.astro";
+import Button from "@components/ui/Button.astro";
+import { getUiLabels } from "@lib/sanity/queries";
+
+const ui = await getUiLabels();
+---
+
+<PageLayout title={ui?.notFoundTitle ?? "Page introuvable"} canonicalPath="/404/">
+  <Container width="prose" class="flex min-h-[60vh] flex-col justify-center py-20 text-center">
+    <p class="text-brand-600 text-7xl font-semibold sm:text-9xl">404</p>
+    <h1 class="mt-6 text-3xl font-semibold sm:text-4xl">
+      {ui?.notFoundTitle ?? "Page introuvable"}
+    </h1>
+    {ui?.notFoundMessage && <p class="text-ink-muted mt-4 text-lg">{ui.notFoundMessage}</p>}
+    <div class="mt-8 flex justify-center">
+      <Button
+        href={ui?.notFoundCtaHref ?? "/"}
+        label={ui?.notFoundCtaLabel ?? "Retour à l'accueil"}
+        size="lg"
+      />
+    </div>
+  </Container>
+</PageLayout>

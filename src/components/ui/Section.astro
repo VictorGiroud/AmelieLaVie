@@ -1,0 +1,38 @@
+---
+import Container from "./Container.astro";
+
+interface Props {
+  background?: "white" | "alt" | "brand" | "dark";
+  spacing?: "sm" | "md" | "lg";
+  width?: "screen" | "prose" | "wide";
+  /** Pour les data-attributes Visual Editing Sanity. */
+  id?: string;
+  class?: string;
+}
+
+const {
+  background = "white",
+  spacing = "md",
+  width = "screen",
+  id,
+  class: className = "",
+} = Astro.props;
+
+const bgClass =
+  background === "alt"
+    ? "bg-paper-alt"
+    : background === "brand"
+      ? "bg-brand-50"
+      : background === "dark"
+        ? "bg-ink text-paper"
+        : "bg-paper";
+
+const padY =
+  spacing === "sm" ? "py-6 sm:py-8" : spacing === "lg" ? "py-12 sm:py-16" : "py-8 sm:py-12";
+---
+
+<section id={id} class={`${bgClass} ${padY}`}>
+  <Container width={width} class={className}>
+    <slot />
+  </Container>
+</section>

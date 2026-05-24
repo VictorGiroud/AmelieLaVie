@@ -1,0 +1,76 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/ui/Container.astro";
+import SanityImage from "@components/ui/Image.astro";
+import { getActualites, getAllTags, getTagBySlug } from "@lib/sanity/queries";
+
+export async function getStaticPaths() {
+  const tags = await getAllTags();
+  return tags.map((t) => ({ params: { tag: t.slug.current } }));
+}
+
+const { tag: slug } = Astro.params;
+if (!slug) return Astro.redirect("/404/");
+
+const tag = await getTagBySlug(slug);
+if (!tag) return Astro.redirect("/404/");
+
+const articles = await getActualites(100, slug);
+const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
+---
+
+<PageLayout
+  title={`Tag : ${tag.title}`}
+  description={tag.description}
+  canonicalPath={`/tags/${tag.slug.current}/`}
+>
+  <Container width="wide" class="py-8 sm:py-12">
+    <a
+      href="/actualites/"
+      class="text-ink-muted hover:text-brand-700 inline-flex items-center gap-1 text-sm font-medium transition-colors"
+    >
+      <span aria-hidden="true">←</span> Toutes les actualités
+    </a>
+    <header class="mt-6 mb-10 max-w-2xl">
+      <p class="text-ink-muted text-xs tracking-widest uppercase">Tag</p>
+      <h1 class="text-brand-700 mt-2 text-3xl font-semibold sm:text-4xl">#{tag.title}</h1>
+      {tag.description && <p class="text-ink mt-3 text-base">{tag.description}</p>}
+      <p class="text-ink-muted mt-3 text-sm">
+        {articles.length} article{articles.length > 1 ? "s" : ""}
+      </p>
+    </header>
+
+    <ul class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {
+        articles.map((a) => (
+          <li>
+            <article class="border-border bg-paper h-full overflow-hidden rounded-lg border">
+              <a href={`/actualites/${a.slug.current}/`} class="block">
+                {a.featuredImage?.asset && (
+                  <SanityImage
+                    image={a.featuredImage}
+                    width={600}
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    class="aspect-[16/9] w-full object-cover"
+                  />
+                )}
+                <div class="p-4">
+                  <time
+                    datetime={a.publishedAt}
+                    class="text-ink-muted text-xs tracking-wider uppercase"
+                  >
+                    {fmt.format(new Date(a.publishedAt))}
+                  </time>
+                  <h2 class="text-brand-700 mt-1 text-base leading-snug font-semibold">
+                    {a.title}
+                  </h2>
+                  <p class="text-ink-muted mt-2 line-clamp-3 text-sm">{a.description}</p>
+                </div>
+              </a>
+            </article>
+          </li>
+        ))
+      }
+    </ul>
+  </Container>
+</PageLayout>

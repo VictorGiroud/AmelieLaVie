@@ -1,0 +1,78 @@
+---
+/**
+ * Boutons de partage social pour un article ou une page.
+ * Utilise les URLs de partage natives des plateformes — pas de JS,
+ * pas de tracker tiers, ouverture dans un nouvel onglet.
+ */
+interface Props {
+  /** URL canonique absolue de la page à partager. */
+  url: string;
+  /** Titre de la page (utilisé dans le corps du share). */
+  title: string;
+  /** Description courte (Email body, WhatsApp text). */
+  description?: string;
+  class?: string;
+}
+
+const { url, title, description = "", class: className = "" } = Astro.props;
+
+const encodedUrl = encodeURIComponent(url);
+const encodedTitle = encodeURIComponent(title);
+const emailBody = encodeURIComponent(`${description ? description + "\n\n" : ""}${url}`);
+
+const shares = [
+  {
+    name: "Email",
+    href: `mailto:?subject=${encodedTitle}&body=${emailBody}`,
+    color: "bg-ink-muted hover:bg-ink",
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>',
+  },
+  {
+    name: "WhatsApp",
+    href: `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`,
+    color: "bg-[#25d366] hover:bg-[#1eba59]",
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-1.6-.8-2.7-1.5-3.8-3.3-.3-.5.3-.5.8-1.6.1-.2 0-.3 0-.5s-.6-1.6-.8-2.1c-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .2.3 2.1 3.3 5.2 4.6 1.9.8 2.7.9 3.7.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.3-.6-.5zM12 2A10 10 0 0 0 3.3 17l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18.3c-1.5 0-2.9-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.3 8.3 0 1 1 12 20.3z"/></svg>',
+  },
+  {
+    name: "Facebook",
+    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    color: "bg-[#1877f2] hover:bg-[#155fc1]",
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.6H8v3.2h2.5V22h3z"/></svg>',
+  },
+  {
+    name: "LinkedIn",
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    color: "bg-[#0a66c2] hover:bg-[#084c8f]",
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM8.5 18H5.8V9.8h2.7V18zM7.1 8.6C6.3 8.6 5.6 8 5.6 7.1c0-.8.7-1.4 1.5-1.4s1.5.6 1.5 1.4c0 .9-.7 1.5-1.5 1.5zM18.2 18h-2.7v-4c0-1 0-2.3-1.4-2.3-1.4 0-1.6 1.1-1.6 2.2V18H9.8V9.8h2.6v1.1h.1c.4-.7 1.2-1.4 2.5-1.4 2.7 0 3.2 1.8 3.2 4V18z"/></svg>',
+  },
+  {
+    name: "X / Twitter",
+    href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+    color: "bg-ink hover:bg-black",
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
+  },
+];
+---
+
+<aside class={`text-ink-muted text-sm ${className}`} aria-label="Partager cet article">
+  <p class="mb-3 font-medium">Partager cet article :</p>
+  <ul class="flex flex-wrap items-center gap-2">
+    {
+      shares.map((s) => (
+        <li>
+          <a
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Partager sur ${s.name} (ouvre dans un nouvel onglet)`}
+            title={`Partager sur ${s.name}`}
+            class={`text-paper inline-flex h-10 w-10 items-center justify-center rounded-full transition-colors ${s.color}`}
+          >
+            {/* eslint-disable-next-line astro/no-set-html-directive */}
+            <span class="block h-5 w-5" set:html={s.icon} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</aside>

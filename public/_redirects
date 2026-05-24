@@ -1,0 +1,55 @@
+# Astro génère les pages avec trailingSlash='always'.
+# La normalisation du slash final est gérée par Netlify (Site settings →
+# Build & deploy → Pretty URLs). Inutile (et dangereux : boucle 301) de la
+# redéclarer ici avec un `301!` qui force le redirect même quand l'URL est
+# déjà conforme.
+
+# Legacy : slugs Gatsby accentués → nouveaux slugs ASCII Sanity (preserve SEO).
+# Sources écrites en percent-encoded : le navigateur encode les caractères
+# Unicode dans le path avant l'envoi, donc le matching côté Netlify se fait
+# sur la version encodée (le format Unicode brut ne match pas en pratique).
+/actualites/appel-%C3%A0-projet-geotec/                                                       /actualites/appel-a-projet-geotec/                                       301!
+/actualites/appel-%C3%A0-projet-qualitel/                                                     /actualites/appel-a-projet-qualitel/                                     301!
+/actualites/appel-%C3%A0-projets-klesia/                                                      /actualites/appel-a-projets-klesia/                                      301!
+/actualites/bilan-randonn%C3%A9e-2022/                                                        /actualites/bilan-randonnee-2022/                                        301!
+/actualites/laur%C3%A9at-appel-%C3%A0-projet-qualitel/                                        /actualites/laureat-appel-a-projet-qualitel/                             301!
+/actualites/ouverture-prochaine-%C3%A9t%C3%A9-2024/                                           /actualites/ouverture-prochaine-ete-2024/                                301!
+/actualites/premi%C3%A8res-photos-des-colibris/                                               /actualites/premieres-photos-des-colibris/                               301!
+/actualites/randonn%C3%A9e-2021/                                                              /actualites/randonnee-2021/                                              301!
+/actualites/randonn%C3%A9e-2022/                                                              /actualites/randonnee-2022/                                              301!
+/actualites/randonn%C3%A9e-2023/                                                              /actualites/randonnee-2023/                                              301!
+/actualites/remise-de-ch%C3%A8que-par-sports-dimanche/                                        /actualites/remise-de-cheque-par-sports-dimanche/                        301!
+/actualites/v%C5%93ux-2026-apr%C3%A8s-une-ann%C3%A9e-charni%C3%A8re-et-des-souvenirs-forts/   /actualites/v-ux-2026-apres-une-annee-charniere-et-des-souvenirs-forts/  301!
+/agenda/assembl%C3%A9-g%C3%A9n%C3%A9rale/                                                     /agenda/assemble-generale/                                               301!
+/agenda/march%C3%A9-de-no%C3%ABl-montanay/                                                    /agenda/marche-de-noel-montanay/                                         301!
+/agenda/randonn%C3%A9e-p%C3%A9destre-1/                                                       /agenda/randonnee-pedestre-1/                                            301!
+/agenda/randonn%C3%A9e-p%C3%A9destre/                                                         /agenda/randonnee-pedestre/                                              301!
+
+# Raccourcis utiles (historiques) — pointent vers la rando courante.
+/randonnee     /actualites/randonnee-2026/                                                                    301!
+/reservation   https://www.helloasso.com/associations/amelie-la-vie/boutiques/randonnee-amelie-la-vie-2026    301!
+
+# Tracés GPX et liens Footpath (randonnée) — gardent leur sémantique courte
+/rando/5/fp    https://footpathapp.com/routes/160cc74b-e833-41df-929f-967902befdcf    301!
+/rando/10/fp   https://footpathapp.com/routes/ac1f2047-1d14-4b70-8259-81ae1694e0bd    301!
+/rando/15/fp   https://footpathapp.com/routes/84e1d8f9-ecfc-422a-a6d8-ac67955f3676    301!
+/rando/17/fp   https://footpathapp.com/routes/84e1d8f9-ecfc-422a-a6d8-ac67955f3676    301!
+
+/rando/5/gpx   /assets/rando/rando-2026-5km.gpx     301!
+/rando/10/gpx  /assets/rando/rando-2026-10km.gpx    301!
+/rando/15/gpx  /assets/rando/rando-2026-17km.gpx    301!
+/rando/17/gpx  /assets/rando/rando-2026-17km.gpx    301!
+
+/rando/5       /rando/5/gpx     301!
+/rando/10      /rando/10/gpx    301!
+/rando/15      /rando/15/gpx    301!
+/rando/17      /rando/17/gpx    301!
+
+/5             /rando/5/gpx     301!
+/10            /rando/10/gpx    301!
+/15            /rando/15/gpx    301!
+/17            /rando/17/gpx    301!
+
+# Admin : ancien chemin Netlify CMS → Studio Sanity hébergé
+/admin       https://amelielavie.sanity.studio    302
+/admin/*     https://amelielavie.sanity.studio    302

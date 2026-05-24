@@ -1,0 +1,12 @@
+export { sectionHero } from "./hero";
+export { sectionRichText } from "./richText";
+export { sectionImageText } from "./imageText";
+export { sectionBlurbs } from "./blurbs";
+export { sectionGallery } from "./gallery";
+export { sectionActualitesList } from "./actualitesList";
+export { sectionAgendaList } from "./agendaList";
+export { sectionPartenairesGrid } from "./partenairesGrid";
+export { sectionCta } from "./cta";
+export { sectionEmbed } from "./embed";
+export { sectionNewsletter } from "./newsletter";
+export { sectionContactForm } from "./contactForm";

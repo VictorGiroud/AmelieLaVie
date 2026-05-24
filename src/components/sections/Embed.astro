@@ -1,0 +1,67 @@
+---
+import Section from "@components/ui/Section.astro";
+import type { SectionEmbed } from "@lib/sanity/types";
+
+interface Props {
+  section: SectionEmbed;
+}
+
+const { section } = Astro.props;
+const height = section.height ?? 720;
+
+/** Convertit une URL YouTube en URL embed. */
+function youtubeEmbedUrl(url: string): string {
+  const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/);
+  return match ? `https://www.youtube.com/embed/${match[1]}` : url;
+}
+
+/** HelloAsso refuse l'iframe direct (X-Frame-Options). Suffixe le path d'un widget si absent. */
+function helloAssoEmbedUrl(url: string): string {
+  if (/\/(widget|widget-bouton|widget-don|iframe)(\b|\/|$)/.test(url)) return url;
+  return url.replace(/\/+$/, "") + "/widget-bouton";
+}
+
+let embedUrl = section.url;
+if (section.provider === "youtube") embedUrl = youtubeEmbedUrl(section.url);
+if (section.provider === "helloasso") embedUrl = helloAssoEmbedUrl(section.url);
+
+const isHelloBouton = section.provider === "helloasso" && /widget-bouton/.test(embedUrl);
+const aspect = section.provider === "youtube" ? "aspect-video" : "";
+const isYoutube = section.provider === "youtube";
+
+const wrapperClass = isHelloBouton
+  ? "mx-auto max-w-md"
+  : isYoutube
+    ? "mx-auto max-w-4xl"
+    : "mx-auto max-w-4xl";
+
+const innerStyle = isYoutube ? "" : isHelloBouton ? "height:110px" : `height:${height}px`;
+const innerClass = isHelloBouton
+  ? "overflow-hidden rounded-xl"
+  : isYoutube
+    ? `overflow-hidden rounded-lg ${aspect}`
+    : "overflow-hidden rounded-lg";
+---
+
+<Section background="white" width="wide" spacing={isHelloBouton ? "sm" : "md"}>
+  {
+    section.title && (
+      <h2 class="mb-4 text-center text-2xl font-semibold sm:text-3xl">{section.title}</h2>
+    )
+  }
+  <div class={wrapperClass}>
+    <div class={innerClass} style={innerStyle}>
+      <iframe
+        src={embedUrl}
+        title={section.title ?? `Intégration ${section.provider}`}
+        class="h-full w-full"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+        allow={isYoutube
+          ? "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          : undefined}
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</Section>

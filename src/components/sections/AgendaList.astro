@@ -1,0 +1,59 @@
+---
+import Section from "@components/ui/Section.astro";
+import { getEvenements } from "@lib/sanity/queries";
+import type { SectionAgendaList } from "@lib/sanity/types";
+
+interface Props {
+  section: SectionAgendaList;
+}
+
+const { section } = Astro.props;
+const events = await getEvenements(section.limit ?? 5, section.showPast ?? false);
+const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", timeStyle: "short" });
+---
+
+<Section background="alt" width="wide">
+  <div class="mb-6 flex items-baseline justify-between">
+    <h2 class="text-2xl font-semibold sm:text-3xl">{section.heading}</h2>
+    <a href="/agenda/" class="text-brand-700 text-sm font-medium hover:underline">
+      Tout l'agenda →
+    </a>
+  </div>
+  {
+    events.length === 0 ? (
+      <div class="border-border bg-paper rounded-lg border p-6 text-center">
+        <p class="text-ink-muted">
+          {section.emptyState ?? "Aucun événement prévu pour le moment."}
+        </p>
+        <a
+          href="/agenda/"
+          class="text-brand-700 mt-3 inline-block text-sm font-medium hover:underline"
+        >
+          Voir les événements passés →
+        </a>
+      </div>
+    ) : (
+      <ul class="divide-border border-border bg-paper divide-y overflow-hidden rounded-lg border">
+        {events.map((e) => (
+          <li>
+            <a
+              href={`/agenda/${e.slug.current}/`}
+              class="hover:bg-paper-alt flex flex-col gap-1 px-6 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
+            >
+              <div>
+                <h3 class="text-brand-700 text-lg font-semibold">{e.title}</h3>
+                {e.address && <p class="text-ink-muted mt-1 text-sm">{e.address}</p>}
+              </div>
+              <time
+                datetime={e.startDate}
+                class="text-ink-muted text-sm whitespace-nowrap sm:text-right"
+              >
+                {fmt.format(new Date(e.startDate))}
+              </time>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</Section>

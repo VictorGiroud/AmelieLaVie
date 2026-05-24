@@ -1,0 +1,21 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import SectionRenderer from "@components/SectionRenderer.astro";
+import { getContactInfo, getHomePage, getUiLabels } from "@lib/sanity/queries";
+
+const [homePage, uiLabels, contactInfo] = await Promise.all([
+  getHomePage(),
+  getUiLabels(),
+  getContactInfo(),
+]);
+
+if (!homePage) {
+  throw new Error(
+    "Le singleton homePage est introuvable dans Sanity. Lance la migration : pnpm migrate:content --commit",
+  );
+}
+---
+
+<PageLayout title="Accueil" canonicalPath="/">
+  <SectionRenderer sections={homePage.sections} uiLabels={uiLabels} contactInfo={contactInfo} />
+</PageLayout>
