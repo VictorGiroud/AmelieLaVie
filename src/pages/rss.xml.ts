@@ -6,7 +6,7 @@ export async function GET(context: APIContext) {
   const [articles, siteSettings] = await Promise.all([getActualites(50), getSiteSettings()]);
 
   const site =
-    context.site ?? new URL(import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.org");
+    context.site ?? new URL(import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.com");
 
   return rss({
     title: siteSettings?.title ? `Actualités — ${siteSettings.title}` : "Actualités",

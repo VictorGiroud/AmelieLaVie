@@ -37,7 +37,7 @@ const ogImageSource = seo?.ogImage?.asset ? seo.ogImage : siteSettings?.defaultO
 const ogImageUrl = ogImageSource?.asset ? imageUrl(ogImageSource, 1200) : undefined;
 const noindex = seo?.noIndex ?? false;
 
-const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.org";
+const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.com";
 
 // JSON-LD : Organization (toujours) + autres si fournis par la page
 const orgLd = organizationJsonLd({ siteSettings, contactInfo, navigation, siteUrl });

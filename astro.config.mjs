@@ -3,7 +3,7 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
-const SITE_URL = process.env.SITE_URL ?? "https://amelielavie.org";
+const SITE_URL = process.env.PUBLIC_SITE_URL ?? process.env.SITE_URL ?? "https://amelielavie.com";
 
 export default defineConfig({
   site: SITE_URL,

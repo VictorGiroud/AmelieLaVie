@@ -17,7 +17,7 @@ const {
   canonicalPath,
 } = Astro.props;
 
-const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.org";
+const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.com";
 const canonical = canonicalPath ? new URL(canonicalPath, siteUrl).toString() : Astro.url.toString();
 const ogImage = image ? new URL(image, siteUrl).toString() : `${siteUrl}/og-default.png`;
 ---

@@ -22,7 +22,7 @@ if (!article) return Astro.redirect("/404/");
 const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
 const minutes = readingTimeMinutes(article.body);
 
-const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.org";
+const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.com";
 const canonicalUrl = new URL(`/actualites/${article.slug.current}/`, siteUrl).toString();
 const jsonLd = articleJsonLd({ article, siteSettings, siteUrl, canonicalUrl });
 ---

@@ -23,7 +23,7 @@ const fmt = new Intl.DateTimeFormat("fr-FR", {
 });
 const isPast = new Date(event.startDate) < new Date();
 
-const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.org";
+const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.com";
 const canonicalUrl = new URL(`/agenda/${event.slug.current}/`, siteUrl).toString();
 const jsonLd = eventJsonLd({ event, siteSettings, canonicalUrl });
 ---
