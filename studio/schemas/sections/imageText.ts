@@ -3,7 +3,7 @@ import { SplitVerticalIcon } from "@sanity/icons";
 
 export const sectionImageText = defineType({
   name: "section.imageText",
-  title: "Section : Image + Texte",
+  title: "Image + texte (2 colonnes)",
   type: "object",
   icon: SplitVerticalIcon,
   fields: [
@@ -59,7 +59,16 @@ export const sectionImageText = defineType({
               {
                 name: "link",
                 type: "object",
-                fields: [defineField({ name: "href", title: "URL", type: "url" })],
+                fields: [
+                  defineField({
+                    name: "href",
+                    title: "URL ou chemin",
+                    type: "url",
+                    description: "Chemin interne (ex: /contact/) ou URL externe (https://…).",
+                    validation: (R) =>
+                      R.uri({ allowRelative: true, scheme: ["http", "https", "mailto", "tel"] }),
+                  }),
+                ],
               },
             ],
           },
@@ -79,7 +88,7 @@ export const sectionImageText = defineType({
     select: { title: "title", media: "image" },
     prepare: ({ title, media }) => ({
       title: title ?? "Image + Texte",
-      subtitle: "Section image+texte",
+      subtitle: "Image + texte",
       media,
     }),
   },

@@ -3,7 +3,7 @@ import { BlockContentIcon } from "@sanity/icons";
 
 export const sectionHero = defineType({
   name: "section.hero",
-  title: "Section : Hero (en-tête)",
+  title: "En-tête de page (titre + alerte)",
   type: "object",
   icon: BlockContentIcon,
   fields: [
@@ -69,7 +69,7 @@ export const sectionHero = defineType({
     select: { title: "title", media: "backgroundImage" },
     prepare: ({ title, media }) => ({
       title: title ?? "Hero",
-      subtitle: "Section Hero",
+      subtitle: "En-tête de page",
       media,
     }),
   },

@@ -90,7 +90,14 @@ export const actualite = defineType({
                 title: "Lien",
                 type: "object",
                 fields: [
-                  defineField({ name: "href", title: "URL", type: "url" }),
+                  defineField({
+                    name: "href",
+                    title: "URL ou chemin",
+                    type: "url",
+                    description: "Chemin interne (ex: /contact/) ou URL externe (https://…).",
+                    validation: (R) =>
+                      R.uri({ allowRelative: true, scheme: ["http", "https", "mailto", "tel"] }),
+                  }),
                   defineField({
                     name: "external",
                     title: "Externe ?",

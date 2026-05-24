@@ -3,7 +3,7 @@ import { ImagesIcon } from "@sanity/icons";
 
 export const sectionGallery = defineType({
   name: "section.gallery",
-  title: "Section : Galerie d'images",
+  title: "Galerie photos",
   type: "object",
   icon: ImagesIcon,
   fields: [

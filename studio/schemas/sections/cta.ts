@@ -3,7 +3,7 @@ import { RocketIcon } from "@sanity/icons";
 
 export const sectionCta = defineType({
   name: "section.cta",
-  title: "Section : Appel à l'action",
+  title: "Boutons d'action (Soutenir, Contacter…)",
   type: "object",
   icon: RocketIcon,
   fields: [

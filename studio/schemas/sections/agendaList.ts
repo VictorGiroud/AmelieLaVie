@@ -3,7 +3,7 @@ import { CalendarIcon } from "@sanity/icons";
 
 export const sectionAgendaList = defineType({
   name: "section.agendaList",
-  title: "Section : Liste d'événements (agenda)",
+  title: "Aperçu des prochains événements",
   type: "object",
   icon: CalendarIcon,
   fields: [

@@ -8,7 +8,7 @@ import { EnvelopeIcon } from "@sanity/icons";
  */
 export const sectionContactForm = defineType({
   name: "section.contactForm",
-  title: "Section : Formulaire de contact",
+  title: "Formulaire de contact",
   type: "object",
   icon: EnvelopeIcon,
   description:

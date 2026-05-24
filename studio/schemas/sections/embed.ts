@@ -5,7 +5,7 @@ const ALLOWED_PROVIDERS = ["helloasso", "youtube"] as const;
 
 export const sectionEmbed = defineType({
   name: "section.embed",
-  title: "Section : Intégration externe",
+  title: "Bouton HelloAsso ou vidéo YouTube",
   type: "object",
   icon: CodeIcon,
   description: "Intègre un formulaire HelloAsso (dons / adhésions) ou une vidéo YouTube.",

@@ -3,7 +3,7 @@ import { TextIcon } from "@sanity/icons";
 
 export const sectionRichText = defineType({
   name: "section.richText",
-  title: "Section : Texte enrichi",
+  title: "Bloc de texte (paragraphes, titres, liens)",
   type: "object",
   icon: TextIcon,
   fields: [
@@ -40,7 +40,14 @@ export const sectionRichText = defineType({
                 title: "Lien",
                 type: "object",
                 fields: [
-                  defineField({ name: "href", title: "URL", type: "url" }),
+                  defineField({
+                    name: "href",
+                    title: "URL ou chemin",
+                    type: "url",
+                    description: "Chemin interne (ex: /contact/) ou URL externe (https://…).",
+                    validation: (R) =>
+                      R.uri({ allowRelative: true, scheme: ["http", "https", "mailto", "tel"] }),
+                  }),
                   defineField({
                     name: "external",
                     title: "Externe ?",
@@ -84,6 +91,6 @@ export const sectionRichText = defineType({
   ],
   preview: {
     select: { title: "heading" },
-    prepare: ({ title }) => ({ title: title ?? "Texte enrichi", subtitle: "Section texte" }),
+    prepare: ({ title }) => ({ title: title ?? "Bloc de texte", subtitle: "Paragraphes" }),
   },
 });

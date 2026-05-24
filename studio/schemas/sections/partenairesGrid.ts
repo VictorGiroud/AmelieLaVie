@@ -3,7 +3,7 @@ import { HeartFilledIcon } from "@sanity/icons";
 
 export const sectionPartenairesGrid = defineType({
   name: "section.partenairesGrid",
-  title: "Section : Grille de partenaires",
+  title: "Logos des partenaires (grille)",
   type: "object",
   icon: HeartFilledIcon,
   fields: [

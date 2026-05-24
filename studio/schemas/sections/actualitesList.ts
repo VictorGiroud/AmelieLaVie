@@ -3,7 +3,7 @@ import { DocumentsIcon } from "@sanity/icons";
 
 export const sectionActualitesList = defineType({
   name: "section.actualitesList",
-  title: "Section : Liste d'actualités",
+  title: "Aperçu des dernières actualités",
   type: "object",
   icon: DocumentsIcon,
   fields: [

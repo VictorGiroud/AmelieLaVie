@@ -3,7 +3,7 @@ import { EnvelopeIcon } from "@sanity/icons";
 
 export const sectionNewsletter = defineType({
   name: "section.newsletter",
-  title: "Section : Inscription newsletter",
+  title: "Formulaire d'inscription newsletter",
   type: "object",
   icon: EnvelopeIcon,
   description: "L'endpoint Mailchimp est défini dans « Coordonnées & intégrations ».",

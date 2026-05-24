@@ -3,7 +3,7 @@ import { ThListIcon } from "@sanity/icons";
 
 export const sectionBlurbs = defineType({
   name: "section.blurbs",
-  title: "Section : Tuiles (image + texte)",
+  title: "Grille de tuiles (image + texte court)",
   type: "object",
   icon: ThListIcon,
   fields: [
