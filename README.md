@@ -1,12 +1,10 @@
 # Amélie la Vie
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/37c0461c-22b9-48de-a2a4-17e6f6bc6ee7/deploy-status)](https://app.netlify.com/sites/amelielavie/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b0f13bab-14e4-4428-b3ad-74c6eac821b4/deploy-status)](https://app.netlify.com/projects/amelielavie-astro-preview/deploys)
 
-Site officiel de l'association **Amélie la Vie**.
+Site officiel de l'association **Amélie la Vie** — habitat partagé pour adultes cérébrolésés.
 
-> **Refonte en cours (mai 2026)** — passage de **Gatsby 4 + Netlify CMS** à **Astro 5 + Sanity + Tailwind v4**.
-> L'ancien code reste accessible dans [`legacy/`](./legacy/) le temps de la migration.
-> Plan détaillé : `C:\Users\conta\.claude\plans\j-ai-ce-projet-que-jolly-pixel.md`.
+Live : <https://amelielavie.com> · Studio : <https://amelielavie.sanity.studio>
 
 ---
 

@@ -3,7 +3,7 @@
 Ce guide explique comment **modifier le contenu du site** sans toucher au code. Il s'adresse aux bénévoles qui rejoignent l'équipe de gestion.
 
 > Temps de prise en main : **15–20 minutes**.
-> Si tu bloques, contacte Victor (`contact@amelielavie.com`).
+> Si tu bloques, écris à `contact@amelielavie.com`.
 
 ---
 
@@ -12,7 +12,7 @@ Ce guide explique comment **modifier le contenu du site** sans toucher au code. 
 Le site est piloté depuis **Sanity Studio**, un éditeur en ligne qui ressemble à Notion.
 
 1. Ouvre [`https://amelielavie.sanity.studio`](https://amelielavie.sanity.studio)
-2. Connecte-toi avec l'adresse email que Victor a invitée (Google ou GitHub)
+2. Connecte-toi avec l'adresse email avec laquelle tu as été invité (Google ou GitHub)
 3. Tu arrives sur le panneau d'édition
 
 Tu peux aussi cliquer sur **« Admin »** en bas à droite du site, ça mène au même endroit.
@@ -33,7 +33,7 @@ Sur la gauche du Studio, plusieurs sections :
 | **Partenaires**    | Logos des soutiens financiers                                                   |
 | **Réglages**       | Site settings, navigation, infos contact, libellés UI                           |
 
-> Tout ce qui est éditable est éditable ici. **Pas besoin de demander à Victor** pour ajouter une actu ou un événement.
+> Tout ce qui est éditable est éditable ici. **Pas besoin de passer par le dev** pour ajouter une actu ou un événement.
 
 ---
 
@@ -155,8 +155,8 @@ Le don pérenne (`/formulaires/1`) ne change pas.
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
 | Je ne vois pas mes changements sur le site | Attends 1–2 min (le site se reconstruit). Si toujours rien, vérifie que tu as bien cliqué **Publish** (pas juste Save). |
 | Je me suis trompé, je veux annuler         | Icône **History** en haut de l'éditeur → choisis une version précédente → **Restore**                                   |
-| Le site est cassé                          | Contacte Victor immédiatement avec l'URL et l'erreur affichée                                                           |
-| Je ne peux pas me connecter                | Vérifie que Victor t'a bien invité avec ton adresse Google/GitHub                                                       |
+| Le site est cassé                          | Écris à `contact@amelielavie.com` immédiatement avec l'URL et l'erreur affichée                                         |
+| Je ne peux pas me connecter                | Vérifie que tu as bien été invité avec ton adresse Google/GitHub (écris à `contact@amelielavie.com` sinon)              |
 
 ---
 
