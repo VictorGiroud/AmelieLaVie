@@ -10,6 +10,10 @@ import {
   CalendarIcon,
   HeartFilledIcon,
   TagIcon,
+  InfoOutlineIcon,
+  BlockContentIcon,
+  EnvelopeIcon,
+  DocumentIcon,
 } from "@sanity/icons";
 
 import type { SingletonType } from "./schemas";
@@ -25,10 +29,56 @@ const singleton = (
     .icon(icon)
     .child(S.document().schemaType(type).documentId(type).title(title));
 
+/**
+ * Raccourci vers un document `page` spécifique (par son `_id` fixe), affiché
+ * directement dans la sidebar pour éviter aux bénévoles de passer par la liste
+ * complète des pages. Les pages principales du site (association, habitat,
+ * contact, soutenir, mentions) ont un ID stable créé lors de la migration
+ * Phase 2 et qu'on suppose pérenne.
+ */
+const pageShortcut = (
+  S: Parameters<StructureResolver>[0],
+  docId: string,
+  title: string,
+  icon?: typeof CogIcon,
+) =>
+  S.listItem()
+    .id(docId)
+    .title(title)
+    .icon(icon)
+    .child(S.document().schemaType("page").documentId(docId).title(title));
+
 export const structure: StructureResolver = (S) =>
   S.list()
     .title("Contenu")
     .items([
+      // ═══ Pages principales (accès rapide) ═══
+      singleton(S, "homePage", "Accueil", HomeIcon),
+      pageShortcut(S, "page-association", "L'association", InfoOutlineIcon),
+      pageShortcut(S, "page-habitat-partage", "Habitat partagé", BlockContentIcon),
+      pageShortcut(S, "page-nous-soutenir", "Nous soutenir", HeartFilledIcon),
+      pageShortcut(S, "page-contact", "Contact", EnvelopeIcon),
+      pageShortcut(S, "page-mentions-legales", "Mentions légales", DocumentIcon),
+
+      S.divider(),
+
+      // ═══ Contenu éditorial ═══
+      S.documentTypeListItem("actualite").title("Actualités").icon(DocumentTextIcon),
+      S.documentTypeListItem("evenement").title("Agenda").icon(CalendarIcon),
+
+      S.divider(),
+
+      // ═══ Référentiels ═══
+      S.documentTypeListItem("partenaire").title("Partenaires").icon(HeartFilledIcon),
+      S.documentTypeListItem("tag").title("Tags d'articles").icon(TagIcon),
+
+      S.divider(),
+
+      // ═══ Autres pages (rarement modifiées) ═══
+      S.documentTypeListItem("page").title("Autres pages").icon(EarthGlobeIcon),
+
+      S.divider(),
+
       // ═══ Réglages ═══
       S.listItem()
         .title("Réglages")
@@ -43,22 +93,4 @@ export const structure: StructureResolver = (S) =>
               singleton(S, "uiLabels", "Libellés d'interface", ControlsIcon),
             ]),
         ),
-
-      S.divider(),
-
-      // ═══ Pages ═══
-      singleton(S, "homePage", "Page d'accueil", HomeIcon),
-      S.documentTypeListItem("page").title("Pages").icon(EarthGlobeIcon),
-
-      S.divider(),
-
-      // ═══ Contenu éditorial ═══
-      S.documentTypeListItem("actualite").title("Actualités").icon(DocumentTextIcon),
-      S.documentTypeListItem("evenement").title("Agenda").icon(CalendarIcon),
-
-      S.divider(),
-
-      // ═══ Référentiels ═══
-      S.documentTypeListItem("partenaire").title("Partenaires").icon(HeartFilledIcon),
-      S.documentTypeListItem("tag").title("Tags").icon(TagIcon),
     ]);

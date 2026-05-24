@@ -28,11 +28,11 @@ export const page = defineType({
   fields: [
     defineField({
       name: "title",
-      title: "Titre de la page (interne)",
+      title: "Nom du document",
       type: "string",
       group: "meta",
       description:
-        "Affiché dans le Studio uniquement. Le titre visible vient de la première section Hero.",
+        "Sert uniquement à retrouver la page dans le Studio. Le titre visible par les visiteurs est défini dans la section « Hero » en haut de page.",
       validation: (R) => R.required().min(2).max(120),
     }),
     defineField({

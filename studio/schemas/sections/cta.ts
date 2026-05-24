@@ -32,15 +32,17 @@ export const sectionCta = defineType({
     }),
     defineField({
       name: "illustration",
-      title: "Illustration",
+      title: "Icône du bouton principal",
       type: "string",
       initialValue: "heart",
+      description:
+        "L'icône est automatiquement déduite du libellé du bouton si laissée par défaut (« Cœur » sur « Soutenir », « Téléphone » sur « Contacter »…).",
       options: {
         list: [
-          { title: "Cœur", value: "heart" },
-          { title: "Mégaphone", value: "megaphone" },
-          { title: "Téléphone", value: "phone" },
-          { title: "Mains jointes", value: "hands" },
+          { title: "❤️ Cœur (don, soutien)", value: "heart" },
+          { title: "📞 Téléphone (contact)", value: "phone" },
+          { title: "🤝 Mains jointes (adhésion)", value: "hands" },
+          { title: "📣 Mégaphone (annonce)", value: "megaphone" },
           { title: "Aucune", value: "none" },
         ],
       },

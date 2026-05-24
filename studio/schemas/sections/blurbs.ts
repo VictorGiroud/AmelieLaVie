@@ -37,15 +37,18 @@ export const sectionBlurbs = defineType({
                   name: "alt",
                   title: "Texte alternatif",
                   type: "string",
+                  description:
+                    "Décrivez l'image en une phrase courte (lu par les lecteurs d'écran).",
                   validation: (R) => R.required(),
                 }),
               ],
             }),
             defineField({
               name: "title",
-              title: "Titre",
+              title: "Titre (optionnel)",
               type: "string",
-              validation: (R) => R.required().max(60),
+              description: "Laissez vide si l'image et le texte se suffisent à eux-mêmes.",
+              validation: (R) => R.max(60),
             }),
             defineField({
               name: "text",

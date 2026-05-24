@@ -9,7 +9,8 @@ import { structure } from "./structure";
 
 const projectId = process.env.SANITY_STUDIO_PROJECT_ID;
 const dataset = process.env.SANITY_STUDIO_DATASET ?? "production";
-const previewUrl = process.env.SANITY_STUDIO_PREVIEW_URL ?? "http://localhost:4321";
+const previewUrl =
+  process.env.SANITY_STUDIO_PREVIEW_URL ?? "https://amelielavie-astro-preview.netlify.app";
 
 if (!projectId) {
   throw new Error(

@@ -8,5 +8,9 @@ export default defineCliConfig({
     projectId,
     dataset,
   },
-  autoUpdates: true,
+  studioHost: "amelielavie",
+  deployment: {
+    autoUpdates: true,
+    appId: "r3ln23lvcydh541j2ekpfvux",
+  },
 });
