@@ -25,9 +25,18 @@
 /agenda/randonn%C3%A9e-p%C3%A9destre-1/                                                       /agenda/randonnee-pedestre-1/                                            301!
 /agenda/randonn%C3%A9e-p%C3%A9destre/                                                         /agenda/randonnee-pedestre/                                              301!
 
-# Raccourcis utiles (historiques) — pointent vers la rando courante.
-/randonnee     /actualites/randonnee-2026/                                                                    301!
-/reservation   https://www.helloasso.com/associations/amelie-la-vie/boutiques/randonnee-amelie-la-vie-2026    301!
+# ─── Raccourcis pérennes pour les communications externes ───
+# Utilisez ces URLs courtes dans la newsletter, les flyers, les posts
+# réseaux sociaux : elles continueront de fonctionner même quand l'URL
+# HelloAsso changera (nouvelle campagne d'adhésion chaque année).
+#
+# Pour mettre à jour quand HelloAsso ouvre une nouvelle année :
+#   1. Éditer la cible des règles ci-dessous (ex: /adherer-…-pour-2027)
+#   2. git commit + push → Netlify rebuild automatique
+/adherer       https://www.helloasso.com/associations/amelie-la-vie/adhesions/adherer-a-l-association-pour-2026    302!
+/donner        https://www.helloasso.com/associations/amelie-la-vie/formulaires/1                                 302!
+/randonnee     /actualites/randonnee-2026/                                                                       301!
+/reservation   https://www.helloasso.com/associations/amelie-la-vie/boutiques/randonnee-amelie-la-vie-2026        302!
 
 # Tracés GPX et liens Footpath (randonnée) — gardent leur sémantique courte
 /rando/5/fp    https://footpathapp.com/routes/160cc74b-e833-41df-929f-967902befdcf    301!

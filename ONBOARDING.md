@@ -128,16 +128,25 @@ Tout est dans **Réglages** :
 
 ---
 
-## 8. Adhésion HelloAsso — mise à jour annuelle
+## 8. URLs courtes pour communiquer
 
-L'URL d'adhésion HelloAsso change chaque année (ex. `…-pour-2026` → `…-pour-2027`).
+Pour partager le lien d'adhésion ou de don (newsletter, flyer, post Facebook, signature email…), utilise toujours :
 
-1. **Pages** → **Nous soutenir**
-2. Section **Intégration HelloAsso** _Adhérer en ligne_
-3. Modifie l'**URL à intégrer** avec la nouvelle URL HelloAsso de l'année
-4. Publish
+- 👉 **https://amelielavie.com/adherer** → redirige vers HelloAsso (adhésion en cours)
+- 👉 **https://amelielavie.com/donner** → redirige vers HelloAsso (don)
+- 👉 **https://amelielavie.com/randonnee** → page de la rando de l'année
+- 👉 **https://amelielavie.com/reservation** → boutique HelloAsso rando
 
-Le don pérenne (`/formulaires/1`) ne change pas.
+Ces URLs sont **pérennes** : leur cible HelloAsso peut changer d'une année à l'autre, mais la communication externe reste à jour automatiquement.
+
+### Adhésion HelloAsso — mise à jour annuelle (côté technique)
+
+L'URL d'adhésion HelloAsso change chaque année (ex. `…-pour-2026` → `…-pour-2027`). À faire en début de campagne :
+
+1. **Dans le Studio** (visible bouton sur la page) : **Pages** → **Nous soutenir** → section _Adhérer en ligne_ → met à jour l'**URL** → Publish
+2. **Dans le code** (URL courte `/adherer`) : éditer `public/_redirects` et changer la cible → commit + push (à faire par le dev)
+
+Le don pérenne (`/formulaires/1`) ne change pas — rien à mettre à jour.
 
 ---
 
