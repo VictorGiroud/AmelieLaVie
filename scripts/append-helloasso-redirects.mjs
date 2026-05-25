@@ -19,16 +19,13 @@ import { createClient } from "@sanity/client";
 import { appendFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 
-const projectId =
-  process.env.PUBLIC_SANITY_PROJECT_ID ?? process.env.SANITY_STUDIO_PROJECT_ID;
+const projectId = process.env.PUBLIC_SANITY_PROJECT_ID ?? process.env.SANITY_STUDIO_PROJECT_ID;
 const dataset =
   process.env.PUBLIC_SANITY_DATASET ?? process.env.SANITY_STUDIO_DATASET ?? "production";
 const apiVersion = process.env.PUBLIC_SANITY_API_VERSION ?? "2025-01-01";
 
 if (!projectId) {
-  console.warn(
-    "[post-build] PUBLIC_SANITY_PROJECT_ID manquant — skip HelloAsso redirects.",
-  );
+  console.warn("[post-build] PUBLIC_SANITY_PROJECT_ID manquant — skip HelloAsso redirects.");
   process.exit(0);
 }
 

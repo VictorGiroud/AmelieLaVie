@@ -92,19 +92,23 @@ export const sectionRichText = defineType({
   preview: {
     select: { heading: "heading", body: "body" },
     prepare: ({ heading, body }) => {
+      type PortableSpan = { _type?: string; text?: unknown };
+      type PortableBlock = { _type?: string; children?: PortableSpan[] };
       const snippet = Array.isArray(body)
-        ? body
-            .filter((b: any) => b?._type === "block")
-            .map((b: any) =>
+        ? (body as PortableBlock[])
+            .filter((b) => b?._type === "block")
+            .map((b) =>
               (b.children ?? [])
-                .filter((c: any) => c?._type === "span" && typeof c.text === "string")
-                .map((c: any) => c.text)
+                .filter((c) => c?._type === "span" && typeof c.text === "string")
+                .map((c) => c.text as string)
                 .join(""),
             )
             .join(" ")
             .trim()
         : "";
-      const title = heading?.trim() || (snippet ? snippet.slice(0, 80) + (snippet.length > 80 ? "…" : "") : "(à compléter)");
+      const title =
+        heading?.trim() ||
+        (snippet ? snippet.slice(0, 80) + (snippet.length > 80 ? "…" : "") : "(à compléter)");
       return { title, subtitle: "Texte libre" };
     },
   },

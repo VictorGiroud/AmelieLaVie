@@ -31,8 +31,7 @@ function resolveHelloAssoUrl(): string | undefined {
   return section.url;
 }
 
-const rawUrl =
-  section.provider === "helloasso" ? resolveHelloAssoUrl() : section.url;
+const rawUrl = section.provider === "helloasso" ? resolveHelloAssoUrl() : section.url;
 
 const embedUrl = !rawUrl
   ? null
@@ -42,7 +41,8 @@ const embedUrl = !rawUrl
       ? helloAssoEmbedUrl(rawUrl)
       : rawUrl;
 
-const isHelloBouton = !!embedUrl && section.provider === "helloasso" && /widget-bouton/.test(embedUrl);
+const isHelloBouton =
+  !!embedUrl && section.provider === "helloasso" && /widget-bouton/.test(embedUrl);
 const aspect = section.provider === "youtube" ? "aspect-video" : "";
 const isYoutube = section.provider === "youtube";
 

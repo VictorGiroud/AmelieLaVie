@@ -57,9 +57,7 @@ export const sectionEmbed = defineType({
         parent?.provider === "helloasso" && parent?.helloAssoLink !== "custom",
       validation: (R) =>
         R.custom((url, ctx) => {
-          const parent = ctx.parent as
-            | { provider?: string; helloAssoLink?: string }
-            | undefined;
+          const parent = ctx.parent as { provider?: string; helloAssoLink?: string } | undefined;
           const isYoutube = parent?.provider === "youtube";
           const isCustomHelloAsso =
             parent?.provider === "helloasso" && parent?.helloAssoLink === "custom";
