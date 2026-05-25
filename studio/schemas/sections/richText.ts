@@ -90,7 +90,22 @@ export const sectionRichText = defineType({
     }),
   ],
   preview: {
-    select: { title: "heading" },
-    prepare: ({ title }) => ({ title: title ?? "Bloc de texte", subtitle: "Paragraphes" }),
+    select: { heading: "heading", body: "body" },
+    prepare: ({ heading, body }) => {
+      const snippet = Array.isArray(body)
+        ? body
+            .filter((b: any) => b?._type === "block")
+            .map((b: any) =>
+              (b.children ?? [])
+                .filter((c: any) => c?._type === "span" && typeof c.text === "string")
+                .map((c: any) => c.text)
+                .join(""),
+            )
+            .join(" ")
+            .trim()
+        : "";
+      const title = heading?.trim() || (snippet ? snippet.slice(0, 80) + (snippet.length > 80 ? "…" : "") : "(à compléter)");
+      return { title, subtitle: "Texte libre" };
+    },
   },
 });
