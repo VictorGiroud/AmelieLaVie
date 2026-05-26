@@ -87,6 +87,35 @@ export const evenement = defineType({
             { title: "Liste à puces", value: "bullet" },
             { title: "Liste numérotée", value: "number" },
           ],
+          marks: {
+            decorators: [
+              { title: "Gras", value: "strong" },
+              { title: "Italique", value: "em" },
+            ],
+            annotations: [
+              {
+                name: "link",
+                title: "Lien",
+                type: "object",
+                fields: [
+                  defineField({
+                    name: "href",
+                    title: "URL ou chemin",
+                    type: "url",
+                    description: "Chemin interne (ex: /contact/) ou URL externe (https://…).",
+                    validation: (R) =>
+                      R.uri({ allowRelative: true, scheme: ["http", "https", "mailto", "tel"] }),
+                  }),
+                  defineField({
+                    name: "external",
+                    title: "Externe ?",
+                    type: "boolean",
+                    initialValue: false,
+                  }),
+                ],
+              },
+            ],
+          },
         }),
       ],
     }),

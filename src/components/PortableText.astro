@@ -53,13 +53,30 @@ function escapeHtml(s: string): string {
     .replace(/"/g, "&quot;");
 }
 
+// Auto-link des URLs tapées en clair (http/https). On wrap chaque URL trouvée
+// avec un <a target="_blank">, en laissant la ponctuation finale en dehors
+// pour ne pas casser le lien (ex: « voir https://x.com. » → le point reste hors lien).
+const URL_RE = /https?:\/\/[^\s<>"']+/g;
+const TRAILING_PUNCT_RE = /[.,;:!?)\]]+$/;
+function autoLink(escapedHtml: string): string {
+  return escapedHtml.replace(URL_RE, (match) => {
+    const trailing = TRAILING_PUNCT_RE.exec(match)?.[0] ?? "";
+    const url = trailing ? match.slice(0, -trailing.length) : match;
+    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-brand-700 underline decoration-brand-500 decoration-1 underline-offset-4 hover:decoration-2">${url} <span aria-hidden="true" class="text-xs">↗</span><span class="sr-only"> (ouvre dans un nouvel onglet)</span></a>${trailing}`;
+  });
+}
+
 function renderSpans(children: PortableTextSpan[], markDefs: PortableTextMarkDef[]): string {
   return children
     .map((span) => {
+      const marks = span.marks ?? [];
+      // Si le span est déjà DANS un lien annoté, on n'auto-linkifie pas
+      // (sinon on aurait <a><a>…</a></a>).
+      const hasLinkMark = marks.some((m) => markDefs.find((d) => d._key === m)?._type === "link");
       let text = escapeHtml(span.text ?? "");
-      // Préserver les retours à la ligne explicites
       text = text.replace(/\n/g, "<br/>");
-      for (const mark of [...(span.marks ?? [])].reverse()) {
+      if (!hasLinkMark) text = autoLink(text);
+      for (const mark of [...marks].reverse()) {
         const { open, close } = markToTag(mark, markDefs);
         text = `${open}${text}${close}`;
       }
