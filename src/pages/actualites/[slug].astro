@@ -7,6 +7,7 @@ import ShareButtons from "@components/ShareButtons.astro";
 import { getActualiteBySlug, getAllActualitesSlugs, getSiteSettings } from "@lib/sanity/queries";
 import { articleJsonLd } from "@lib/seo/jsonld";
 import { readingTimeMinutes } from "@lib/readingTime";
+import { dateLongNoTime as fmt } from "@lib/format/date";
 
 export async function getStaticPaths() {
   const slugs = await getAllActualitesSlugs();
@@ -18,8 +19,6 @@ if (!slug) return Astro.redirect("/404/");
 
 const [article, siteSettings] = await Promise.all([getActualiteBySlug(slug), getSiteSettings()]);
 if (!article) return Astro.redirect("/404/");
-
-const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
 const minutes = readingTimeMinutes(article.body);
 
 const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? "https://amelielavie.com";

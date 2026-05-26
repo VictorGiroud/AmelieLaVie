@@ -187,7 +187,6 @@ export interface Evenement {
   endDate?: string;
   address?: string;
   locationCoords?: { lat: number; lng: number };
-  resume?: string;
   image?: SanityImage;
   body?: PortableTextContent;
   display: boolean;

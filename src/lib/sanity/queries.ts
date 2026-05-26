@@ -213,7 +213,7 @@ export async function getEvenements(limit = 100, showPast = false): Promise<Even
     `*[_type == "evenement" && display == true ${futureFilter}] | order(startDate ${
       showPast ? "desc" : "asc"
     })[0...$limit]{
-      _id, _type, title, slug, startDate, endDate, address, resume, display,
+      _id, _type, title, slug, startDate, endDate, address, display,
       image ${IMAGE_FRAGMENT}
     }`,
     { limit },
@@ -223,7 +223,7 @@ export async function getEvenements(limit = 100, showPast = false): Promise<Even
 export async function getEvenementBySlug(slug: string): Promise<Evenement | null> {
   return sanity.fetch(
     `*[_type == "evenement" && slug.current == $slug][0]{
-      _id, _type, title, slug, startDate, endDate, address, locationCoords, resume, display,
+      _id, _type, title, slug, startDate, endDate, address, locationCoords, display,
       image ${IMAGE_FRAGMENT},
       ${PORTABLE_TEXT_FRAGMENT},
       seo{ metaTitle, metaDescription, noIndex, ogImage ${IMAGE_FRAGMENT} }

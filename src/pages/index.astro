@@ -1,12 +1,14 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
 import SectionRenderer from "@components/SectionRenderer.astro";
-import { getContactInfo, getHomePage, getUiLabels } from "@lib/sanity/queries";
+import { getContactInfo, getEvenements, getHomePage, getUiLabels } from "@lib/sanity/queries";
+import { dateFullNoTime } from "@lib/format/date";
 
-const [homePage, uiLabels, contactInfo] = await Promise.all([
+const [homePage, uiLabels, contactInfo, upcomingEvents] = await Promise.all([
   getHomePage(),
   getUiLabels(),
   getContactInfo(),
+  getEvenements(1, false),
 ]);
 
 if (!homePage) {
@@ -14,8 +16,19 @@ if (!homePage) {
     "Le singleton homePage est introuvable dans Sanity. Lance la migration : pnpm migrate:content --commit",
   );
 }
+
+// Bandeau Hero auto : si pas d'alerte manuelle saisie + un prochain événement existe,
+// on génère "Rendez-vous le [date] pour [titre] !" pour le hero.
+const nextEvent = upcomingEvents[0];
+const autoAlerte = nextEvent
+  ? `Rendez-vous le ${dateFullNoTime.format(new Date(nextEvent.startDate))} pour ${nextEvent.title.trim()} !`
+  : null;
+
+const sections = homePage.sections.map((s) =>
+  s._type === "section.hero" && !s.alerte?.trim() && autoAlerte ? { ...s, alerte: autoAlerte } : s,
+);
 ---
 
 <PageLayout title="Accueil" canonicalPath="/">
-  <SectionRenderer sections={homePage.sections} uiLabels={uiLabels} contactInfo={contactInfo} />
+  <SectionRenderer sections={sections} uiLabels={uiLabels} contactInfo={contactInfo} />
 </PageLayout>

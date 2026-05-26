@@ -3,6 +3,7 @@ import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/ui/Container.astro";
 import SanityImage from "@components/ui/Image.astro";
 import { getActualites, getAllTags, getTagBySlug } from "@lib/sanity/queries";
+import { dateLongNoTime as fmt } from "@lib/format/date";
 
 export async function getStaticPaths() {
   const tags = await getAllTags();
@@ -16,7 +17,6 @@ const tag = await getTagBySlug(slug);
 if (!tag) return Astro.redirect("/404/");
 
 const articles = await getActualites(100, slug);
-const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
 ---
 
 <PageLayout

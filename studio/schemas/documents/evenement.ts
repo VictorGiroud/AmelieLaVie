@@ -56,14 +56,6 @@ export const evenement = defineType({
       description: "Pour afficher une carte. Optionnel.",
     }),
     defineField({
-      name: "resume",
-      title: "Résumé",
-      type: "text",
-      rows: 3,
-      group: "content",
-      description: "Affiché dans la liste de l'agenda. ~2 phrases.",
-    }),
-    defineField({
       name: "image",
       title: "Image (optionnelle)",
       type: "image",

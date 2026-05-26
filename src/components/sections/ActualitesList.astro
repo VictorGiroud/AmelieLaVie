@@ -3,6 +3,7 @@ import Section from "@components/ui/Section.astro";
 import SanityImage from "@components/ui/Image.astro";
 import { getActualites } from "@lib/sanity/queries";
 import type { SectionActualitesList, UiLabels } from "@lib/sanity/types";
+import { dateLongNoTime as fmt } from "@lib/format/date";
 
 interface Props {
   section: SectionActualitesList;
@@ -13,7 +14,6 @@ const { section, uiLabels } = Astro.props;
 const limit = section.limit ?? 3;
 const filterSlug = (section.filterTag as { slug?: string } | undefined)?.slug;
 const articles = await getActualites(limit, filterSlug);
-const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
 ---
 
 <Section background="white" width="wide">

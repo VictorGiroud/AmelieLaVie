@@ -3,9 +3,9 @@ import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/ui/Container.astro";
 import SanityImage from "@components/ui/Image.astro";
 import { getActualites, getAllTags, getUiLabels } from "@lib/sanity/queries";
+import { dateLongNoTime as fmt } from "@lib/format/date";
 
 const [articles, tags, ui] = await Promise.all([getActualites(100), getAllTags(), getUiLabels()]);
-const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" });
 
 // Tags réellement utilisés par au moins un article publié.
 // Note: les actualités projettent `slug` en string via GROQ, tandis que

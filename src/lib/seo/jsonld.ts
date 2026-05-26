@@ -11,6 +11,7 @@ import type {
   SiteSettings,
 } from "@lib/sanity/types";
 import { imageUrl } from "@lib/sanity/image";
+import { portableTextToPlainText } from "@lib/sanity/portableText";
 
 interface JsonLd {
   "@context": "https://schema.org";
@@ -105,7 +106,7 @@ export function eventJsonLd({
     "@context": "https://schema.org",
     "@type": "Event",
     name: event.title,
-    description: event.resume ?? event.title,
+    description: portableTextToPlainText(event.body) || event.title,
     startDate: event.startDate,
     ...(event.endDate ? { endDate: event.endDate } : {}),
     eventStatus: "https://schema.org/EventScheduled",

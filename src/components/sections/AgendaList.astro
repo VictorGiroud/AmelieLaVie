@@ -2,6 +2,7 @@
 import Section from "@components/ui/Section.astro";
 import { getEvenements } from "@lib/sanity/queries";
 import type { SectionAgendaList } from "@lib/sanity/types";
+import { dateLong as fmt } from "@lib/format/date";
 
 interface Props {
   section: SectionAgendaList;
@@ -9,7 +10,6 @@ interface Props {
 
 const { section } = Astro.props;
 const events = await getEvenements(section.limit ?? 5, section.showPast ?? false);
-const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", timeStyle: "short" });
 ---
 
 <Section background="alt" width="wide">

@@ -2,6 +2,7 @@
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/ui/Container.astro";
 import { getEvenements, getUiLabels } from "@lib/sanity/queries";
+import { dateLong as fmt } from "@lib/format/date";
 
 const ui = await getUiLabels();
 const [upcoming, past] = await Promise.all([getEvenements(50, false), getEvenements(50, true)]);
@@ -9,8 +10,6 @@ const [upcoming, past] = await Promise.all([getEvenements(50, false), getEveneme
 const now = new Date();
 const upcomingEvents = upcoming;
 const pastEvents = past.filter((e) => new Date(e.startDate) < now);
-
-const fmt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", timeStyle: "short" });
 ---
 
 <PageLayout
